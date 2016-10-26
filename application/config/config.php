@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/tinderbox';
+$config['base_url'] = 'http://localhost/tinderbox/';
 
 /*
 |--------------------------------------------------------------------------
@@ -35,7 +35,7 @@ $config['base_url'] = 'http://localhost/tinderbox';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = 'index.php';
+$config['index_page'] = '';
 
 /*
 |--------------------------------------------------------------------------
@@ -96,11 +96,11 @@ $config['charset'] = 'UTF-8';
 | Enable/Disable System Hooks
 |--------------------------------------------------------------------------
 |
-| If you would like to use the 'hooks' feature you must enable it by
+| If you would like to use the 'hooks' efature you must enable it by
 | setting this variable to TRUE (boolean).  See the user guide for details.
 |
 */
-$config['enable_hooks'] = FALSE;
+$config['enable_hooks'] = TRUE;
 
 /*
 |--------------------------------------------------------------------------
@@ -213,7 +213,7 @@ $config['directory_trigger'] = 'd';
 | your log files will fill up very fast.
 |
 */
-$config['log_threshold'] = 0;
+$config['log_threshold'] = 2;
 
 /*
 |--------------------------------------------------------------------------
@@ -314,7 +314,7 @@ $config['cache_query_string'] = FALSE;
 | https://codeigniter.com/user_guide/libraries/encryption.html
 |
 */
-$config['encryption_key'] = '';
+$config['encryption_key'] = hex2bin('a7005602756b906599521fe7662af22f');
 
 /*
 |--------------------------------------------------------------------------
