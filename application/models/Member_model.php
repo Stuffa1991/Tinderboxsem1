@@ -7,6 +7,7 @@ class Member_model extends CI_Model {
 	private $name;	// string
 	private $role;	// string
 	private $created_at; // int
+	private $language; // string
 	private $mode; // string
 
 	public function __construct()
