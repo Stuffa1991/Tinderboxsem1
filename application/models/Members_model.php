@@ -10,7 +10,7 @@ class Members_model extends CI_Model {
 		
 	} 
 
-	public function getUsers()
+	public function getMembers()
 	{
 		$sth = $this->db->query("SELECT me.name, me.role, co.email, co.phone, co.mobile 
 			FROM members AS me

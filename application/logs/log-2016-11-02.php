@@ -91,3 +91,65 @@ DEBUG - 2016-11-02 13:05:13 --> Total execution time: 0.2840
 DEBUG - 2016-11-02 13:05:13 --> UTF-8 Support Enabled
 DEBUG - 2016-11-02 13:05:13 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2016-11-02 13:05:13 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:22:12 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:12 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 13:22:12 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:22:12 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:22:12 --> Total execution time: 0.2110
+DEBUG - 2016-11-02 13:22:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:22:13 --> 404 Page Not Found: Hello%20World/index
+DEBUG - 2016-11-02 13:22:15 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:15 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:22:15 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:22:15 --> Severity: Notice --> Undefined property: Admin::$members_model C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 15
+ERROR - 2016-11-02 13:22:15 --> Severity: error --> Exception: Call to a member function getUser() on null C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 15
+DEBUG - 2016-11-02 13:22:36 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:22:36 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:22:36 --> Severity: Notice --> Undefined property: Admin::$members_model C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 15
+ERROR - 2016-11-02 13:22:36 --> Severity: error --> Exception: Call to a member function getUser() on null C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 15
+DEBUG - 2016-11-02 13:22:50 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:50 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:22:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:22:51 --> Total execution time: 1.1531
+DEBUG - 2016-11-02 13:22:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:22:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:22:51 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:23:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:23:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:23:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:23:02 --> Total execution time: 0.1760
+DEBUG - 2016-11-02 13:23:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:23:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:23:02 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:42:43 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:42:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:43:21 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:43:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:43:21 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:43:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:43:32 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:43:32 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:43:33 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:43:33 --> Severity: Notice --> Undefined variable: lang C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 20
+DEBUG - 2016-11-02 13:43:33 --> Total execution time: 0.2140
+DEBUG - 2016-11-02 13:45:24 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:45:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:45:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:45:24 --> Severity: Notice --> Undefined variable: lang C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 20
+DEBUG - 2016-11-02 13:45:24 --> Total execution time: 0.0740
+DEBUG - 2016-11-02 13:45:41 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:45:41 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:45:42 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:45:42 --> Severity: Notice --> Undefined variable: lang C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 21
+DEBUG - 2016-11-02 13:45:42 --> Total execution time: 0.5170
+DEBUG - 2016-11-02 13:45:43 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:45:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:45:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:45:43 --> Severity: Notice --> Undefined variable: lang C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 21
+DEBUG - 2016-11-02 13:45:43 --> Total execution time: 0.0420
+DEBUG - 2016-11-02 13:46:14 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:46:14 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:46:14 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:46:14 --> Total execution time: 0.0850

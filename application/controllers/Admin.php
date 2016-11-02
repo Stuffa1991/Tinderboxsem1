@@ -6,17 +6,19 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url_helper');
+		$this->lang->load('english_lang', 'english');
 	}
 
 	public function index()
 	{
-		$this->load->model('members_model');
+		// $this->load->model('members_model');
 
-		$data['members'] = $this->members_model->getUsers();
+		// $data['members'] = $this->members_model->getUsers();
 
-		$this->load->view('header');
-		$this->load->view('admin/index', $data);
-		$this->load->view('footer');
+		// $this->load->view('header');
+		// $this->load->view('admin/index', $data);
+		// $this->load->view('footer');
+		echo $this->lang->line('test');
 	}
 
 }
