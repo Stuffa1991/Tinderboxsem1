@@ -6,7 +6,6 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->helper('url_helper');
-		$this->lang->load('english_lang', 'english');
 	}
 
 	public function index()
@@ -18,6 +17,7 @@ class Admin extends CI_Controller {
 		// $this->load->view('header');
 		// $this->load->view('admin/index', $data);
 		// $this->load->view('footer');
+		//$this->lang->load('language_lang', 'english');
 		echo $this->lang->line('test');
 	}
 
