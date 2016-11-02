@@ -2,58 +2,69 @@
 
 class Index extends CI_Controller {
 
-	private $user;
+	private $member;
 	
+	/*
+	* Construct
+	*/
+	public function __construct()
+	{
+		parent::__construct();
+		//$this->load->library('auth');
+		$this->load->library('form_validation');
+		$this->load->model('login_model');
+		$this->load->helper('url'); 
+		//$this->auth->handleLogin();
+	}
+
 	/*
 	 * Page index
 	 */
 	public function index()
 	{
-		$this->load->view('index/index');
+		//Set form rules
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+
+		if($this->form_validation->run() === FALSE)
+		{
+			//If the form validation isnt being runned
+			$this->load->view('header');
+			$this->load->view('index/index');
+			$this->load->view('footer');
+		}
+		else
+		{
+			//Get $_POST from FORM
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			$this->login($email,$password);
+		}
 	}
 
 	/*
 	 * Method to login
 	 */
-	public function login()
+	public function login($email,$password)
 	{
-		$this->load->library('auth');
-	}
-
-	public function user($id = null)
-	{
-		$this->load->model('member_model');
-
-		switch($_SERVER['REQUEST_METHOD'])
+		//Find the the member via the model
+		$member = $this->login_model->getMemberByEmailPassword($email, $password);
+		if(count($member))
 		{
-			case 'POST':
-				$userdata = file_get_contents('php://input');
-				$userdata = json_decode($userdata);
+			//If there is 1 or more results returned --- should only be one
+			$sess_data = array(
+				'login' => TRUE, 
+				'email' => $member[0]->email, 
+				'memberid' => $member[0]->memberid, 
+				'name' => $member[0]->name
+			);
 
-				$this->member = [
-					'firstname' => $userdata->firstname,
-					'lastname'	=> $userdata->lastname,
-					'password' => $userdata->password,
-					'email'	=> $userdata->email
-				];
+			$this->session->setData($sess_data);
 
-				$this->member_model->set_user($this->user);
-
-				break;
-			case 'PUT':
-
-			case 'DELETE':
-
-			default:
-				echo 'Get user profile i with id: ' . $id;
+			header('location: /tinderbox/dashboard');
+		} else {
+			return FALSE;
 		}
 	}
-
-	public function secret_endpoint()
-	{
-		$this->load->library('auth');
-		$this->auth->handleLogin();
-	}
-
 
 }

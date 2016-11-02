@@ -201,3 +201,214 @@ DEBUG - 2016-11-02 14:21:36 --> No URI present. Default controller set.
 DEBUG - 2016-11-02 14:21:36 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2016-11-02 14:21:37 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2016-11-02 14:21:37 --> Total execution time: 0.3280
+DEBUG - 2016-11-02 15:41:36 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:41:36 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:41:36 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:41:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:41:38 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:41:38 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:42:10 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:42:10 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:42:10 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:44:19 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:44:19 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:44:19 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:44:30 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:44:30 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:44:30 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:44:31 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:44:31 --> Total execution time: 0.6020
+DEBUG - 2016-11-02 15:44:57 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:44:57 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:44:57 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 15:44:57 --> Query error: Table 'tinderbox.users' doesn't exist - Invalid query: SELECT *
+FROM `users`
+WHERE `email` = 'contact@contact.dk'
+AND `password` = 'password'
+DEBUG - 2016-11-02 15:46:03 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:46:03 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:46:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:46:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:46:03 --> Total execution time: 0.0900
+DEBUG - 2016-11-02 15:46:04 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:46:04 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:46:04 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:46:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:46:05 --> Total execution time: 0.2830
+DEBUG - 2016-11-02 15:46:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:46:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:46:49 --> 404 Page Not Found: /index
+DEBUG - 2016-11-02 15:47:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:07 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:07 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:47:18 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:18 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:18 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:47:34 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:34 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:34 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:47:34 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:34 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:34 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:47:41 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:41 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:41 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:47:56 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:47:56 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:47:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:47:56 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:48:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:48:09 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:48:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:48:09 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:48:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:48:53 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:48:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:48:53 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:49:01 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:49:01 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:49:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:49:01 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:49:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:49:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:49:07 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:49:45 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:49:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:49:45 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:13 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:14 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:14 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:19 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:19 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:24 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:24 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:24 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:31 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:31 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:31 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:50:34 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:34 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:50:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:50:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:50:35 --> Total execution time: 0.0820
+DEBUG - 2016-11-02 15:50:42 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:50:42 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:50:43 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:50:43 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:51:01 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:51:01 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:51:01 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:51:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:51:01 --> Total execution time: 0.0880
+DEBUG - 2016-11-02 15:51:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:51:07 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:51:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:51:07 --> 404 Page Not Found: Index/index
+DEBUG - 2016-11-02 15:51:48 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:51:48 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:51:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:51:49 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:51:49 --> Total execution time: 0.5400
+DEBUG - 2016-11-02 15:52:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:52:02 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:52:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:52:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:52:02 --> Total execution time: 0.1100
+DEBUG - 2016-11-02 15:52:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:52:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:52:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 15:52:07 --> Severity: error --> Exception: Cannot use object of type stdClass as array C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 57
+DEBUG - 2016-11-02 15:53:05 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:53:05 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:53:05 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 15:53:05 --> Severity: error --> Exception: Call to undefined method CI_Session::setData() C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 60
+DEBUG - 2016-11-02 15:53:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:53:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:53:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 15:53:29 --> Severity: error --> Exception: Call to undefined method CI_Session::setuser_data() C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 60
+DEBUG - 2016-11-02 15:54:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:54:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:54:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:54:13 --> Total execution time: 0.4010
+DEBUG - 2016-11-02 15:54:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:54:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:54:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:54:13 --> Total execution time: 0.0960
+DEBUG - 2016-11-02 15:54:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:54:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 15:54:20 --> 404 Page Not Found: Dashboard/logout
+DEBUG - 2016-11-02 15:54:22 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:54:22 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:54:22 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:54:22 --> Total execution time: 0.5630
+DEBUG - 2016-11-02 15:55:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:55:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:55:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:55:13 --> Total execution time: 0.0900
+DEBUG - 2016-11-02 15:55:16 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:55:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:55:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:55:16 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:55:16 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 15:55:16 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:55:16 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:55:16 --> Total execution time: 0.1990
+DEBUG - 2016-11-02 15:55:23 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 15:55:23 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 15:55:23 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 15:55:23 --> Total execution time: 0.1590
+DEBUG - 2016-11-02 16:00:35 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:00:35 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:00:35 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 16:00:35 --> Severity: Notice --> Undefined property: Auth::$CI C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\libraries\Auth.php 14
+ERROR - 2016-11-02 16:00:35 --> Severity: Notice --> Trying to get property of non-object C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\libraries\Auth.php 14
+ERROR - 2016-11-02 16:00:35 --> Severity: error --> Exception: Call to a member function library() on null C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\libraries\Auth.php 14
+DEBUG - 2016-11-02 16:01:00 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:00 --> Session class already loaded. Second attempt ignored.
+ERROR - 2016-11-02 16:01:00 --> Unable to load the requested class: Url_helper
+DEBUG - 2016-11-02 16:01:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:27 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-02 16:01:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:27 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:01:27 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:27 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:27 --> Total execution time: 0.0530
+DEBUG - 2016-11-02 16:01:42 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:42 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:43 --> Total execution time: 0.2150
+DEBUG - 2016-11-02 16:01:43 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:43 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:43 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:43 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-02 16:01:43 --> Total execution time: 0.1275
+DEBUG - 2016-11-02 16:01:48 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:48 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:48 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:01:48 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:48 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:48 --> Total execution time: 0.0680
+DEBUG - 2016-11-02 16:01:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:51 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-02 16:01:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:01:51 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:01:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:01:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:01:51 --> Total execution time: 0.0550

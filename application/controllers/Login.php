@@ -1,22 +1,25 @@
-<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Login extends CI_Controller {
 
+	private $member;
+	
+	/*
+	* Construct
+	*/
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('auth');
 		$this->load->library('form_validation');
 		$this->load->model('login_model');
-		$this->load->helper('url');
+		$this->load->helper('url'); 
 	}
 
+	/*
+	 * Page index
+	 */
 	public function index()
 	{
-		//Get $_POST from FORM
-		$email = $this->input->post('email');
-		$password = $this->input->post('password');
-
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
@@ -25,50 +28,47 @@ class Login extends CI_Controller {
 		{
 			//If the form validation isnt being runned
 			$this->load->view('header');
-			$this->load->view('index/index');
+			$this->load->view('login/index');
 			$this->load->view('footer');
 		}
 		else
 		{
-			//Find the the user via the model
-			$user = $this->login_model->login($email, $password);
-			var_dump($user);
-			if(count($user))
-			{
-				//If there is 1 or more results returned --- should only be one
-				$sess_data = array(
-					'login' => TRUE, 
-					'email' => $user[0]->email, 
-					'userid' => $user[0]->userid, 
-					'name' => $user[0]->name
-				);
-
-				$this->session->set_userdata($sess_data);
-
-				header('location: /tinderbox/dashboard');
-				//redirect('/dashboard/');
-			} else {
-				//The user cant be found in the database
-				// redirect('/');
-				echo 'hehj';
-				//Ex.
-				// $this->load->view('login_view', [
-				// 	'error' => 'Login not found',
-				// ]);
-			}
+			//Get $_POST from FORM
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			$this->login($email,$password);
 		}
 	}
 
-	public function reset()
+	/*
+	 * Method to login
+	 */
+	public function login($email,$password)
 	{
+		//Find the the member via the model
+		$member = $this->login_model->login($email, $password);
+		if(count($member))
+		{
+			//If there is 1 or more results returned --- should only be one
+			$sess_data = array(
+				'login' => TRUE, 
+				'email' => $member->email
+			);
 
+			$this->session->set_userdata($sess_data);
 
-		$this->load->view('header');
-		$this->load->view('index/reset');
-		$this->load->view('footer');
+			header('location: /tinderbox/dashboard');
+		} else {
+			return FALSE;
+		}
+	}
+
+	public function logout()
+	{
+		// @TODO Do not sess_destroy but set the data to NULL or ZERO
+		$this->session->sess_destroy();
+		redirect('/');
+		die();
 	}
 
 }
-
-/* End of file Login.php */
-/* Location: ./application/controllers/Login.php */

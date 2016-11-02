@@ -6,35 +6,24 @@ class Auth
 
     public function __construct()
     {
-        $this->ci =& get_instance();   
+        $this->ci =& get_instance();
     }
 
     public function handleLogin()
-    {
-        $this->ci->load->model('member_model');
+    {	
+    	//Load Session library
+    	$this->ci->load->library(array('session'));
 
-        $basicAuth = getallheaders()['Authorization'];
-    
-        $encodedLogin = explode(' ', $basicAuth)[1];
-        $decodedLogin = base64_decode($encodedLogin);
-        $credentials = explode(':', $decodedLogin);
+    	//Load url helper
+    	$this->ci->load->helper(array('url_helper'));
 
-        $userdata = $this->ci->member_model
-            ->getMemberByEmailPassword($credentials[0], $credentials[1]);
+    	//Get session data
+        $loggedIn = $this->ci->session->login;
 
-        if($userdata === null) {
-            $this->ci->output
-                ->set_header('HTTP/1.1 401 Unauthorized')
-                ->set_header('Content-Type', 'application/json')
-                ->set_output(json_encode([
-                    'error' => 'Username or password is wrong'
-                    ]))
-                ->_display();
-
-            die();
-
-        } else {
-            return true;
+        //If not logged in
+        if($loggedIn == FALSE){
+        	redirect('/');
+        	die();
         }
     }
 }
