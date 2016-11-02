@@ -20,17 +20,17 @@ class Task_model extends CI_Model {
 
 	public function setTask()
 	{
-		return $this->$id;
+		return $this->id;
 	}
 
 	public function getTask($id)
 	{
-		return $this->$task;
+		return $this->task;
 	}
 
 	public function updateTask($id)
 	{
-		return $this->$task;
+		return $this->task;
 	}	
 
 	public function deleteTask($id)

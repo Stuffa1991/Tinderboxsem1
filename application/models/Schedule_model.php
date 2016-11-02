@@ -18,17 +18,17 @@ class Schedule_model extends CI_Model {
 
 	public function setSchedule()
 	{
-		return $this->$id;
+		return $this->id;
 	}
 
 	public function getSchedule($id)
 	{
-		return $this->$schedule;
+		return $this->schedule;
 	}
 
 	public function updateSchedule($id)
 	{
-		return $this->$schedule;
+		return $this->schedule;
 	}	
 
 	public function deleteSchedule($id)
