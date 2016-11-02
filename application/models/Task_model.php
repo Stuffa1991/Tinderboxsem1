@@ -11,7 +11,7 @@ class Task_model extends CI_Model {
 	private $totime; // int
 	private $mode // string
 
-	private $tasks[] // Array
+	private $tasks = [] // Array
 
 	public function __construct()
 	{

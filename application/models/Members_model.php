@@ -2,7 +2,7 @@
 
 class Members_model extends CI_Model {
 
-	private $members[]; // Array
+	private $members = []; // Array
 
 	public function __construct()
 	{

@@ -2,7 +2,7 @@
 
 class Tasks_model extends CI_Model {
 
-	private $tasks[] // Array
+	private $tasks = [] // Array
 
 	public function __construct()
 	{

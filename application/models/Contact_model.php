@@ -7,7 +7,7 @@ class Contact_model extends CI_Model {
 	private $phone; // int
 	private $mobile; // int
 
-	private $contacts[] // Array
+	private $contacts = [] // Array
 
 	public function __construct()
 	{
