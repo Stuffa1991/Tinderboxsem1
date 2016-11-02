@@ -18,6 +18,18 @@ class Login_model extends CI_Model {
 		return $query->result();
 	}
 	
+
+	public function getUserByEmailPassword($email, $password)
+	{
+		$query = sprintf('SELECT * FROM USERS
+			WHERE email = "%s" AND password = "%s" LIMIT 1',
+			$email, $password
+		);
+
+		$result = $this->db->query($query);
+		return $result->row();
+	}
+	
 	// // Get a user
 	// public function get_userById($id)
 	// {
