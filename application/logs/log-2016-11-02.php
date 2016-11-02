@@ -1,0 +1,86 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+DEBUG - 2016-11-02 12:57:56 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 12:57:56 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 12:57:56 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 12:57:56 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 12:57:56 --> Total execution time: 0.5980
+DEBUG - 2016-11-02 12:57:56 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 12:57:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 12:57:56 --> 404 Page Not Found: Hello%20World/index
+DEBUG - 2016-11-02 12:58:00 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 12:58:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 12:58:01 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 12:58:01 --> Severity: error --> Exception: syntax error, unexpected '[', expecting ',' or ';' C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\models\Members_model.php 5
+DEBUG - 2016-11-02 12:59:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 12:59:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 12:59:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 12:59:20 --> Severity: error --> Exception: Call to undefined method Members_model::get_users() C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\controllers\Admin.php 14
+DEBUG - 2016-11-02 12:59:47 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 12:59:47 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 12:59:47 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 12:59:47 --> Severity: error --> Exception: Call to undefined function site_url() C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\views\admin\index.php 23
+DEBUG - 2016-11-02 13:00:21 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:00:21 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:00:21 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+ERROR - 2016-11-02 13:00:21 --> Severity: Notice --> Undefined variable: notes C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\views\admin\index.php 24
+ERROR - 2016-11-02 13:00:21 --> Severity: Warning --> Invalid argument supplied for foreach() C:\Users\Bruger\Dropbox\xampp\htdocs\tinderbox\application\views\admin\index.php 24
+DEBUG - 2016-11-02 13:00:21 --> Total execution time: 0.1090
+DEBUG - 2016-11-02 13:00:21 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:00:21 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:00:21 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:00:22 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:00:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:00:22 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:01:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:01:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:01:13 --> Total execution time: 0.1240
+DEBUG - 2016-11-02 13:01:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:01:13 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:01:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:53 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:01:53 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:01:53 --> Total execution time: 0.0970
+DEBUG - 2016-11-02 13:01:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:01:53 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:01:54 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:01:54 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:01:58 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:58 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:01:58 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:01:58 --> Total execution time: 0.0700
+DEBUG - 2016-11-02 13:01:58 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:01:58 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:01:59 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:01:59 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:59 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:01:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:01:59 --> Total execution time: 0.2890
+DEBUG - 2016-11-02 13:01:59 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:01:59 --> Total execution time: 0.1580
+DEBUG - 2016-11-02 13:01:59 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:01:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:01:59 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:02:00 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:02:00 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:02:00 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:02:00 --> Total execution time: 0.1220
+DEBUG - 2016-11-02 13:02:00 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:02:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:02:00 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:02:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:02:29 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:02:29 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:02:29 --> Total execution time: 0.0870
+DEBUG - 2016-11-02 13:02:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:02:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:02:29 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:02:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:02:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:02:29 --> 404 Page Not Found: Admin/Hello%20World

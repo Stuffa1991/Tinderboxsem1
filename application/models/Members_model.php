@@ -2,7 +2,7 @@
 
 class Members_model extends CI_Model {
 
-	private $members[]; // Array
+	private $members = []; // Array
 
 	public function __construct()
 	{
@@ -10,15 +10,14 @@ class Members_model extends CI_Model {
 		
 	}
 
-
 	public function getUsers()
 	{
-		$result = $this->db->query('SELECT `id`, `title`, `datetime` 
-			FROM notes 
-			WHERE `datetime` > 0
-			ORDER BY `datetime` DESC ');
+		$sth = $this->db->query("SELECT me.name, me.role, co.email, co.phone, co.mobile 
+			FROM members AS me
+			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
+			WHERE me.mode != 'deleted'");
 
-		$this->notes = $result->result();
+		$this->members = $sth->result();
 		return $this->members;
 	}
 }
