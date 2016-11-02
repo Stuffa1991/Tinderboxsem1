@@ -13,7 +13,7 @@ class Admin extends CI_Controller {
 		$this->load->model('members_model');
 
 		$data['members'] = $this->members_model->getUsers();
-
+		 
 		$this->load->view('admin/index', $data);
 	}
 

@@ -84,3 +84,10 @@ ERROR - 2016-11-02 13:02:29 --> 404 Page Not Found: Admin/Hello%20World
 DEBUG - 2016-11-02 13:02:29 --> UTF-8 Support Enabled
 DEBUG - 2016-11-02 13:02:29 --> Global POST, GET and COOKIE data sanitized
 ERROR - 2016-11-02 13:02:29 --> 404 Page Not Found: Admin/Hello%20World
+DEBUG - 2016-11-02 13:05:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:05:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 13:05:13 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 13:05:13 --> Total execution time: 0.2840
+DEBUG - 2016-11-02 13:05:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 13:05:13 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 13:05:13 --> 404 Page Not Found: Admin/Hello%20World
