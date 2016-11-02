@@ -11,37 +11,15 @@ class Informations_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function getInfos()
+	public function getInfos($type)
 	{
 		$sth = $this->db->query("SELECT *
 			FROM informations
-			WHERE type = 'info'
+			WHERE type = '$type'
 			AND mode != 'deleted'");
 
 		$this->infos = $sth->result();
 		return $this->infos;
-	}
-
-	public function getRules()
-	{
-		$sth = $this->db->query("SELECT *
-			FROM informations
-			WHERE type = 'rules'
-			AND mode != 'deleted'");
-
-		$this->rules = $sth->result();
-		return $this->rules;
-	}
-
-	public function getNews()
-	{
-		$sth = $this->db->query("SELECT *
-			FROM informations
-			WHERE type = 'news'
-			AND mode != 'deleted'");
-
-		$this->news = $sth->result();
-		return $this->news;
 	}
 
 }
