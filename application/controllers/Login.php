@@ -57,7 +57,7 @@ class Login extends CI_Controller {
 
 			$this->session->set_userdata($sess_data);
 
-			header('location: /tinderbox/dashboard');
+			redirect('/dashboard/');
 		} else {
 			return FALSE;
 		}
