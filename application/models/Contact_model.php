@@ -16,17 +16,17 @@ class Contact_model extends CI_Model {
 
 	public function setContacts()
 	{
-		return $this->$id;
+		return $this->id;
 	}
 
 	public function getContacts($id)
 	{
-		return $this->$contacts;
+		return $this->contacts;
 	}
 
 	public function updateContacts($id)
 	{
-		return $this->$contacts;
+		return $this->contacts;
 	}	
 
 }

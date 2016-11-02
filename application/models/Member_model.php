@@ -17,7 +17,7 @@ class Member_model extends CI_Model {
 
 	public function setMember()
 	{
-		return $this->$id;
+		return $this->id;
 	}
 
 	public function getMember($id)
