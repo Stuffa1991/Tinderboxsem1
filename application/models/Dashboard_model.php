@@ -2,8 +2,6 @@
 
 class Dashboard_model extends CI_Model {
 
-	public $variable;
-
 	public function __construct()
 	{
 		parent::__construct();
