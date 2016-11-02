@@ -179,3 +179,20 @@ DEBUG - 2016-11-02 13:58:19 --> UTF-8 Support Enabled
 DEBUG - 2016-11-02 13:58:19 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2016-11-02 13:58:19 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2016-11-02 13:58:19 --> Total execution time: 0.0810
+DEBUG - 2016-11-02 14:06:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 14:06:49 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 14:06:50 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 14:06:50 --> Total execution time: 0.1480
+DEBUG - 2016-11-02 14:20:18 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 14:20:18 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 14:20:18 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 14:20:18 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 14:20:18 --> Total execution time: 0.2420
+DEBUG - 2016-11-02 14:20:19 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 14:20:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-02 14:20:19 --> 404 Page Not Found: Hello%20World/index
+DEBUG - 2016-11-02 14:20:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 14:20:20 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 14:20:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 14:20:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 14:20:20 --> Total execution time: 0.2550

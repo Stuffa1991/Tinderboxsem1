@@ -1,7 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<form action="/tinderbox/login/index" method="POST" role="form">
+					<form action="<?php  echo base_url('/login/index')?>" method="POST" role="form">
 						<legend>Form title</legend>
 						<?php echo validation_errors(); ?>
 						<div class="form-group">
