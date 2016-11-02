@@ -1,24 +1,40 @@
-<?php defined('BASEPATH') OR exit('No direct script access allowed');
+<?php
 
-class Auth {
+class Auth
+{
+    private $ci;
 
-		protected $CI;
+    public function __construct()
+    {
+        $this->ci =& get_instance();   
+    }
 
-        // We'll use a constructor, as you can't directly call a function
-        // from a property definition.
-        public function __construct()
-        {
-                // Assign the CodeIgniter super-object
-                $CI =& get_instance();
-                $CI->load->helper('url');
-				$CI->load->library('session');
+    public function handleLogin()
+    {
+        $this->ci->load->model('user_model');
+
+        $basicAuth = getallheaders()['Authorization'];
+    
+        $encodedLogin = explode(' ', $basicAuth)[1];
+        $decodedLogin = base64_decode($encodedLogin);
+        $credentials = explode(':', $decodedLogin);
+
+        $userdata = $this->ci->user_model
+            ->getUserByEmailPassword($credentials[0], $credentials[1]);
+
+        if($userdata === null) {
+            $this->ci->output
+                ->set_header('HTTP/1.1 401 Unauthorized')
+                ->set_header('Content-Type', 'application/json')
+                ->set_output(json_encode([
+                    'error' => 'Username or password is wrong'
+                    ]))
+                ->_display();
+
+            die();
+
+        } else {
+            return true;
         }
-
-        public function HandleLogin()
-        {
-        	if($CI->session->login == FALSE){
-        		redirect('/');
-        		exit;
-        	}
-        }
+    }
 }
