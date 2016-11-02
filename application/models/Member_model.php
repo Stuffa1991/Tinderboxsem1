@@ -52,6 +52,24 @@ class Member_model extends CI_Model {
 			return $this->lang->line('delete_user_success');
 		}
 	}
+
+	/*
+	 * Method for login only
+	 */
+	public function getMemberByEmailPassword($email, $password)
+	{
+		$sth = sprintf('SELECT me.password, co.email
+			FROM members AS me
+			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
+			WHERE co.email = "%s" 
+			AND me.password = "%s" 
+			LIMIT 1',
+			$email, $password
+		);
+
+		$result = $this->db->query($sth);
+		return $result->row();
+	}
 }
 
 /* End of file Member_model.php */

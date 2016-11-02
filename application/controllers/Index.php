@@ -4,11 +4,17 @@ class Index extends CI_Controller {
 
 	private $user;
 	
+	/*
+	 * Page index
+	 */
 	public function index()
 	{
 		$this->load->view('index/index');
 	}
 
+	/*
+	 * Method to login
+	 */
 	public function login()
 	{
 		$this->load->library('auth');
@@ -16,7 +22,7 @@ class Index extends CI_Controller {
 
 	public function user($id = null)
 	{
-		$this->load->model('user_model');
+		$this->load->model('member_model');
 
 		switch($_SERVER['REQUEST_METHOD'])
 		{
@@ -24,14 +30,14 @@ class Index extends CI_Controller {
 				$userdata = file_get_contents('php://input');
 				$userdata = json_decode($userdata);
 
-				$this->user = [
+				$this->member = [
 					'firstname' => $userdata->firstname,
 					'lastname'	=> $userdata->lastname,
 					'password' => $userdata->password,
 					'email'	=> $userdata->email
 				];
 
-				$this->user_model->set_user($this->user);
+				$this->member_model->set_user($this->user);
 
 				break;
 			case 'PUT':
@@ -45,9 +51,8 @@ class Index extends CI_Controller {
 
 	public function secret_endpoint()
 	{
-		$this->load->library('auth_lib');
-		$this->auth_lib->handle_login();
-		echo 'tada';
+		$this->load->library('auth');
+		$this->auth->handleLogin();
 	}
 
 

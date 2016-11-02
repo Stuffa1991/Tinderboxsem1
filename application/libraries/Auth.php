@@ -11,7 +11,7 @@ class Auth
 
     public function handleLogin()
     {
-        $this->ci->load->model('user_model');
+        $this->ci->load->model('member_model');
 
         $basicAuth = getallheaders()['Authorization'];
     
@@ -19,8 +19,8 @@ class Auth
         $decodedLogin = base64_decode($encodedLogin);
         $credentials = explode(':', $decodedLogin);
 
-        $userdata = $this->ci->user_model
-            ->getUserByEmailPassword($credentials[0], $credentials[1]);
+        $userdata = $this->ci->member_model
+            ->getMemberByEmailPassword($credentials[0], $credentials[1]);
 
         if($userdata === null) {
             $this->ci->output
