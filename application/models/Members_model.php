@@ -21,6 +21,3 @@ class Members_model extends CI_Model {
 		return $this->members;
 	}
 }
-
-/* End of file Members_model.php */
-/* Location: ./application/models/Members_model.php */

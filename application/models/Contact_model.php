@@ -26,7 +26,7 @@ class Contact_model extends CI_Model {
 
 	public function updateContacts($id)
 	{
-		return $this->contacts;
+		return $this->$contacts;
 	}	
 
 }

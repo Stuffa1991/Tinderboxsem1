@@ -1,39 +1,37 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Task_model extends CI_Model {
+class Schedule_model extends CI_Model {
 
 	private $id; // int
 	private $memberid; // int
 	private $placeid; // int
-	private $teamid; // int
-	private $name; // string
 	private $fromtime; // int
 	private $totime; // int
 	private $mode // string
 
-	private $task = [] // Array
+	private $schedule = []; // Array
 
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
-	public function setTask()
+	public function setSchedule()
 	{
 		return $this->$id;
 	}
 
-	public function getTask($id)
+	public function getSchedule($id)
 	{
-		return $this->$task;
+		return $this->$schedule;
 	}
 
-	public function updateTask($id)
+	public function updateSchedule($id)
 	{
-		return $this->$task;
+		return $this->$schedule;
 	}	
 
-	public function deleteTask($id)
+	public function deleteSchedule($id)
 	{
 		return true;
 	}
