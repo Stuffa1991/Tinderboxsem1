@@ -3,8 +3,6 @@
 class Informations_model extends CI_Model {
 
 	private $infos = []; // Array
-	private $rules = []; // Array
-	private $news = []; // Array 
 
 	public function __construct()
 	{

@@ -7,24 +7,24 @@ class Contact_model extends CI_Model {
 	private $phone; // int
 	private $mobile; // int
 
-	private $contacts = [] // Array
+	private $contact = [] // Array
 
 	public function __construct()
 	{
 		parent::__construct();
 	}
 
-	public function setContacts()
+	public function setContact()
 	{
 		return $this->id;
 	}
 
-	public function getContacts($id)
+	public function getContact($id)
 	{
 		return $this->contacts;
 	}
 
-	public function updateContacts($id)
+	public function updateContact($id)
 	{
 		return $this->contacts;
 	}	
