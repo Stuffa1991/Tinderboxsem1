@@ -1,7 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<form action="<?php  echo base_url('/login/registerUser/')?>" method="POST" role="form">
+					<form action="<?php  echo base_url('/login/registerUser/')?>" method="POST" role="form" class="registerUserForm">
 						<legend>Form title</legend>
 						<div class="form-group">
 							<label for="username">Username</label>

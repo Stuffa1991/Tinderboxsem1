@@ -87,13 +87,12 @@ class Login extends CI_Controller {
 	{
 		$this->method->method('POST');
 
-		//php://input returns NULL
-		$post = file_get_contents('php://input');
-		$post = json_decode($post);
+		$postData = file_get_contents('php://input');
 
-		//php://input returns NULL
-		var_dump($this->input->post('a'));
-		die();
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
 
 		// Set your rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
@@ -111,7 +110,7 @@ class Login extends CI_Controller {
 			->set_header('Content-Type: application/json')
 			->set_output(json_encode([
 				'status' => 400,
-				'statusCode' => 'Bad Request',
+				'statusCode' => 'Validation Error',
 				'response' => validation_errors()
 				]))
 			->_display();
@@ -120,9 +119,9 @@ class Login extends CI_Controller {
 		} 
 
 		$res = $this->login_model->registerUser([
-			'email' => $post->email,
-			'name' => $post->name,
-			'password' => $post->password
+			'email' => $post['email'],
+			'name' => $post['name'],
+			'password' => $post['password']
 		]);
 
 		if($res === false)

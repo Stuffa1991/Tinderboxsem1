@@ -60,6 +60,30 @@
 
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
+
+		<script type="text/javascript">
+			jQuery('.registerUserForm').submit(function(e) {
+				jQuery.ajax({
+					type: 'POST',
+					url: 'http://localhost/tinderbox/login/registerUser/',
+					data: jQuery(this).serialize(),
+					success: function(data, textStatus, xhr) {
+						//console.debug(data + ' ' + textStatus + ' ' + xhr);
+						var dataString = JSON.stringify(data);
+						console.debug(dataString);
+					},
+					complete: function(xhr, textStatus) {
+						//console.debug(textStatus + ' ' + xhr); 
+					},
+					error: function(xhr, textStatus, errorThrown) {
+						//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
+					}
+				});
+				e.preventDefault();
+			});
+			
+		</script>
+
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
 		<!-- Default js -->

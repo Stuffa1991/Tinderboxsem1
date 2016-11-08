@@ -1418,3 +1418,434 @@ DEBUG - 2016-11-08 14:51:38 --> Session: "sess_save_path" is empty; using "sessi
 DEBUG - 2016-11-08 14:51:38 --> Session class already loaded. Second attempt ignored.
 DEBUG - 2016-11-08 14:51:38 --> Total execution time: 0.0538
 >>>>>>> 9257d0e5d0503d090c94fe29ae5244178f4b8655
+DEBUG - 2016-11-08 15:43:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 15:43:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 15:43:53 --> 404 Page Not Found: Examples/index
+DEBUG - 2016-11-08 15:43:56 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 15:43:56 --> No URI present. Default controller set.
+DEBUG - 2016-11-08 15:43:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 15:43:56 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 15:43:56 --> Total execution time: 0.2117
+DEBUG - 2016-11-08 16:18:57 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:18:57 --> No URI present. Default controller set.
+DEBUG - 2016-11-08 16:18:57 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:18:57 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:18:57 --> Total execution time: 0.0517
+DEBUG - 2016-11-08 16:19:03 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:19:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:19:03 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:19:03 --> Total execution time: 0.0437
+DEBUG - 2016-11-08 16:19:26 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:19:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:19:26 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:19:26 --> Total execution time: 0.0487
+DEBUG - 2016-11-08 16:19:43 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:19:43 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:19:43 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:19:43 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:21:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:02 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:02 --> Total execution time: 0.0414
+DEBUG - 2016-11-08 16:21:06 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:07 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:07 --> Total execution time: 0.0408
+DEBUG - 2016-11-08 16:21:12 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:12 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:12 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:21:28 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:28 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:28 --> Total execution time: 0.0435
+DEBUG - 2016-11-08 16:21:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:37 --> Total execution time: 0.0421
+DEBUG - 2016-11-08 16:21:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:21:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:21:51 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:21:51 --> Total execution time: 0.0427
+DEBUG - 2016-11-08 16:22:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:22:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:22:09 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:22:09 --> Total execution time: 0.0451
+DEBUG - 2016-11-08 16:23:14 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:23:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:23:15 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:23:15 --> Total execution time: 0.0400
+DEBUG - 2016-11-08 16:24:30 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:24:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:24:30 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:24:30 --> Total execution time: 0.0503
+DEBUG - 2016-11-08 16:27:28 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:27:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:27:28 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:27:28 --> Total execution time: 0.0487
+DEBUG - 2016-11-08 16:27:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:27:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:27:38 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:27:39 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:27:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:27:39 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:27:39 --> Total execution time: 0.0467
+DEBUG - 2016-11-08 16:28:04 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:28:04 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:28:04 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:28:04 --> Total execution time: 0.0474
+DEBUG - 2016-11-08 16:28:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:28:27 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:28:27 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:28:27 --> Total execution time: 0.0434
+DEBUG - 2016-11-08 16:29:16 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:29:16 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:29:16 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:29:16 --> Total execution time: 0.0419
+DEBUG - 2016-11-08 16:29:25 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:29:25 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:29:25 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:29:26 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:29:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:29:26 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:29:26 --> Total execution time: 0.0433
+DEBUG - 2016-11-08 16:29:36 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:29:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:29:36 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:29:36 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:29:36 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:29:36 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:29:36 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:29:36 --> Total execution time: 0.0422
+DEBUG - 2016-11-08 16:30:26 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:30:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:30:26 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:30:26 --> Total execution time: 0.0470
+DEBUG - 2016-11-08 16:32:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:32:20 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:32:20 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:32:20 --> Total execution time: 0.0417
+DEBUG - 2016-11-08 16:32:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:32:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:32:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:32:39 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:32:39 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:32:39 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:32:39 --> Total execution time: 0.0430
+DEBUG - 2016-11-08 16:34:57 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:34:57 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:34:57 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:34:57 --> Total execution time: 0.0432
+DEBUG - 2016-11-08 16:35:01 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:01 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:35:01 --> Total execution time: 0.0439
+DEBUG - 2016-11-08 16:35:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:02 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:35:02 --> Total execution time: 0.0425
+DEBUG - 2016-11-08 16:35:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:09 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:35:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:49 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:35:50 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:50 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:50 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:35:50 --> Total execution time: 0.0461
+DEBUG - 2016-11-08 16:35:55 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:35:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:35:55 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:36:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:36:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:36:29 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:36:42 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:36:42 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:36:42 --> Session: session.auto_start is enabled in php.ini. Aborting.
+ERROR - 2016-11-08 16:36:42 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 122
+ERROR - 2016-11-08 16:36:42 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 123
+ERROR - 2016-11-08 16:36:42 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 124
+DEBUG - 2016-11-08 16:36:42 --> Total execution time: 0.0875
+DEBUG - 2016-11-08 16:37:14 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:37:14 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:37:14 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:37:14 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:37:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:37:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:37:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:37:37 --> Total execution time: 0.0395
+DEBUG - 2016-11-08 16:37:41 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:37:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:37:41 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:37:41 --> Total execution time: 0.0438
+DEBUG - 2016-11-08 16:37:48 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:37:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:37:48 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:37:48 --> Total execution time: 0.0451
+DEBUG - 2016-11-08 16:38:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:38:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:38:29 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:38:29 --> Total execution time: 0.0499
+DEBUG - 2016-11-08 16:39:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:39:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:39:09 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:39:09 --> Total execution time: 0.0448
+DEBUG - 2016-11-08 16:39:46 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:39:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:39:46 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:39:46 --> Total execution time: 0.0444
+DEBUG - 2016-11-08 16:39:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:39:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:39:51 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:39:51 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:39:54 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:39:54 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:39:54 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:39:54 --> Total execution time: 0.0474
+DEBUG - 2016-11-08 16:39:58 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:39:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:39:58 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:39:58 --> Total execution time: 0.0447
+DEBUG - 2016-11-08 16:40:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:40:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:40:02 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:40:02 --> Total execution time: 0.0458
+DEBUG - 2016-11-08 16:40:11 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:40:11 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:40:11 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:40:11 --> Total execution time: 0.0432
+DEBUG - 2016-11-08 16:40:11 --> Total execution time: 0.0432
+DEBUG - 2016-11-08 16:40:22 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:40:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:40:22 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:40:22 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:40:22 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:42:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:42:27 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:42:27 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:42:27 --> Total execution time: 0.0487
+DEBUG - 2016-11-08 16:42:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:42:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:42:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:42:37 --> Total execution time: 0.0451
+DEBUG - 2016-11-08 16:42:43 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:42:43 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:42:43 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:42:43 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:42:43 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:43:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:43:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:43:02 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:43:02 --> Total execution time: 0.0430
+DEBUG - 2016-11-08 16:43:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:43:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:43:09 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:43:09 --> Total execution time: 0.0455
+DEBUG - 2016-11-08 16:43:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:43:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:43:51 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:43:51 --> Total execution time: 0.0409
+DEBUG - 2016-11-08 16:43:58 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:43:58 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:43:58 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:43:58 --> Total execution time: 0.0461
+DEBUG - 2016-11-08 16:44:01 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:44:01 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:44:01 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:44:01 --> Total execution time: 0.0509
+DEBUG - 2016-11-08 16:44:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:44:07 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:44:07 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:44:07 --> Total execution time: 0.0543
+DEBUG - 2016-11-08 16:44:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:44:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:44:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:44:37 --> Total execution time: 0.0444
+DEBUG - 2016-11-08 16:44:45 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:44:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:44:45 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:44:45 --> Total execution time: 0.0448
+DEBUG - 2016-11-08 16:45:06 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:45:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:45:06 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:45:06 --> Total execution time: 0.0465
+DEBUG - 2016-11-08 16:45:47 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:45:47 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:45:47 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:45:47 --> Total execution time: 0.0412
+DEBUG - 2016-11-08 16:45:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:45:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:45:53 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:45:53 --> Total execution time: 0.0489
+DEBUG - 2016-11-08 16:45:59 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:45:59 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:45:59 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:45:59 --> Total execution time: 0.0436
+DEBUG - 2016-11-08 16:46:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:46:27 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:46:27 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:46:27 --> Total execution time: 0.0425
+DEBUG - 2016-11-08 16:46:33 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:46:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:46:33 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:46:33 --> Total execution time: 0.0486
+DEBUG - 2016-11-08 16:47:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:47:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:47:53 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:47:53 --> Total execution time: 0.0415
+DEBUG - 2016-11-08 16:47:57 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:47:57 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:47:57 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:47:57 --> Total execution time: 0.0449
+DEBUG - 2016-11-08 16:48:00 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:48:00 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:48:00 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:48:00 --> Total execution time: 0.0458
+DEBUG - 2016-11-08 16:50:03 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:50:03 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:50:03 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:50:03 --> Total execution time: 0.0487
+DEBUG - 2016-11-08 16:50:08 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:50:08 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:50:08 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:50:08 --> Total execution time: 0.0475
+DEBUG - 2016-11-08 16:51:09 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:51:09 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:51:09 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:51:09 --> Total execution time: 0.0415
+DEBUG - 2016-11-08 16:51:12 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:51:12 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:51:12 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:51:12 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:51:46 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:51:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:51:46 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:51:46 --> Total execution time: 0.0426
+DEBUG - 2016-11-08 16:52:27 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:52:27 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:52:27 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:52:27 --> Total execution time: 0.0429
+DEBUG - 2016-11-08 16:52:40 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:52:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:52:40 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:52:40 --> Total execution time: 0.0411
+DEBUG - 2016-11-08 16:52:46 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 16:52:46 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 16:52:46 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 16:52:46 --> Total execution time: 0.0496
+DEBUG - 2016-11-08 17:04:55 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:04:55 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:04:55 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:04:55 --> Total execution time: 0.0478
+DEBUG - 2016-11-08 17:05:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:05:02 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:05:02 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:05:02 --> Total execution time: 0.0450
+DEBUG - 2016-11-08 17:06:19 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:06:19 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:06:19 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:06:34 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:06:34 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:06:34 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:06:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:06:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:06:38 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:06:41 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:06:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:06:41 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:06:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:06:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:06:49 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:07:28 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:07:28 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:07:28 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:07:45 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:07:45 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:07:45 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:09:23 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:09:23 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:09:23 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:09:33 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:09:33 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:09:33 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:09:33 --> Total execution time: 0.0398
+DEBUG - 2016-11-08 17:09:44 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:09:44 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:09:44 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:09:44 --> Total execution time: 0.0413
+DEBUG - 2016-11-08 17:10:10 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:10:10 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:10:10 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:10:10 --> Total execution time: 0.0437
+DEBUG - 2016-11-08 17:11:15 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:11:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:11:15 --> Session: session.auto_start is enabled in php.ini. Aborting.
+ERROR - 2016-11-08 17:11:15 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 123
+ERROR - 2016-11-08 17:11:15 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 124
+ERROR - 2016-11-08 17:11:15 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 125
+DEBUG - 2016-11-08 17:11:15 --> Total execution time: 0.0692
+DEBUG - 2016-11-08 17:12:18 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:12:18 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:12:18 --> Session: session.auto_start is enabled in php.ini. Aborting.
+ERROR - 2016-11-08 17:12:18 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 123
+ERROR - 2016-11-08 17:12:18 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 124
+ERROR - 2016-11-08 17:12:18 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 125
+DEBUG - 2016-11-08 17:12:18 --> Total execution time: 0.0748
+DEBUG - 2016-11-08 17:12:56 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:12:56 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:12:56 --> Session: session.auto_start is enabled in php.ini. Aborting.
+ERROR - 2016-11-08 17:12:56 --> Severity: Warning --> json_decode() expects parameter 1 to be string, array given C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 98
+ERROR - 2016-11-08 17:12:56 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 125
+ERROR - 2016-11-08 17:12:56 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 126
+ERROR - 2016-11-08 17:12:56 --> Severity: Notice --> Trying to get property of non-object C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 127
+DEBUG - 2016-11-08 17:12:56 --> Total execution time: 0.0719
+DEBUG - 2016-11-08 17:13:30 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:13:30 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:13:30 --> Session: session.auto_start is enabled in php.ini. Aborting.
+ERROR - 2016-11-08 17:13:30 --> Severity: Warning --> json_decode() expects parameter 1 to be string, array given C:\Users\Staffan\Dropbox\xampp\htdocs\tinderbox\application\controllers\Login.php 98
+DEBUG - 2016-11-08 17:13:40 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:13:40 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:13:40 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:13:52 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:13:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:13:52 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:15:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:15:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:15:29 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:06 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:06 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:06 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:06 --> Total execution time: 0.0536
+DEBUG - 2016-11-08 17:20:15 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:15 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:15 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:15 --> Total execution time: 0.0506
+DEBUG - 2016-11-08 17:20:16 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:16 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:16 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:16 --> Total execution time: 0.0632
+DEBUG - 2016-11-08 17:20:26 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:26 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:26 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:26 --> Total execution time: 0.0428
+DEBUG - 2016-11-08 17:20:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:37 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:37 --> Total execution time: 0.0434
+DEBUG - 2016-11-08 17:20:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:49 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:49 --> Total execution time: 0.0436
+DEBUG - 2016-11-08 17:20:53 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:20:53 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:20:53 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:20:53 --> Total execution time: 0.0421
+DEBUG - 2016-11-08 17:21:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:21:51 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:21:51 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:21:51 --> Total execution time: 0.0446
+DEBUG - 2016-11-08 17:21:52 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 17:21:52 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 17:21:52 --> Session: session.auto_start is enabled in php.ini. Aborting.
+DEBUG - 2016-11-08 17:21:52 --> Total execution time: 0.0449
