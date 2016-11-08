@@ -979,3 +979,13 @@ DEBUG - 2016-11-08 14:46:34 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2016-11-08 14:46:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2016-11-08 14:46:34 --> Session class already loaded. Second attempt ignored.
 DEBUG - 2016-11-08 14:46:34 --> Total execution time: 0.0456
+DEBUG - 2016-11-08 14:48:02 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:48:02 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:48:02 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:48:02 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:48:02 --> Total execution time: 0.0397
+DEBUG - 2016-11-08 14:48:08 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:48:08 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:48:08 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:48:08 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:48:08 --> Total execution time: 0.0347
