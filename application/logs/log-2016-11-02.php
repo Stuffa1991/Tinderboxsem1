@@ -412,3 +412,37 @@ DEBUG - 2016-11-02 16:01:51 --> No URI present. Default controller set.
 DEBUG - 2016-11-02 16:01:51 --> Global POST, GET and COOKIE data sanitized
 DEBUG - 2016-11-02 16:01:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
 DEBUG - 2016-11-02 16:01:51 --> Total execution time: 0.0550
+DEBUG - 2016-11-02 16:05:13 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:05:13 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:05:13 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:06:55 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:06:55 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:06:55 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:06:55 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:07:51 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:07:51 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:07:51 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:07:51 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:07:51 --> Total execution time: 0.0389
+DEBUG - 2016-11-02 16:08:03 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:08:03 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:08:03 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:08:03 --> Total execution time: 0.0396
+DEBUG - 2016-11-02 16:09:28 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:09:28 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:09:28 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:09:28 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:09:28 --> Total execution time: 0.0457
+DEBUG - 2016-11-02 16:11:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:11:20 --> No URI present. Default controller set.
+DEBUG - 2016-11-02 16:11:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:11:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:11:20 --> Total execution time: 0.0404
+DEBUG - 2016-11-02 16:11:24 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:11:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:11:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:11:24 --> UTF-8 Support Enabled
+DEBUG - 2016-11-02 16:11:24 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-02 16:11:24 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-02 16:11:24 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-02 16:11:24 --> Total execution time: 0.0352

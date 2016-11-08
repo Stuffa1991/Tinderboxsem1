@@ -8,9 +8,10 @@
 
 		<!-- Compiled and minified CSS -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
-
 		<!-- Fonts -->
-		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<!-- Default css -->
+		<link rel="stylesheet" href="<?=base_url('public/css/default.css')";?>
 		   
 	</head>
 		<body>
