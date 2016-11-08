@@ -20,9 +20,16 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
+		$loggedIn = $this->session->login;
+
+		if($loggedIn){
+			redirect('/dashboard');
+			die();
+		}
+
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[8]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
 
 		if($this->form_validation->run() === FALSE)
 		{
@@ -69,6 +76,60 @@ class Login extends CI_Controller {
 		$this->session->sess_destroy();
 		redirect('/');
 		die();
+	}
+
+	/*
+	 * Register
+	 */
+	public function registerUser()
+	{
+		$loggedIn = $this->session->login;
+
+		if($loggedIn){
+			redirect('/dashboard');
+			die();
+		}
+
+		//Set form rules
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
+
+		if($this->form_validation->run() === FALSE)
+		{
+			//If the form validation isnt being runned
+			$this->load->view('header');
+			$this->load->view('login/register');
+			$this->load->view('footer');
+		}
+		else
+		{
+			//Get $_POST from FORM
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+			$repeatPassword = $this->input->post('repeatPassword');
+			$name = $this->input->post('name');
+
+			if($password != $repeatPassword) {
+				echo'Password not same';
+				return FALSE;
+			}
+
+			$data = array(
+		        'email'		=>	$email,
+		        'password' 	=>	$password,
+		        'name'		=>	$name
+		    );
+
+			$this->login_model->registerUser($data);
+		}
+	}
+
+	public function register()
+	{
+		//If the form validation isnt being runned
+		$this->load->view('header');
+		$this->load->view('login/register');
+		$this->load->view('footer');
 	}
 
 }

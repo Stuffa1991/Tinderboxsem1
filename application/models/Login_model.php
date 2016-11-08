@@ -23,6 +23,38 @@ class Login_model extends CI_Model {
 		return $result->row();
 	}
 	
+	public function registerUser($data = [])
+	{
+
+		//Insert new contact
+		$sth = sprintf('INSERT INTO contacts
+			(Email)
+			VALUES
+			("%s")',
+			$data['email']
+		);
+
+		//Execute query
+		$result = $this->db->query($sth);
+
+		//Get id from latest executed query
+		$contactId = $this->db->insert_id();
+
+		$date = date('Y-m-d H:i:s');
+
+		//Iniate new member
+		$sth = sprintf('INSERT INTO members
+			(contactid,name, password, role, created_at, language, mode)
+			VALUES
+			("%s", "%s", "%s", "user", "%s","en_US", "pending" )
+			',
+			$contactId, $data['name'], $data['password'], $date
+		);
+
+		$result = $this->db->query($sth);
+
+		return TRUE;
+	}
 }
 
 /* End of file Login_model.php */
