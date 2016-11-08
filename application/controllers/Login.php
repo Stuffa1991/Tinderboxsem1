@@ -10,7 +10,7 @@ class Login extends CI_Controller {
 	public function __construct()
 	{
 		parent::__construct();
-		$this->load->library('form_validation');
+		$this->load->library(array('form_validation', 'method'));
 		$this->load->model('login_model');
 		$this->load->helper('url'); 
 	}
@@ -65,7 +65,9 @@ class Login extends CI_Controller {
 			$this->session->set_userdata($sess_data);
 
 			redirect('/dashboard/');
-		} else {
+		} 
+		else 
+		{
 			return FALSE;
 		}
 	}
@@ -83,6 +85,78 @@ class Login extends CI_Controller {
 	 */
 	public function registerUser()
 	{
+		$this->method->method('POST');
+
+		//php://input returns NULL
+		$post = file_get_contents('php://input');
+		$post = json_decode($post);
+
+		//php://input returns NULL
+		var_dump($this->input->post('a'));
+		die();
+
+		// Set your rules
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
+		$this->form_validation->set_rules('repeatPassword', 'Password', 'required|min_length[1]|matches[password]');
+		$this->form_validation->set_rules('name', 'Name', 'required|min_length[1]');
+
+		if ($this->form_validation->run() == TRUE) {  
+		  //This means it works we can continue the script hooray
+		}
+		else 
+		{ 
+		  $this->output
+			->set_header('HTTP/1.1 400 Bad Request')
+			->set_header('Content-Type: application/json')
+			->set_output(json_encode([
+				'status' => 400,
+				'statusCode' => 'Bad Request',
+				'response' => validation_errors()
+				]))
+			->_display();
+
+		die();
+		} 
+
+		$res = $this->login_model->registerUser([
+			'email' => $post->email,
+			'name' => $post->name,
+			'password' => $post->password
+		]);
+
+		if($res === false)
+		{
+			$this->output
+			->set_header('HTTP/1.1 400 Bad Request')
+			->set_header('Content-Type: application/json')
+			->set_output(json_encode([
+				'status' => 400,
+				'statusCode' => 'Bad Request',
+				'response' => $res
+				]))
+			->_display();
+
+		die();
+		} 
+		else 
+		{
+			$this->output
+			->set_header('HTTP/1.1 200 OK')
+			->set_header('Content-Type: application/json')
+			->set_output(json_encode([
+				'status' => 200,
+				'statusCode' => 'OK',
+				'response' => $res
+				]))
+			->_display();
+
+		die();
+		}
+	}
+
+	public function register()
+	{
 		$loggedIn = $this->session->login;
 
 		if($loggedIn){
@@ -90,42 +164,6 @@ class Login extends CI_Controller {
 			die();
 		}
 
-		//Set form rules
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
-
-		if($this->form_validation->run() === FALSE)
-		{
-			//If the form validation isnt being runned
-			$this->load->view('header');
-			$this->load->view('login/register');
-			$this->load->view('footer');
-		}
-		else
-		{
-			//Get $_POST from FORM
-			$email = $this->input->post('email');
-			$password = $this->input->post('password');
-			$repeatPassword = $this->input->post('repeatPassword');
-			$name = $this->input->post('name');
-
-			if($password != $repeatPassword) {
-				echo'Password not same';
-				return FALSE;
-			}
-
-			$data = array(
-		        'email'		=>	$email,
-		        'password' 	=>	$password,
-		        'name'		=>	$name
-		    );
-
-			$this->login_model->registerUser($data);
-		}
-	}
-
-	public function register()
-	{
 		//If the form validation isnt being runned
 		$this->load->view('header');
 		$this->load->view('login/register');

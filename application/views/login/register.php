@@ -1,9 +1,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
-					<form action="<?php  echo base_url('/login/register/')?>" method="POST" role="form">
+					<form action="<?php  echo base_url('/login/registerUser/')?>" method="POST" role="form">
 						<legend>Form title</legend>
-						<?php echo validation_errors(); ?>
 						<div class="form-group">
 							<label for="username">Username</label>
 							<input type="text" class="form-control" id="username" name="email" placeholder="Email" required autofocus>
