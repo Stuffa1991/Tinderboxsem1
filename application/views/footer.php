@@ -67,6 +67,18 @@
 			jQuery('.registerUserForm').submit(function(e) {
 				e.preventDefault();
 
+			    //Serialize form - get values
+			    var values = {};
+				$.each(jQuery(this).serializeArray(), function(i, field) {
+				    values[field.name] = field.value;
+				});
+
+				if(values.repeatPassword !== values.password)
+				{
+					alert('Passwords dont match');
+					return false;
+				}
+
 				url = jQuery(this).attr('action');
 
 				jQuery.ajax({
