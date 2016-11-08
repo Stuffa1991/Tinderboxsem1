@@ -923,3 +923,59 @@ DEBUG - 2016-11-08 14:40:38 --> Session: "sess_save_path" is empty; using "sessi
 DEBUG - 2016-11-08 14:40:38 --> Auth class already loaded. Second attempt ignored.
 DEBUG - 2016-11-08 14:40:38 --> Session class already loaded. Second attempt ignored.
 DEBUG - 2016-11-08 14:40:38 --> Total execution time: 0.0400
+DEBUG - 2016-11-08 14:42:06 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:42:06 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:42:06 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:42:06 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:42:06 --> Total execution time: 0.0350
+DEBUG - 2016-11-08 14:42:20 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:42:20 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:42:20 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:42:20 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:42:20 --> Total execution time: 0.0362
+DEBUG - 2016-11-08 14:43:07 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:43:07 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:43:07 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:43:07 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:43:07 --> Total execution time: 0.0393
+DEBUG - 2016-11-08 14:45:22 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:22 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:22 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:29 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:29 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:29 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:37 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:37 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:37 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:37 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:38 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:38 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:38 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:38 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:38 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:38 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:38 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:41 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:41 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:41 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:48 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:48 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:48 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:45:49 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:45:49 --> Global POST, GET and COOKIE data sanitized
+ERROR - 2016-11-08 14:45:49 --> 404 Page Not Found: Public/css
+DEBUG - 2016-11-08 14:46:34 --> UTF-8 Support Enabled
+DEBUG - 2016-11-08 14:46:34 --> Global POST, GET and COOKIE data sanitized
+DEBUG - 2016-11-08 14:46:34 --> Session: "sess_save_path" is empty; using "session.save_path" value from php.ini.
+DEBUG - 2016-11-08 14:46:34 --> Session class already loaded. Second attempt ignored.
+DEBUG - 2016-11-08 14:46:34 --> Total execution time: 0.0456
