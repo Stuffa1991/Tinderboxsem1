@@ -1,3 +1,6 @@
+/*
+ * BASE - Dont edit this
+ */
 body {
     display: flex;
     min-height: 100vh;
@@ -7,26 +10,65 @@ body {
 main {
     flex: 1 0 auto;
 }
+/*
+ * End base
+ */
 
-.nav-wrapper {
+
+/*
+ * Header
+ */
+nav .nav-wrapper {
     background: #043540;
 }
+/*
+ * End header
+ */
+
+/*
+ * Site view
+ */
+.side-nav .userView .circle {
+    height: 122px;
+    width: 122px;
+    margin: 0 25px auto;
+}
+/*
+ * End site
+ */
+
+/*
+ * Footer
+ */
 footer.page-footer {
 	background: #043540;
+	margin-top: 0;
+    padding-top: 0;
 }
-nav .button-collapse {
-	margin: 0 10px;
+footer .container {
+	width: 100%;
 }
-nav img {
-    width: 40px;
-    margin: 0 10px;
+footer .row {
+	margin-bottom: 0;
 }
-
-@media only screen and (max-width: 992px) {
-	.hide-on-med-and-down {
-	    display: block !important;
-	}
+footer.page-footer .collection {
+    border: none;
+    margin: 0;
 }
-
-
-
+footer.page-footer .collection .collection-item {
+	width: 20%;
+    float: left;
+    border: none;
+}
+footer.page-footer .collection a.collection-item {
+	background: #043540;
+	color: #fff;
+	padding: 5px 20px;
+	text-align: center;
+}
+footer.page-footer .collection a.collection-item.active {
+	background: #f18879;
+}
+/*
+ * End footer
+ */
