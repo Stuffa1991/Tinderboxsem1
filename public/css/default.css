@@ -1,0 +1,32 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.nav-wrapper {
+    background: #043540;
+}
+footer.page-footer {
+	background: #043540;
+}
+nav .button-collapse {
+	margin: 0 10px;
+}
+nav img {
+    width: 40px;
+    margin: 0 10px;
+}
+
+@media only screen and (max-width: 992px) {
+	.hide-on-med-and-down {
+	    display: block !important;
+	}
+}
+
+
+
