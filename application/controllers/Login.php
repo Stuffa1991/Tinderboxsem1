@@ -106,10 +106,10 @@ class Login extends CI_Controller {
 		else 
 		{ 
 		  $this->output
-			->set_header('HTTP/1.1 400 Bad Request')
+			->set_header('HTTP/1.1 200 OK')
 			->set_header('Content-Type: application/json')
 			->set_output(json_encode([
-				'status' => 400,
+				'status' => 200,
 				'statusCode' => 'Validation Error',
 				'response' => validation_errors()
 				]))

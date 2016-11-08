@@ -60,12 +60,18 @@
 
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
+		
+		
 
 		<script type="text/javascript">
 			jQuery('.registerUserForm').submit(function(e) {
+				e.preventDefault();
+
+				url = jQuery(this).attr('action');
+
 				jQuery.ajax({
 					type: 'POST',
-					url: 'http://localhost/tinderbox/login/registerUser/',
+					url: url,
 					data: jQuery(this).serialize(),
 					success: function(data, textStatus, xhr) {
 						//console.debug(data + ' ' + textStatus + ' ' + xhr);
@@ -79,9 +85,7 @@
 						//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
 					}
 				});
-				e.preventDefault();
 			});
-			
 		</script>
 
 		<!-- Compiled and minified JavaScript -->
