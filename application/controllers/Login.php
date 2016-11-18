@@ -20,12 +20,7 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$loggedIn = $this->session->login;
-
-		if($loggedIn){
-			redirect('/dashboard');
-			die();
-		}
+		$this->auth->handleLogin();
 
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
@@ -45,6 +40,24 @@ class Login extends CI_Controller {
 			$password = $this->input->post('password');
 			$this->login($email,$password);
 		}
+	}
+
+	/*
+	 * Page register
+	 */
+	public function register()
+	{
+		$loggedIn = $this->session->login;
+
+		if($loggedIn){
+			redirect('/dashboard');
+			die();
+		}
+
+		//If the form validation isnt being runned
+		$this->load->view('header');
+		$this->load->view('login/register');
+		$this->load->view('footer');
 	}
 
 	/*
@@ -72,16 +85,20 @@ class Login extends CI_Controller {
 		}
 	}
 
+	/*
+	 * Method to logout
+	 */
 	public function logout()
 	{
-		// @TODO Do not sess_destroy but set the data to NULL or ZERO
-		$this->session->sess_destroy();
-		redirect('/');
-		die();
+
+		// // @TODO Do not sess_destroy but set the data to NULL or ZERO
+		// $this->session->sess_destroy();
+		// redirect('/');
+		// die();
 	}
 
 	/*
-	 * Register
+	 * Method to register user
 	 */
 	public function registerUser()
 	{
@@ -152,21 +169,6 @@ class Login extends CI_Controller {
 
 		die();
 		}
-	}
-
-	public function register()
-	{
-		$loggedIn = $this->session->login;
-
-		if($loggedIn){
-			redirect('/dashboard');
-			die();
-		}
-
-		//If the form validation isnt being runned
-		$this->load->view('header');
-		$this->load->view('login/register');
-		$this->load->view('footer');
 	}
 
 }

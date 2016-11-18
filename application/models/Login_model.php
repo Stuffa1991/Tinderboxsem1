@@ -5,7 +5,7 @@ class Login_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
+		$this->load->library('encryption');
 	}	
 
 	public function login($email, $password)
@@ -25,7 +25,6 @@ class Login_model extends CI_Model {
 	
 	public function registerUser($data = [])
 	{
-
 		//Insert new contact
 		$sth = sprintf('INSERT INTO contacts
 			(Email)
@@ -41,6 +40,7 @@ class Login_model extends CI_Model {
 		$contactId = $this->db->insert_id();
 
 		$date = date('Y-m-d H:i:s');
+		$password = $data['password'];
 
 		//Iniate new member
 		$sth = sprintf('INSERT INTO members
