@@ -9,14 +9,14 @@ class Schedules_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function getSchedules()
+	public function getSchedules($memberid)
 	{
-
-	}
-
-	public function getSchedulesById($memberid)
-	{
-
+		$sth = $this->db->query("SELECT fromtime, totime 
+			FROM schedules 
+			WHERE mode != 'deleted'
+			AND memberid = %d", $memberid);
+		
+		$this->notes = $sth->result();
 	}
 
 	public function getSchedulesByDay()
