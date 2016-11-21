@@ -75,8 +75,6 @@ class Login extends CI_Controller {
 		//Find the the member via the model
 		$member = $this->login_model->login($email, $password);
 
-		var_dump($member);
-		return;
 		if(count($member))
 		{
 			//If there is 1 or more results returned --- should only be one
