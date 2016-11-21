@@ -32,12 +32,7 @@ class Login_model extends CI_Model {
 	public function registerUser($data = [])
 	{
 		//Insert new contact
-		$sth = sprintf('INSERT INTO contacts
-			(Email)
-			VALUES
-			("%s")',
-			$data['email']
-		);
+		$sth = sprintf('INSERT INTO contacts (Email) VALUES ("%s")', $data['email']);
 
 		//Execute query
 		$result = $this->db->query($sth);
