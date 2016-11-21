@@ -160,7 +160,7 @@ class Login extends CI_Controller {
 				]))
 			->_display();
 
-			//$this->auth->response(200, 'OK', $this->note_model->getNote($safeId));
+			//$this->auth->response(400, 'Bad Request', $res);
 
 		die();
 		} 

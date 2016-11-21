@@ -2,12 +2,18 @@
 
 class Dashboard extends CI_Controller {
 
+	/*
+	 * Construct
+	 */
 	public function __construct()
 	{
 		parent::__construct();
 		$this->auth->handleLogin();
 	}
 
+	/*
+	 * Page index
+	 */
 	public function index()
 	{
 		$this->load->view('header');
