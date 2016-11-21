@@ -9,7 +9,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    background-image: url(../img/background.jpg);
+    /*background-image: url(../img/background.jpg);*/
     background-size: cover;
 }
 /*
