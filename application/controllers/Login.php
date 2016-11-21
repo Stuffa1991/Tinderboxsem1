@@ -20,8 +20,6 @@ class Login extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->auth->handleLogin();
-
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
