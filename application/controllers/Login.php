@@ -151,6 +151,8 @@ class Login extends CI_Controller {
 				]))
 			->_display();
 
+			//$this->auth->response(200, 'OK', $this->note_model->getNote($safeId));
+
 		die();
 		} 
 		else 
