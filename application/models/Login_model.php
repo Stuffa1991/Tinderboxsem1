@@ -10,13 +10,16 @@ class Login_model extends CI_Model {
 
 	public function login($email, $password)
 	{
+
+		$encryptedPassword = $this->encryption->encrypt($password);
+
 		$sth = sprintf('SELECT me.password, co.email
 			FROM members AS me
 			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
 			WHERE co.email = "%s" 
 			AND me.password = "%s" 
 			LIMIT 1',
-			$email, $password
+			$email, $encryptedPassword
 		);
 
 		$result = $this->db->query($sth);
@@ -42,13 +45,15 @@ class Login_model extends CI_Model {
 		$date = date('Y-m-d H:i:s');
 		$password = $data['password'];
 
+		$encryptedPassword = $this->encryption->encrypt($password);
+
 		//Iniate new member
 		$sth = sprintf('INSERT INTO members
 			(contactid,name, password, role, created_at, language, mode)
 			VALUES
 			("%s", "%s", "%s", "user", "%s","en_US", "pending" )
 			',
-			$contactId, $data['name'], $data['password'], $date
+			$contactId, $data['name'], $encryptedPassword, $date
 		);
 
 		$result = $this->db->query($sth);
