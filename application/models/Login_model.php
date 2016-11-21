@@ -10,8 +10,11 @@ class Login_model extends CI_Model {
 
 	public function login($email, $password)
 	{
-
-		$encryptedPassword = $this->encryption->encrypt($password);
+		//TODO
+		//Tilføj statement der henter en given bruger
+		//Tilføj decrypt - if decryptPassword == input
+			//->Videre til det vi har nu
+			//->Ellers return false;
 
 		$sth = sprintf('SELECT me.password, co.email
 			FROM members AS me
@@ -19,7 +22,7 @@ class Login_model extends CI_Model {
 			WHERE co.email = "%s" 
 			AND me.password = "%s" 
 			LIMIT 1',
-			$email, $encryptedPassword
+			$email, $password
 		);
 
 		$result = $this->db->query($sth);
@@ -53,7 +56,7 @@ class Login_model extends CI_Model {
 			VALUES
 			("%s", "%s", "%s", "user", "%s","en_US", "pending" )
 			',
-			$contactId, $data['name'], $encryptedPassword, $date
+			$contactId, $data['name'], $password, $date
 		);
 
 		$result = $this->db->query($sth);
