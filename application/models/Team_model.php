@@ -11,6 +11,14 @@ class Team_model extends CI_Model {
 		parent::__construct();
 	}
 
+	public function getTeam($id)
+	{
+		$query = sprintf('SELECT teamid, name FROM teams WHERE teamid = "%s"', $id);
+		$result = $this->db->query($query);
+
+		return $result->row();
+	}
+
 	public function setTeam($data = [])
 	{
 		$query = sprintf('INSERT INTO teams (name) VALUES ("%s")', $data['name']);
@@ -24,14 +32,6 @@ class Team_model extends CI_Model {
 		} 
 		
 		return false;
-	}
-
-	public function getTeam($id)
-	{
-		$query = sprintf('SELECT teamid, name FROM teams WHERE teamid = "%s"', $id);
-		$result = $this->db->query($query);
-
-		return $result->row();
 	}
 
 	public function updateTeam($id, $data = [])

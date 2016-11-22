@@ -18,6 +18,14 @@ class Task_model extends CI_Model {
 		parent::__construct();
 	}
 
+	public function getTask($id)
+	{
+		$query = sprintf('SELECT taskid, name, fromtime, totime FROM tasks WHERE taskid = "%s"', $id);
+		$result = $this->db->query($query);
+
+		return $result->row();
+	}
+
 	public function setTask()
 	{
 		$query = sprintf('INSERT INTO places (name) VALUES ("%s")', $data['name']);
@@ -37,14 +45,6 @@ class Task_model extends CI_Model {
 		} 
 		
 		return false;
-	}
-
-	public function getTask($id)
-	{
-		$query = sprintf('SELECT taskid, name, fromtime, totime FROM tasks WHERE taskid = "%s"', $id);
-		$result = $this->db->query($query);
-
-		return $result->row();
 	}
 
 	public function updateTask($id)
