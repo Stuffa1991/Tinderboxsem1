@@ -13,7 +13,7 @@ class Team_model extends CI_Model {
 
 	public function setTeam($data = [])
 	{
-		$query = sprintf('INSERT INTO teams (name) VALUES ("%s")', $data['title']);
+		$query = sprintf('INSERT INTO teams (name) VALUES ("%s")', $data['name']);
 		$this->db->query($query);
 
 		// Get latest id
@@ -29,7 +29,6 @@ class Team_model extends CI_Model {
 	public function getTeam($id)
 	{
 		$query = sprintf('SELECT teamid, name FROM teams WHERE teamid = "%s"', $id);
-
 		$result = $this->db->query($query);
 
 		return $result->row();
@@ -68,8 +67,7 @@ class Team_model extends CI_Model {
 
 		if(count($this->errors) === 0) {
 
-			$sth = sprintf("UPDATE teams SET mode = 'deleted'
-				WHERE teamid = %d", $noneTaintedId);
+			$sth = sprintf("UPDATE teams SET mode = 'deleted' WHERE teamid = %d", $noneTaintedId);
 
 			if($this->db->query($sth)) {
 				return true;

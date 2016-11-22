@@ -9,14 +9,16 @@ class Tasks_model extends CI_Model {
 		parent::__construct();
 	}
 
-	public function getTasks()
+	public function getTasks($id)
 	{
+		$query = $this->db->query('SELECT ta.name, ta.fromtime, ta.totime, pl.name as place
+			FROM tasks AS ta 
+			WHERE ta.memberid = "%s"
+			AND ta.mode != `deleted`
+		', $id);
+		$this->tasks = $query->result();
 
-	}
-
-	public function getTasksById($memberid)
-	{
-
+		return $this->tasks;
 	}
 
 	public function getTasksByDay()

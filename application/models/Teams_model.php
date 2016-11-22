@@ -12,9 +12,9 @@ class Teams_model extends CI_Model {
 	public function getTeams()
 	{
 		$query = $this->db->query("SELECT teamid, name FROM teams  WHERE mode != 'deleted'");
-		$this->notes = $query->result();
+		$this->teams = $query->result();
 
-		return $this->notes;
+		return $this->teams;
 	}
 
 }
