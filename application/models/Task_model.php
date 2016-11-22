@@ -26,7 +26,7 @@ class Task_model extends CI_Model {
 		return $result->row();
 	}
 
-	public function setTask()
+	public function setTask($data = [])
 	{
 		$query = sprintf('INSERT INTO places (name) VALUES ("%s")', $data['name']);
 		$this->db->query($query);
@@ -47,7 +47,7 @@ class Task_model extends CI_Model {
 		return false;
 	}
 
-	public function updateTask($id)
+	public function updateTask($id, $data = [])
 	{
 		// If not an int, return false
 		if(!is_int($id) && $id <= 0) { return false; }	
