@@ -29,7 +29,7 @@ class Member_model extends CI_Model {
 	}
 	public function setMember()
 	{
-		// Sets the contact field
+		// Sets the contact field for now
 		$query = sprintf('INSERT INTO contacts (email, phone, mobile) VALUES ("%s", "%s", "%s")', 
 			$data['email'], $data['phone'], $data['mobile']);
 		$this->db->query($query);
@@ -51,13 +51,12 @@ class Member_model extends CI_Model {
 		return false;
 	}
 
-
 	public function updateMember($id, $data)
 	{
 		// If not an int, return false
 		if(!is_int($id) && $id <= 0) { return false; }	
 
-		// Updates the contact field
+		// Updates the contact field for now
 		$query = sprintf('UPDATE contacts SET email = "%s", phone = "%s", mobile = "%s" WHERE contacitd = "%s"', 
 			$data['contactid'], $data['email'], $data['phone'], $data['mobile']);
 		$this->db->query($query);
