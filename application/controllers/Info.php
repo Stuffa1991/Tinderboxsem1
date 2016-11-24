@@ -40,6 +40,6 @@ class Info extends CI_Controller {
 	public function getRules()
 	{
 		// Loads library response
-		$this->response->response(200, 'OK', $this->Informations_model->getInfos('rules'));
+		$this->response->response(200, 'OK', $this->Informations_model->getInfos('rule'));
 	}
 }
