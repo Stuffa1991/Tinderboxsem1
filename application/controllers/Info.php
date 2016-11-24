@@ -2,6 +2,22 @@
 
 class Info extends CI_Controller {
 
+	/*
+	 * Construct
+	 */
+	public function __construct()
+	{
+		parent::__construct();
+		$this->auth->handleLogin();
+
+		// Loads library method
+		$this->method->method('GET');
+		$this->load->model('Informations_model');
+	}
+
+	/*
+	 * Page index
+	 */
 	public function index()
 	{
 		$this->load->view('header');
@@ -9,18 +25,21 @@ class Info extends CI_Controller {
 		$this->load->view('footer');
 	}
 
-	public function getInfo()
+	/*
+	 * Method get infos
+	 */
+	public function getInfos()
 	{
-		// Loads library method
-		$this->method->method('GET');
-		$this->load->model('Informations_model');
-
 		// Loads library response
 		$this->response->response(200, 'OK', $this->Informations_model->getInfos('info'));
+	}
 
-		var_dump($this->Informations_model->getInfos('info'));
+	/*
+	 * Method get rules
+	 */
+	public function getRules()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->Informations_model->getInfos('rules'));
 	}
 }
-
-/* End of file Info.php */
-/* Location: ./application/controllers/Info.php */
