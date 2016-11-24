@@ -34,6 +34,3 @@ class Info extends CI_Controller {
 		$this->response->response(200, 'OK', $this->Informations_model->getInfos('info'));
 	}
 }
-
-/* End of file Info.php */
-/* Location: ./application/controllers/Info.php */
