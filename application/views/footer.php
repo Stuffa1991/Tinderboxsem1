@@ -67,5 +67,10 @@
 		<!-- Default js -->
 		<script src="<?=base_url('public/js/default.js');?>"></script>
 		
+
+		<script id="teamleader" type="x-tmpl-mustache">
+		Hello
+		{{ name }} - {{ email }} - {{ phone }} - {{ mobile }}
+		</script>
 	</body>
 </html>
