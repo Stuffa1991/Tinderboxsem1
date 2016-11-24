@@ -1,7 +1,9 @@
 <div class="row">
 	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Back</a>
 	
-	<ul id="member-list" class="collection with-header"></ul>
+	<ul id="member-list" class="collection with-header">
+		
+	</ul>
 </div>
 
 <script id="members" type="x-tmpl-mustache">

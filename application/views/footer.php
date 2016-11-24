@@ -67,6 +67,10 @@
 		<!-- Default js -->
 		<script src="<?=base_url('public/js/default.js');?>"></script>
 		<script src="<?=base_url('public/js/admin.js');?>"></script>
-		
+		<script>
+		var siteUrl = '<?=base_url('');?>';
+		</script>	
+	
+
 	</body>
 </html>
