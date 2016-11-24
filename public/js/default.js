@@ -37,7 +37,7 @@ function loadTeamLeader(siteUrl) {
 
 			var template = $('#teamleader').html();
 			Mustache.parse(template);   // optional, speeds up future uses
-			var rendered = Mustache.render(template, {name: "Luke", email: "email@email", phone: "5050505", mobile: "505050"});
+			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
 			$('#container').html(rendered);
 		}
 	});

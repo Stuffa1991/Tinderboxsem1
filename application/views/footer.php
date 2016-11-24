@@ -76,7 +76,7 @@
 		  	<div class="card-stacked">
 		    	<div class="card-content">
 		    		<p>Team leader - {{ name }}</p>
-		      		<p>{{ email }} - {{ phone }} - {{ mobile }}</p>
+		      		<p>{{ email }} - {{ mobile }}</p>
 		   		</div>
 		    	<div class="card-action">
 		    		
