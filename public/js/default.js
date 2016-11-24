@@ -1,5 +1,7 @@
 $(function(){
 
+	var siteUrl = 'http://localhost/sites/tinderbox/trunk/';
+
 	/*
 	 * Initialize
 	 */
@@ -7,12 +9,6 @@ $(function(){
 	$(".button-collapse").sideNav();
 	
 	
-
-
-
-
-
-
 	// Initialize collapsible (uncomment the line below if you use the dropdown variation)
 	//$('.collapsible').collapsible();
 
@@ -23,7 +19,41 @@ $(function(){
 	      	draggable: true // Choose whether you can drag to open on touch screens
 	    }
 	);
+
+	loadTeamLeader(siteUrl);
 });
+
+/*
+ * Dashboard view
+ */
+function loadTeamLeader(siteUrl) {
+		
+		$.ajax({
+        type: 'GET',
+        url: siteUrl + 'dashboard/getteamleader/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{
+			var html = '<div class="card horizontal">'
+					      	+'<div class="card-image">'
+					        	+'<img src="http://lorempixel.com/100/190/nature/6">'
+					      	+'</div>'
+					      	+'<div class="card-stacked">'
+					        	+'<div class="card-content">'
+					        		+'<p>Team leader</p>'
+					          		+'<p>I am a very simple card. I am good at containing small bits of information.</p>'
+					       		+'</div>'
+					        	+'<div class="card-action">'
+					          		+'<a href="#" class="right">This is a link</a>'
+				        		+'</div>'
+					      	+'</div>'
+					    +'</div>';
+	
+			$('#container').html(html);
+		}
+	});
+}
+
 
 /*
  * Register user form
