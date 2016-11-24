@@ -80,7 +80,8 @@ class Login extends CI_Controller {
 			//If there is 1 or more results returned --- should only be one
 			$sess_data = array(
 				'login' => TRUE, 
-				'email' => $member->email
+				'email' => $member->email,
+				'memberid' => $member->memberid
 			);
 
 			$this->session->set_userdata($sess_data);
