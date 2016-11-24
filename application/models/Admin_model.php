@@ -5,17 +5,18 @@ class Admin_model extends CI_Model {
 	public function __construct()
 	{
 		parent::__construct();
-		
 	}
 
-	public function setInfo($type, $data = [])
+	public function setInfo($data = [])
 	{
-		$this->load->model('Information_model');
-		$sth = sprintf('INSERT ')
-		$result =
+		$this->load->model('information_model');
+		$this->information_model->setInfo($data);
+	}
+
+	public function getMembers()
+	{
+		$this->load->model('members_model');
+		return $this->members_model->getMembers();
 	}
 
 }
-
-/* End of file Admin_model.php */
-/* Location: ./application/models/Admin_model.php */

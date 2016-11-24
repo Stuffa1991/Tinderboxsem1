@@ -18,11 +18,13 @@ class Response
 
 		// Validate
 		if(!is_int($status) && $status > 0) { 
-			die('Wrong data');
+			//die('Wrong data');
+			die('Wrong data: status is not an int');
 		}
 
 		if(!is_string($statusText)) { 
-			die('Wrong data');
+			//die('Wrong data');
+			die('Wrong data: statustext is not a string');
 		}
 
 		// Sanitize

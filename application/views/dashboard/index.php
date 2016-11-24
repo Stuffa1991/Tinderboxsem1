@@ -15,7 +15,3 @@
 	  	</div>
 	</div>
 </script>
-
-<script id="teamleader" type="x-tmpl-mustache">
-
-</script>

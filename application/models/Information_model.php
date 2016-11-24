@@ -28,7 +28,7 @@ class Information_model extends CI_Model {
 		return $result->row();
 	}
 
-	public function setInfo($type, $data = [])
+	public function setInfo($data = [])
 	{
 		$query = sprintf('INSERT INTO informations (memberid, imageid, type, title, `text`, created_at) 
 			VALUES ("%s", "%s", "%s","%s", "%s", "%s")', 

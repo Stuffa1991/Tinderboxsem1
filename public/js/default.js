@@ -7,7 +7,7 @@ $(function(){
 	 */
 	// Initialize collapse button
 	$(".button-collapse").sideNav();
-	
+	$('select').material_select();
 	
 	// Initialize collapsible (uncomment the line below if you use the dropdown variation)
 	//$('.collapsible').collapsible();
@@ -20,8 +20,27 @@ $(function(){
 	    }
 	);
 
-	loadTeamLeader(siteUrl);
+	//loadAdminView(siteUrl);
+	//loadTeamLeader(siteUrl);
+
+	//loadInfoView(siteUrl);
+	//loadRuleView(siteUrl);
+	//loadNewsView(siteUrl);
+
+
+
 });
+
+function serializeForm(data) 
+{
+	//Serialize form - get values
+    var values = {};
+	$.each(data, function(i, field) {
+	    values[field.name] = field.value;
+	});
+
+	return values;
+}
 
 /*
  * Dashboard view
@@ -42,19 +61,68 @@ function loadTeamLeader(siteUrl)
 	});
 }
 
-
+/*
+ * Method to load infos
+ */
 function loadInfoView(siteUrl)
 {
 	$.ajax({
 	    type: 'GET',
-	    url: siteUrl + 'info/getinfo',
+	    url: siteUrl + 'info/getinfos/',
 		contentType: 'application/json',
 		success: function(data, status, response)
-		{
-			var template = $('#info').html();
-			Mustache.parse(template);   // optional, speeds up future uses
-			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
-			$('#container').html(rendered);
+		{	
+			$.each(data, function(key, val) {
+				var template = $('#info').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {title: val.title, text: val.text});
+				$('#info-list').append(rendered);
+			});
+			
+		}
+	});
+}
+
+/*
+ * Method to load rules
+ */
+function loadRuleView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'info/getrules/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				var template = $('#info').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {title: val.title, text: val.text});
+				$('#info-list').append(rendered);
+			});
+			
+		}
+	});
+}
+
+/*
+ * Method to load news
+ */
+function loadNewsView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'info/getnews/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				var template = $('#info').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {title: val.title, text: val.text});
+				$('#info-list').append(rendered);
+			});
+			
 		}
 	});
 }
@@ -65,11 +133,8 @@ function loadInfoView(siteUrl)
 jQuery('.registerUserForm').submit(function(e) {
 	e.preventDefault();
 
-    //Serialize form - get values
-    var values = {};
-	$.each(jQuery(this).serializeArray(), function(i, field) {
-	    values[field.name] = field.value;
-	});
+    var data = $(this).serializeArray();
+	var values = serializeForm(data); 
 
 	if(values.repeatPassword !== values.password)
 	{

@@ -66,6 +66,7 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" integrity="sha256-iaqfO5ue0VbSGcEiQn+OeXxnxAMK2+QgHXIDA5bWtGI=" crossorigin="anonymous"></script>
 		<!-- Default js -->
 		<script src="<?=base_url('public/js/default.js');?>"></script>
+		<script src="<?=base_url('public/js/admin.js');?>"></script>
 		
 	</body>
 </html>
