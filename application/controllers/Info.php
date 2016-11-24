@@ -42,4 +42,13 @@ class Info extends CI_Controller {
 		// Loads library response
 		$this->response->response(200, 'OK', $this->Informations_model->getInfos('rule'));
 	}
+
+	/*
+	 * Method get news
+	 */
+	public function getNews()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->Informations_model->getInfos('news'));
+	}
 }
