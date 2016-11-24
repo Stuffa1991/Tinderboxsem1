@@ -17,6 +17,8 @@ class Info extends CI_Controller {
 
 		// Loads library response
 		$this->response->response(200, 'OK', $this->Informations_model->getInfos('info'));
+
+		var_dump($this->Informations_model->getInfos('info'));
 	}
 }
 
