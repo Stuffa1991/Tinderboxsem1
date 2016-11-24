@@ -15,7 +15,7 @@ class Informations_model extends CI_Model {
 		$result = $this->db->query($query);
 
 		$this->infos = $result->result();
-		
+
 		return $this->infos;
 	}
 
