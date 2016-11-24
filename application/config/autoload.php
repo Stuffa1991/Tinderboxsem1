@@ -58,7 +58,7 @@ $autoload['packages'] = array(APPPATH.'');
 |
 |	$autoload['libraries'] = array('user_agent' => 'ua');
 */
-$autoload['libraries'] = array('database', 'session', 'auth', 'response');
+$autoload['libraries'] = array('database', 'session', 'method', 'auth', 'response');
 
 /*
 | -------------------------------------------------------------------

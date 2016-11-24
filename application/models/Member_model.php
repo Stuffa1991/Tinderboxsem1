@@ -38,7 +38,7 @@ class Member_model extends CI_Model {
 
 		// Sets the member field
 		$query = sprintf('INSERT INTO members (contactid, name, role, created_at) VALUES ("%s", "%s", "%s", "%s")', 
-			$contactid, $data['name'], $data['role'], date('Y-m-d H:i:s');
+			$contactid, $data['name'], $data['role'], date('Y-m-d H:i:s'));
 		$this->db->query($query);
 
 		// Get latest id

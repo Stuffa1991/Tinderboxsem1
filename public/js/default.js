@@ -25,7 +25,9 @@ $(function(){
 	);
 });
 
-//Register user form
+/*
+ * Register user form
+ */
 jQuery('.registerUserForm').submit(function(e) {
 	e.preventDefault();
 
