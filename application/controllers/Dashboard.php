@@ -21,7 +21,7 @@ class Dashboard extends CI_Controller {
 		$this->load->model('team_model');
 		
 		// Loads library response
-		$this->response->response(200, 'OK', $this->team_model->getTeamLeader(Session::get('memberid')));
+		$this->response->response(200, 'OK', $this->team_model->getTeamLeader($this->session->memberid));
 
 		$this->load->view('header');
 		$this->load->view('dashboard/index');
