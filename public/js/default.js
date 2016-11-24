@@ -26,15 +26,14 @@ $(function(){
 /*
  * Dashboard view
  */
-function loadTeamLeader(siteUrl) {
-		
-		$.ajax({
-        type: 'GET',
-        url: siteUrl + 'dashboard/getteamleader/',
+function loadTeamLeader(siteUrl) 
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'dashboard/getteamleader/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-
 			var template = $('#teamleader').html();
 			Mustache.parse(template);   // optional, speeds up future uses
 			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
@@ -43,6 +42,22 @@ function loadTeamLeader(siteUrl) {
 	});
 }
 
+
+function loadInfoView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'info/getinfo',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{
+			var template = $('#info').html();
+			Mustache.parse(template);   // optional, speeds up future uses
+			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
+			$('#container').html(rendered);
+		}
+	});
+}
 
 /*
  * Register user form
