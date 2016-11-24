@@ -1,7 +1,5 @@
 $(function(){
 
-	var siteUrl = 'http://localhost/sites/tinderbox/trunk/';
-
 	/*
 	 * Initialize
 	 */
