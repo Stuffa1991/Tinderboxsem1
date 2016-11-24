@@ -34,22 +34,11 @@ function loadTeamLeader(siteUrl) {
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-			var html = '<div class="card horizontal">'
-					      	+'<div class="card-image">'
-					        	+'<img src="http://lorempixel.com/100/190/nature/6">'
-					      	+'</div>'
-					      	+'<div class="card-stacked">'
-					        	+'<div class="card-content">'
-					        		+'<p>Team leader</p>'
-					          		+'<p>I am a very simple card. I am good at containing small bits of information.</p>'
-					       		+'</div>'
-					        	+'<div class="card-action">'
-					          		+'<a href="#" class="right">This is a link</a>'
-				        		+'</div>'
-					      	+'</div>'
-					    +'</div>';
-	
-			$('#container').html(html);
+
+			var template = $('#teamleader').html();
+			Mustache.parse(template);   // optional, speeds up future uses
+			var rendered = Mustache.render(template, {name: "Luke", email: "email@email", phone: "5050505", mobile: "505050"});
+			$('#container').html(rendered);
 		}
 	});
 }
