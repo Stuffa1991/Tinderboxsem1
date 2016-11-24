@@ -60,7 +60,7 @@ function loadMembersView(siteUrl)
 			$.each(data, function(key, val) {
 				var template = $('#members').html();
 				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {id: val.id, name: val.name, mobile: val.mobile});
+				var rendered = Mustache.render(template, {id: val.memberid, name: val.name, mobile: val.mobile});
 				$('#member-list').append(rendered);
 			});
 			
