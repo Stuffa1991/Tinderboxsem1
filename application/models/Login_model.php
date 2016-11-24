@@ -16,7 +16,7 @@ class Login_model extends CI_Model {
 			//->Videre til det vi har nu
 			//->Ellers return false;
 
-		$sth = sprintf('SELECT me.password, co.email
+		$sth = sprintf('SELECT me.memberid, me.password, co.email
 			FROM members AS me
 			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
 			WHERE co.email = "%s" 
