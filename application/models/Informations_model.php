@@ -11,7 +11,7 @@ class Informations_model extends CI_Model {
 
 	public function getInfos($type)
 	{
-		$sth = $this->db->query('SELECT * FROM informations WHERE type = "%s" AND mode != `deleted`', $type);
+		$sth = $this->db->query('SELECT * FROM informations WHERE type = "%s" AND mode != "deleted"', $type);
 		$this->infos = $sth->result();
 		
 		return $this->infos;
