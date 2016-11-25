@@ -126,22 +126,13 @@ class Login extends CI_Controller {
 		$this->form_validation->set_rules('repeatPassword', 'Password', 'required|min_length[1]|matches[password]');
 		$this->form_validation->set_rules('name', 'Name', 'required|min_length[1]');
 
-		if ($this->form_validation->run() == TRUE) {  
+		if ($this->form_validation->run() == TRUE) 
+		{  
 		  //This means it works we can continue the script hooray
 		}
 		else 
 		{ 
-		  $this->output
-			->set_header('HTTP/1.1 200 OK')
-			->set_header('Content-Type: application/json')
-			->set_output(json_encode([
-				'status' => 200,
-				'statusCode' => 'Validation Error',
-				'response' => validation_errors()
-				]))
-			->_display();
-
-		die();
+			$this->response->response(200, 'OK', validation_errors());
 		} 
 
 		$res = $this->login_model->registerUser([
@@ -152,33 +143,11 @@ class Login extends CI_Controller {
 
 		if($res === false)
 		{
-			$this->output
-			->set_header('HTTP/1.1 400 Bad Request')
-			->set_header('Content-Type: application/json')
-			->set_output(json_encode([
-				'status' => 400,
-				'statusCode' => 'Bad Request',
-				'response' => $res
-				]))
-			->_display();
-
-			//$this->auth->response(400, 'Bad Request', $res);
-
-		die();
+			$this->response->response(200, 'OK', $res);
 		} 
 		else 
 		{
-			$this->output
-			->set_header('HTTP/1.1 200 OK')
-			->set_header('Content-Type: application/json')
-			->set_output(json_encode([
-				'status' => 200,
-				'statusCode' => 'OK',
-				'response' => $res
-				]))
-			->_display();
-
-		die();
+			$this->response->response(200, 'OK', $res);
 		}
 	}
 

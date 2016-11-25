@@ -10,27 +10,47 @@ class Login_model extends CI_Model {
 
 	public function login($email, $password)
 	{
-		//TODO
-		//Tilføj statement der henter en given bruger
-		//Tilføj decrypt - if decryptPassword == input
-			//->Videre til det vi har nu
-			//->Ellers return false;
-
 		$sth = sprintf('SELECT me.memberid, me.password, co.email
-			FROM members AS me
-			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
-			WHERE co.email = "%s" 
-			AND me.password = "%s" 
-			LIMIT 1',
-			$email, $password
+		FROM members AS me
+		LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
+		WHERE co.email = "%s" 
+		LIMIT 1',
+		$email
 		);
 
 		$result = $this->db->query($sth);
-		return $result->row();
+
+		$result_row = $result->row();
+
+		if (password_verify($password, $result_row->password)) {
+		    return $result_row;
+		} else {
+		    return 'Password is wrong';
+		}
 	}
 	
 	public function registerUser($data = [])
 	{
+
+		$sth = sprintf('SELECT co.email
+			FROM members AS me
+			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
+			WHERE co.email = "%s" AND me.mode != "deleted"', 
+			$data['email']);
+		$result = $this->db->query($sth);
+
+		$alreadyExist = $result->row();
+
+		if(count($alreadyExist))
+		{
+			//User already exists
+			return 'User already exists';
+		}
+		else
+		{
+			//Go on user doesnt exist
+		}
+
 		//Insert new contact
 		$sth = sprintf('INSERT INTO contacts (Email) VALUES ("%s")', $data['email']);
 
@@ -43,7 +63,7 @@ class Login_model extends CI_Model {
 		$date = date('Y-m-d H:i:s');
 		$password = $data['password'];
 
-		$encryptedPassword = $this->encryption->encrypt($password);
+		$encryptedPassword = password_hash($password, PASSWORD_DEFAULT);
 
 		//Iniate new member
 		$sth = sprintf('INSERT INTO members
@@ -51,12 +71,12 @@ class Login_model extends CI_Model {
 			VALUES
 			("%s", "%s", "%s", "user", "%s","en_US", "pending" )
 			',
-			$contactId, $data['name'], $password, $date
+			$contactId, $data['name'], $encryptedPassword, $date
 		);
 
 		$result = $this->db->query($sth);
 
-		return TRUE;
+		return 'User created';
 	}
 }
 
