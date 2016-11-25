@@ -53,6 +53,29 @@ function loadMembersView(siteUrl)
 {
 	$.ajax({
 	    type: 'GET',
+	    url: siteUrl + 'admin/getpendingmembers/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				var template = $('#pending-members').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {id: val.memberid, name: val.name, mobile: val.mobile});
+				$('#pending-member-list').append(rendered);
+			});
+			
+		},
+		complete: function(data, status, response)
+		{
+			acceptMember();
+			declineMember();
+			getMemberInfo();
+		}
+
+	});
+
+	$.ajax({
+	    type: 'GET',
 	    url: siteUrl + 'admin/getmembers/',
 		contentType: 'application/json',
 		success: function(data, status, response)
@@ -67,6 +90,73 @@ function loadMembersView(siteUrl)
 		}
 	});
 }
+
+function getMemberInfo()
+{
+	$('#get-member-info').click(function(e) {
+		e.preventDefault();
+
+		var id = $(this).data('memberid');
+
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'admin/getmemberinfo/' + id,
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				var template = $('#memberinfo').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {id: data.memberid, name: data.name, mobile: data.mobile});
+				$('#profile-info').append(rendered);
+			}
+		});
+	});
+}
+
+/*
+ * Method to accept a membership request
+ */
+function acceptMember()
+{
+	$('#accept-member').click(function(e) {
+		e.preventDefault();
+
+		var id = $(this).data('memberid');
+
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'admin/acceptmember/' + id,
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				loadMembersView(siteUrl);
+			}
+		});
+	});
+}
+
+/*
+ * Method to decline a membership request
+ */
+function declineMember()
+{
+	$('#decline-member').click(function(e) {
+		e.preventDefault();
+
+		var id = $(this).data('memberid');
+
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'admin/declinemember/' + id,
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				loadMembersView(siteUrl);
+			}
+		});
+	});
+}
+
 
 /*
  * Info form

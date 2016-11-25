@@ -15,7 +15,19 @@ class Members_model extends CI_Model {
 		$sth = $this->db->query('SELECT me.memberid, me.name, me.role, co.email, co.phone, co.mobile 
 			FROM members AS me
 			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
-			WHERE me.mode != "deleted"');
+			WHERE me.mode != "deleted"
+			AND me.mode != "pending"');
+
+		$this->members = $sth->result();
+		return $this->members;
+	}
+
+	public function getPendingMembers()
+	{
+		$sth = $this->db->query('SELECT me.memberid, me.name, me.role, co.email, co.phone, co.mobile 
+			FROM members AS me
+			LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
+			WHERE me.mode = "pending"');
 
 		$this->members = $sth->result();
 		return $this->members;

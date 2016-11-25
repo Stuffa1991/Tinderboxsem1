@@ -27,6 +27,7 @@ class Member_model extends CI_Model {
 		$this->member = $sth->result();
 		return $this->member;
 	}
+	
 	public function setMember()
 	{
 		// Sets the contact field for now
@@ -57,7 +58,7 @@ class Member_model extends CI_Model {
 		if(!is_int($id) && $id <= 0) { return false; }	
 
 		// Updates the contact field for now
-		$query = sprintf('UPDATE contacts SET email = "%s", phone = "%s", mobile = "%s" WHERE contacitd = "%s"', 
+		$query = sprintf('UPDATE contacts SET email = "%s", phone = "%s", mobile = "%s" WHERE contactid = "%s"', 
 			$data['contactid'], $data['email'], $data['phone'], $data['mobile']);
 		$this->db->query($query);
 
@@ -109,6 +110,44 @@ class Member_model extends CI_Model {
 		} else {
 			return $this->lang->line('delete_user_success');
 		} 
+	}
+
+	public function acceptMember($id)
+	{
+		// If not an int, return false
+		if(!is_int($id) && $id <= 0) { return false; }	
+
+		// Updates the member field
+		$query = sprintf('UPDATE members SET mode = "active" WHERE memberid = "%s"', $id);
+		$this->db->query($query);
+
+		// Get latest id
+		$id = $this->db->insert_id();
+
+		if(is_int($id) && $id > 0) {
+			return $id;
+		} 
+
+		return false;
+	}
+
+	public function declineMember($id)
+	{
+		// If not an int, return false
+		if(!is_int($id) && $id <= 0) { return false; }	
+
+		// Updates the member field
+		$query = sprintf('UPDATE members SET mode = "deleted" WHERE memberid = "%s"', $id);
+		$this->db->query($query);
+
+		// Get latest id
+		$id = $this->db->insert_id();
+
+		if(is_int($id) && $id > 0) {
+			return $id;
+		} 
+
+		return false;
 	}
 
 	/*
