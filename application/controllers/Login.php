@@ -75,7 +75,7 @@ class Login extends CI_Controller {
 		//Find the the member via the model
 		$member = $this->login_model->login($email, $password);
 
-		if(count($member))
+		if($member)
 		{
 			//If there is 1 or more results returned --- should only be one
 			$sess_data = array(
@@ -86,11 +86,11 @@ class Login extends CI_Controller {
 
 			$this->session->set_userdata($sess_data);
 
-			redirect('/dashboard/');
+			$this->response->response(200, 'OK', 'loggedIn');
 		} 
 		else 
 		{
-			return FALSE;
+			$this->response->response(200, 'OK', 'Password or email is incorrect');
 		}
 	}
 

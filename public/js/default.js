@@ -126,9 +126,45 @@ function loadNewsView(siteUrl)
 }
 
 /*
+ * Login user form
+ */
+$('.loginUserForm').submit(function(e) {
+	e.preventDefault();
+
+    var data = $(this).serializeArray();
+	var values = serializeForm(data); 
+
+	url = $(this).attr('action');
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, textStatus, xhr) {
+			//console.debug(data + ' ' + textStatus + ' ' + xhr);
+			if(data == 'loggedIn')
+			{
+				window.location.href = siteUrl + "dashboard";
+				console.log(data + ' True')
+			}
+			else
+			{
+				Materialize.toast(data, 4000) // 4000 is the duration of the toast
+			}
+		},
+		complete: function(xhr, textStatus) {
+			//console.debug(textStatus + ' ' + xhr); 
+		},
+		error: function(xhr, textStatus, errorThrown) {
+			//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
+		}
+	});
+});
+
+/*
  * Register user form
  */
-jQuery('.registerUserForm').submit(function(e) {
+$('.registerUserForm').submit(function(e) {
 	e.preventDefault();
 
     var data = $(this).serializeArray();
@@ -140,12 +176,12 @@ jQuery('.registerUserForm').submit(function(e) {
 		return false;
 	}
 
-	url = jQuery(this).attr('action');
+	url = $(this).attr('action');
 
-	jQuery.ajax({
+	$.ajax({
 		type: 'POST',
 		url: url,
-		data: jQuery(this).serialize(),
+		data: $(this).serialize(),
 		success: function(data, textStatus, xhr) {
 			//console.debug(data + ' ' + textStatus + ' ' + xhr);
 			var dataString = JSON.stringify(data);

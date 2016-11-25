@@ -22,10 +22,12 @@ class Login_model extends CI_Model {
 
 		$result_row = $result->row();
 
-		if (password_verify($password, $result_row->password)) {
+		$passwordVerify = password_verify($password, $result_row->password);
+
+		if ($passwordVerify) {
 		    return $result_row;
 		} else {
-		    return 'Password is wrong';
+		    return false;
 		}
 	}
 	
