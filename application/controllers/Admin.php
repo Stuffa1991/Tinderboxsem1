@@ -48,6 +48,41 @@ class Admin extends CI_Controller {
 	}
 
 	/*
+	 * Method get pending members
+	 */
+	public function getPendingMembers()
+	{	
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getPendingMembers());
+	}
+
+	/*
+	 * Method to get member informations
+	 */
+	public function getMemberInfo($id)
+	{
+		$this->response->response(200, 'OK', $this->admin_model->getMemberInfo($id));
+	}
+
+	/*
+	 * Method to accept a membership request
+	 */
+	public function acceptMember($id)
+	{	
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->acceptMember($id));
+	}
+
+	/*
+	 * Method to decline a membership request
+	 */
+	public function declineMember($id)
+	{	
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->declineMember($id));
+	}
+
+	/*
 	 * Method set info
 	 */
 	public function setInfo()
