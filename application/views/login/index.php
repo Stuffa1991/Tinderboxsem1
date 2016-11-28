@@ -1,7 +1,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col s12">
-					<form class="loginUserForm" action="<?php  echo base_url('/login/')?>" method="POST" role="form">
+					<form class="loginUserForm" action="<?php  echo base_url('/login/loginAjax')?>" method="POST" role="form">
 						<legend>Form title</legend>
 						<?php echo validation_errors(); ?>
 						<div class="form-group">

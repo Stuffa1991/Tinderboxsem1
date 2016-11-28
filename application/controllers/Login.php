@@ -29,24 +29,10 @@ class Login extends CI_Controller {
  			die();
  		}
 
-		//Set form rules
-		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
-
-		if($this->form_validation->run() === FALSE)
-		{
-			//If the form validation isnt being runned
-			$this->load->view('header');
-			$this->load->view('login/index');
-			$this->load->view('footer');
-		}
-		else
-		{
-			//Get $_POST from FORM
-			$email = $this->input->post('email');
-			$password = $this->input->post('password');
-			$this->login($email,$password);
-		}
+ 		//If the form validation isnt being runned
+		$this->load->view('header');
+		$this->load->view('login/index');
+		$this->load->view('footer');
 	}
 
 	/*
@@ -70,27 +56,42 @@ class Login extends CI_Controller {
 	/*
 	 * Method to login
 	 */
-	public function login($email,$password)
+	public function loginAjax()
 	{
-		//Find the the member via the model
-		$member = $this->login_model->login($email, $password);
+		//Set form rules
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
 
-		if($member)
+		if($this->form_validation->run() === FALSE)
 		{
-			//If there is 1 or more results returned --- should only be one
-			$sess_data = array(
-				'login' => TRUE, 
-				'email' => $member->email,
-				'memberid' => $member->memberid
-			);
-
-			$this->session->set_userdata($sess_data);
-
-			$this->response->response(200, 'OK', 'loggedIn');
-		} 
-		else 
+			$this->response->response(200, 'OK', validation_errors());
+		}
+		else
 		{
-			$this->response->response(200, 'OK', 'Password or email is incorrect');
+			//Get $_POST from FORM
+			$email = $this->input->post('email');
+			$password = $this->input->post('password');
+
+			//Find the the member via the model
+			$member = $this->login_model->login($email, $password);
+
+			if($member)
+			{
+				//If there is 1 or more results returned --- should only be one
+				$sess_data = array(
+					'login' => TRUE, 
+					'email' => $member->email,
+					'memberid' => $member->memberid
+				);
+
+				$this->session->set_userdata($sess_data);
+
+				$this->response->response(200, 'OK', 'loggedIn');
+			} 
+			else 
+			{
+				$this->response->response(200, 'OK', 'Password or email is incorrect');
+			}
 		}
 	}
 
