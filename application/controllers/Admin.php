@@ -78,6 +78,7 @@ class Admin extends CI_Controller {
 		parse_str($postData, $post);
 
 		$data = $this->admin_model->setTeam([
+			'teamleaderid' => $post['teamleader'],
 			'name' => $post['name']
 		]);
 
@@ -86,6 +87,15 @@ class Admin extends CI_Controller {
 		} else {
 			$this->response->response(200, 'OK', $data->id);
 		}
+	}
+
+	/*
+	 * Method get team leaders
+	 */
+	public function getTeamLeaders()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getTeamLeaders());
 	}
 
 	/*

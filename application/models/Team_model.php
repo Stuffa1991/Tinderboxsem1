@@ -6,6 +6,8 @@ class Team_model extends CI_Model {
 	private $name; // string
 	private $mode; // string
 
+	private $teamleaders = [];
+
 	public function __construct()
 	{
 		parent::__construct();
@@ -21,7 +23,7 @@ class Team_model extends CI_Model {
 
 	public function setTeam($data = [])
 	{
-		$query = sprintf('INSERT INTO teams (name) VALUES ("%s")', $data['name']);
+		$query = sprintf('INSERT INTO teams (teamleaderid, name) VALUES ("%s", "%s")', $data['teamleaderid'], $data['name']);
 		$this->db->query($query);
 
 		// Get latest id
@@ -78,11 +80,6 @@ class Team_model extends CI_Model {
 		return false;
 	}
 
-	public function getErrors()
-	{
-		return $this->errors;
-	}
-
 	public function getTeamLeader($id)
 	{
 		// If not an int, return false
@@ -105,5 +102,22 @@ class Team_model extends CI_Model {
 
 		return $result->row();
 	}
+
+	public function getTeamLeaders()
+	{
+		$query = sprintf('SELECT memberid, name FROM members WHERE teamleader = 1');
+		$result = $this->db->query($query);
+
+		$this->teamleaders = $result->result();
+
+		return $this->teamleaders;
+	}
+
+	public function getErrors()
+	{
+		return $this->errors;
+	}
+
+
 
 }

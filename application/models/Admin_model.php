@@ -67,4 +67,9 @@ class Admin_model extends CI_Model {
 		$this->schedule_model->setSchedule($data);
 	}
 	
+	public function getTeamLeaders()
+	{
+		$this->load->model('team_model');
+		return $this->team_model->getTeamLeaders();
+	}
 }

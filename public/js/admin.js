@@ -60,20 +60,55 @@ function loadTeamsView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#teamlist').html();
+				var template = $('#team').html();
 				Mustache.parse(template);   // optional, speeds up future uses
 				var rendered = Mustache.render(template, {id: val.teamid, name: val.name});
 				$('#team-list').append(rendered);
-			});	
+			});
 		}
 	});
 
 	$('#add-team').click(function(){
-		console.log('test');
-		var template = $('#addteam').html();
-		Mustache.parse(template);   // optional, speeds up future uses
-		var rendered = Mustache.render(template, {});
-		$('#teaminfo').html(rendered);
+		
+
+		$.ajax({
+			type: 'GET',
+			url: siteUrl + 'admin/getteamleaders/',
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{
+				var template = $('#addteam').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {});
+				$('#teaminfo').html(rendered);
+
+
+				$.each(data, function(key, val) {
+					var template = $('#teamleaders').html();
+					Mustache.parse(template);   // optional, speeds up future uses
+					var rendered = Mustache.render(template, {teamleaderid: val.memberid, name: val.name});
+					$('#teamleaders-select').append(rendered);
+				});
+			},
+
+			complete: function(data, status, response)
+			{
+				
+				
+				//var firstitem = '<option value="" selected>Choose your option</option>';
+				//$('#teamleaders-select').append(firstitem);
+
+				
+
+				$('select').material_select(); // Must be last
+			}
+
+		});
+
+		
+		
+
+		
 	});
 
 	$('#submitTeam').submit(function(e) {
