@@ -66,7 +66,7 @@ class Login extends CI_Controller {
 
 		if($this->form_validation->run() === FALSE)
 		{
-			$this->response->response(200, 'OK', validation_errors());
+			$this->response->response(200, 'OK', validation_errors(' ',' '));
 		}
 		else
 		{
