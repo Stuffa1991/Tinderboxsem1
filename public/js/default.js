@@ -141,6 +141,7 @@ $('.loginUserForm').submit(function(e) {
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, textStatus, xhr) {
+			console.log(data)
 			//console.debug(data + ' ' + textStatus + ' ' + xhr);
 			if(data == 'loggedIn')
 			{
