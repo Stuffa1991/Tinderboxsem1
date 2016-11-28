@@ -18,17 +18,34 @@ $(function(){
 	    }
 	);
 
+	loadDashboardView(siteUrl);
 
-	// Footer menu
+	// menu
+	$('#dashboard-view').click(function(){
+		loadDashboardView(siteUrl);
+	});
+
+	$('#team-view').click(function(){
+		loadTeamView(siteUrl);
+	});
+
+	$('#schedule-view').click(function(){
+		console.log('schedule-view');
+	});
+
+	$('#rules-view').click(function(){
+		loadInfoView(siteUrl);
+	});
+
+	$('#info-view').click(function(){
+		loadRuleView(siteUrl);
+	});
+
+	$('#news-view').click(function(){
+		loadNewsView(siteUrl);
+	});
 
 	//loadAdminView(siteUrl);
-	//loadTeamLeader(siteUrl);
-
-	//loadInfoView(siteUrl);
-	//loadRuleView(siteUrl);
-	//loadNewsView(siteUrl);
-
-
 
 });
 
@@ -46,7 +63,14 @@ function serializeForm(data)
 /*
  * Dashboard view
  */
-function loadTeamLeader(siteUrl) 
+function loadDashboardView(siteUrl)
+{
+	getTeamLeader(siteUrl);
+	getSchedules(siteUrl);
+	getNews(siteUrl);
+}
+
+function getTeamLeader(siteUrl) 
 {
 	$.ajax({
 	    type: 'GET',
@@ -57,10 +81,70 @@ function loadTeamLeader(siteUrl)
 			var template = $('#teamleader').html();
 			Mustache.parse(template);   // optional, speeds up future uses
 			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
-			$('#container').html(rendered);
+			$('#teamleader-info').append(rendered);
 		}
 	});
 }
+
+function getSchedules(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'dashboard/getschedules/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{
+			var template = $('#schedules').html();
+			Mustache.parse(template);   // optional, speeds up future uses
+			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
+			$('#schedules-info').append(rendered);
+		}
+	});
+}
+
+function getNews(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'dashboard/getnews/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{
+			$.each(data, function(key, val) {
+				var template = $('#news').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {title: val.title, text: val.text});
+				$('#news-info').append(rendered);
+			});	
+		}
+	});
+}
+
+/*
+ * Team view
+ */
+function loadTeamView(siteUrl)
+{	
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'team/getteam/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				console.log(val);
+				
+				var template = $('#team').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {memberid: val.memberid, name: val.name});
+				$('#team-list').append(rendered);
+				
+			});
+		}
+	});
+}
+
+
 
 /*
  * Method to load infos
