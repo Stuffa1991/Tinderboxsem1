@@ -11,6 +11,7 @@
 		<!-- Fonts -->
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 		<!-- Default css -->
+		<link rel="stylesheet" href="<?=base_url('public/css/bootstrap-material-datetimepicker.css');?>">
 		<link rel="stylesheet" href="<?=base_url('public/css/default.css');?>">
 		   
 	</head>

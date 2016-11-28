@@ -19,7 +19,7 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	loadTeamsView(siteUrl);
+	schedulesCreate(siteUrl);
 
 });
 
@@ -207,6 +207,48 @@ function declineMember()
 	});
 }
 
+function schedulesLoad()
+{
+	$('#').click(function(e) {
+		e.preventDefault();
+
+		
+	});
+}
+
+/*
+ * Schedule date picker
+ */
+ function schedulesCreate()
+ {
+ 	$('#dateEnd').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-DD-MM HH:mm:00'  });
+	$('#dateStart').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-DD-MM HH:mm:00'  }).on('change', function(e, date)
+	{
+		$('#dateEnd').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+ }
+
+ /*
+ * Schedule form
+ */
+$('#createSchedule').submit(function(e) {
+	e.preventDefault(); 
+
+	url = $(this).attr('action');
+
+	console.log($(this).serialize());
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, status, response) {
+			console.log(data);
+			console.log(status);
+			console.log(response);
+		}
+	});
+});
 
 /*
  * Info form

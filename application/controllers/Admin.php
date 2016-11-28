@@ -48,6 +48,13 @@ class Admin extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function schedules()
+	{
+		$this->load->view('header');
+		$this->load->view('admin/schedules');
+		$this->load->view('footer');
+	}
+
 	/*
 	 * Method get teams
 	 */
@@ -154,4 +161,49 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	/*
+	 * Method to get schedules
+	 */
+	public function getSchedules()
+	{
+		//
+	}
+
+	/*
+	 *
+	 */
+	public function setSchedule()
+	{
+		//$this->method->method('POST');
+
+		$postData = file_get_contents('php://input');
+
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
+
+		$dateStart = html_entity_decode($post['dateStart']);
+		$dateEnd = html_entity_decode($post['dateEnd']);
+
+		$date = new DateTime($dateStart);
+
+		$format = $date->format('Y-m-d-H:i:s');
+
+		$this->response->response(200, 'OK', $format);
+
+		return;
+
+		$data = $this->admin_model->setSchedule([
+			'memberid'	=> $post['memberScheduleId'],
+			'fromtime' => $dateStart,
+			'totime'	=> $dateEnd
+		]);
+
+		if($data === false) {
+			$this->response->response(400, 'Bad Request', 'Shit');
+		} else {
+			$this->response->response(200, 'OK', $data);
+		}
+	}
 }

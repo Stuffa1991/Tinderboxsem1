@@ -2,7 +2,7 @@
 
 class Schedules_model extends CI_Model {
 
-	private $schedules = [] // Array
+	private $schedules = []; // Array
 
 	public function __construct()
 	{

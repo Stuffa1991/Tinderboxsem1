@@ -176,7 +176,7 @@ $('.registerUserForm').submit(function(e) {
 
 	if(values.repeatPassword !== values.password)
 	{
-		alert('Passwords dont match');
+		Materialize.toast('Passwords dont match', 4000) // 4000 is the duration of the toast
 		return false;
 	}
 

@@ -7,7 +7,7 @@ class Schedule_model extends CI_Model {
 	private $placeid; // int
 	private $fromtime; // int
 	private $totime; // int
-	private $mode // string
+	private $mode; // string
 
 	private $schedule = []; // Array
 

@@ -64,6 +64,7 @@ class Login extends CI_Controller {
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
 
+		//If the validator isnt running or it returns errors
 		if($this->form_validation->run() === FALSE)
 		{
 			$this->response->response(200, 'OK', validation_errors(' ',' '));

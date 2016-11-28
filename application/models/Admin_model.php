@@ -54,5 +54,17 @@ class Admin_model extends CI_Model {
 		$this->load->model('information_model');
 		$this->information_model->setInfo($data);
 	}
+
+	public function getSchedules($id)
+	{
+		$this->load->model('schedules_model');
+		$this->schedules_model->getSchedules($id);
+	}
+
+	public function setSchedule($data = [])
+	{
+		$this->load->model('schedule_model');
+		$this->schedule_model->setSchedule($data);
+	}
 	
 }
