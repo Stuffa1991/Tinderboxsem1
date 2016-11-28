@@ -8,7 +8,7 @@ class Auth
     {
         $this->ci =& get_instance();
     }
-    /*
+    
     public function handleLogin()
     {	
     	//Load Session library
@@ -26,5 +26,4 @@ class Auth
         	die();
         }
     }
-    */
 }
