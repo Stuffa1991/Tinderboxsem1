@@ -20,9 +20,19 @@ class Login_model extends CI_Model {
 
 		$result = $this->db->query($sth);
 
-		$result_row = $result->row();
+		$numRows = $result->num_rows();
 
-		$passwordVerify = password_verify($password, $result_row->password);
+		if($numRows <= 0)
+		{
+			return false;
+		}
+		else
+		{
+			$result_row = $result->row();
+
+			$passwordVerify = password_verify($password, $result_row->password);
+		}
+
 
 		if ($passwordVerify) {
 		    return $result_row;

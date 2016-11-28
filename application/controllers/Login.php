@@ -59,7 +59,7 @@ class Login extends CI_Controller {
 	public function loginAjax()
 	{
 		$this->method->method('POST');
-		
+
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
 		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
@@ -77,7 +77,11 @@ class Login extends CI_Controller {
 			//Find the the member via the model
 			$member = $this->login_model->login($email, $password);
 
-			if($member)
+			if($member == false)
+			{
+				$this->response->response(200, 'OK', 'Password or email is incorrect');
+			} 
+			else 
 			{
 				//If there is 1 or more results returned --- should only be one
 				$sess_data = array(
@@ -89,10 +93,6 @@ class Login extends CI_Controller {
 				$this->session->set_userdata($sess_data);
 
 				$this->response->response(200, 'OK', 'loggedIn');
-			} 
-			else 
-			{
-				$this->response->response(200, 'OK', 'Password or email is incorrect');
 			}
 		}
 	}
