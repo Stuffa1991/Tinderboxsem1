@@ -19,7 +19,7 @@
 
 			<div class="input-field col s12">
 	          	<textarea name="text" id="textarea" class="materialize-textarea validate"></textarea>
-	          	<label for="textarea">Text</label>
+	          	<label for="textarea"></label>
 	        </div>
 	        <button type="submit" class="btn btn-primary">Submit</button>
 		</div>		
