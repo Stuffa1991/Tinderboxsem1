@@ -26,5 +26,3 @@
 				<div class="container">
 					<!-- id container -->
 					<div id="container">
-
-				ehco 
