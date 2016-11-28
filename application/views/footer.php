@@ -43,11 +43,11 @@
 	              	<div class="col s12">
 	                	
 	              		<div class="collection">
-					        <a href="#!" class="collection-item active"><i class="material-icons">home</i>Home</a>
-					        <a href="#!" class="collection-item"><i class="material-icons">person</i>Team</a>
-					        <a href="#!" class="collection-item"><i class="material-icons">assignment</i>Schedules</a>
-					        <a href="#!" class="collection-item"><i class="material-icons">face</i>Test</a>
-					        <a href="#!" class="collection-item button-collapse" data-activates="slide-out">
+					        <a id="dashboard-view" href="#!" class="collection-item active"><i class="material-icons">home</i>Home</a>
+					        <a id="team-view" href="#!" class="collection-item"><i class="material-icons">person</i>Team</a>
+					        <a id="schedule-view" href="#!" class="collection-item"><i class="material-icons">assignment</i>Schedules</a>
+					        <a id="" href="#!" class="collection-item"><i class="material-icons">face</i>Test</a>
+					        <a id="" href="#!" class="collection-item button-collapse" data-activates="slide-out">
 			        			<i class="material-icons">menu</i>
 			        			Menu
 			        		</a>

@@ -18,6 +18,9 @@ $(function(){
 	    }
 	);
 
+
+	// Footer menu
+
 	//loadAdminView(siteUrl);
 	//loadTeamLeader(siteUrl);
 
