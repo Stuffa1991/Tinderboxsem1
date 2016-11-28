@@ -18,7 +18,8 @@ $(function(){
 	    }
 	);
 
-	loadMembersView(siteUrl);
+	//loadMembersView(siteUrl);
+	loadTeamsView(siteUrl);
 
 });
 
@@ -46,8 +47,57 @@ function loadAdminView(siteUrl)
 
 }
 */
+
 /*
- * Method to load infos
+ * Method to load members view
+ */
+function loadTeamsView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'admin/getteams/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				var template = $('#teamlist').html();
+				Mustache.parse(template);   // optional, speeds up future uses
+				var rendered = Mustache.render(template, {id: val.teamid, name: val.name});
+				$('#team-list').append(rendered);
+			});	
+		}
+	});
+
+	$('#add-team').click(function(){
+		console.log('test');
+		var template = $('#addteam').html();
+		Mustache.parse(template);   // optional, speeds up future uses
+		var rendered = Mustache.render(template, {});
+		$('#teaminfo').html(rendered);
+	});
+
+	$('#submitTeam').submit(function(e) {
+		e.preventDefault();
+
+		var data = $(this).serializeArray();
+		var values = serializeForm(data); 
+
+		url = $(this).attr('action');
+
+		$.ajax({
+			type: 'POST',
+			url: url,
+			data: $(this).serialize(),
+			success: function(data, status, response) {
+				var dataString = JSON.stringify(data);
+			}
+		});
+	});
+}	
+
+
+/*
+ * Method to load members view
  */
 function loadMembersView(siteUrl)
 {
@@ -169,10 +219,10 @@ $('#submitInfo').submit(function(e) {
 
 	url = $(this).attr('action');
 
-	jQuery.ajax({
+	$.ajax({
 		type: 'POST',
 		url: url,
-		data: jQuery(this).serialize(),
+		data: $(this).serialize(),
 		success: function(data, status, response) {
 			var dataString = JSON.stringify(data);
 		}

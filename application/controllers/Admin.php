@@ -19,7 +19,17 @@ class Admin extends CI_Controller {
 	}
 
 	/*
-	 * Page setInfo
+	 * Page info
+	 */
+	public function info()
+	{
+		$this->load->view('header');
+		$this->load->view('admin/info');
+		$this->load->view('footer');
+	}
+
+	/*
+	 * Page members
 	 */
 	public function members()
 	{
@@ -29,13 +39,46 @@ class Admin extends CI_Controller {
 	}
 
 	/*
-	 * Page setInfo
+	 * Page info
 	 */
-	public function info()
+	public function teams()
 	{
 		$this->load->view('header');
-		$this->load->view('admin/info');
+		$this->load->view('admin/teams');
 		$this->load->view('footer');
+	}
+
+	/*
+	 * Method get teams
+	 */
+	public function getTeams()
+	{	
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getTeams());
+	}
+
+	/*
+	 * Method set team
+	 */	public function setTeam()
+	{	
+		$this->method->method('POST');
+
+		$postData = file_get_contents('php://input');
+
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
+
+		$data = $this->admin_model->setTeam([
+			'name' => $post['name']
+		]);
+
+		if($data === false) {
+			$this->response->response(400, 'Bad Request', 'Shit');
+		} else {
+			$this->response->response(200, 'OK', $data->id);
+		}
 	}
 
 	/*

@@ -3,7 +3,6 @@
 	
 	<div id="profile-info"></div>
 
-
 	<h3>Pending members</h3>
 	<ul id="pending-member-list" class="collapsible" data-collapsible="accordion"></ul>
 

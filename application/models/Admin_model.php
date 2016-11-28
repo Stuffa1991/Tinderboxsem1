@@ -7,6 +7,18 @@ class Admin_model extends CI_Model {
 		parent::__construct();
 	}
 
+	public function getTeams()
+	{
+		$this->load->model('teams_model');
+		return $this->teams_model->getTeams();
+	}
+	
+	public function setTeam($data = [])
+	{
+		$this->load->model('team_model');
+		$this->team_model->setTeam($data);
+	}
+
 	public function getMembers()
 	{
 		$this->load->model('members_model');
