@@ -3,13 +3,6 @@
 
 	<div id="scheduleinfo" class="col s12">
 		<h3>Schedules</h3>
-	<ul id="schedule-list" class="collection with-header"></ul>
-		<div class="input-field">
-			<input id="scheduleId" type="text">
-			<label for="scheduleId">Schedule id</label>
-		</div>
-		<button type="submit" class="btn btn-primary">Find schedule</button>
-	</div>
 
 	<form action="<?php  echo base_url('/admin/setSchedule/')?>" method="POST" role="form" id="createSchedule" class="col s12">
 		<div class="row">

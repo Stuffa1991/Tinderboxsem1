@@ -265,15 +265,6 @@ function declineMember()
 	});
 }
 
-function schedulesLoad()
-{
-	$('#').click(function(e) {
-		e.preventDefault();
-
-		
-	});
-}
-
 /*
  * Schedule date picker
  */
