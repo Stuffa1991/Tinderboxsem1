@@ -246,8 +246,17 @@ class Admin extends CI_Controller {
 		//store serialized data to array
 		parse_str($postData, $post);
 
-		$data = $this->admin_model->setTask([
+		$dateStart = html_entity_decode($post['dateStart']);
+		$dateEnd = html_entity_decode($post['dateEnd']);
 
+		var_dump($post);
+		return;
+		$data = $this->admin_model->setTask([
+			'fromtime' => $dateStart,
+			'totime' => $dateEnd,
+			'memberid' => $post['memberTaskId'],
+			'name' => $post['name'],
+			'place' => $post['placeid']
 		]);
 
 		if($data === false) {
@@ -300,4 +309,5 @@ class Admin extends CI_Controller {
 		// Loads library response
 		$this->response->response(200, 'OK', $this->admin_model->getPlaces());
 	}
+
 }

@@ -10,6 +10,22 @@
 			<div class="input-field col s6 places">
 			</div>
 		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<input name="dateStart" id="dateStart" type="text">
+				<label for="dateStart">Date start</label>
+			</div>
+			<div class="input-field col s6">
+				<input name="dateEnd" id="dateEnd" type="text">
+				<label for="dateEnd">Date end</label>
+			</div>
+		</div>
+		<div class="row">
+			<div class="input-field col s6">
+				<input name="memberTaskId" id="memberTaskId" type="text">
+				<label for="memberTaskId">Member id</label>
+			</div>
+		</div>
 		<button type="submit" class="btn btn-primary">Create Task</button>
 	</form>
 
@@ -28,8 +44,8 @@
 </script>
 
 <script id="place" type="text/x-handlebars-template">
-	<select class="places-select">
-	<option value="" disabled selected>Place</option>
+	<select name="placeid" class="places-select">
+	<option value="0" disabled selected>Place</option>
 	    {{#each data}}
 	    	<option value="{{ id }}">{{ name }}</option>
 		{{/each}}

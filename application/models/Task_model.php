@@ -28,20 +28,17 @@ class Task_model extends CI_Model {
 
 	public function setTask($data = [])
 	{
-		$query = sprintf('INSERT INTO places (name) VALUES ("%s")', $data['name']);
+		$query = sprintf('INSERT INTO tasks (name,fromtime,totime,memberid,placeid) VALUES ("%s","%s","%s","%s","%s")', 
+			$data['name'], $data['fromtime'], $data['totime'], $data['memberid'], $data['place'] );
 		$this->db->query($query);
 
 		$id = $this->db->insert_id();
 
-		$query = sprintf('INSERT INTO tasks (placeid, name, fromtime, totime) VALUES ("%s", "%s", "%s", "%s")', 
-			$id, $data['name'], $data['fromtime'], $data['totime']);
-		$this->db->query($query);
-
-		// Get latest id
-		$id = $this->db->insert_id();
+		$query = sprintf('SELECT name,taskid FROM tasks WHERE taskid="%s"', $id);
+		$result = $this->db->query($query);
 
 		if(is_int($id) && $id > 0) { 
-			return $id;
+			return $result->row();
 		} 
 		
 		return false;

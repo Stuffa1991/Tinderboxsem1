@@ -90,4 +90,10 @@ class Admin_model extends CI_Model {
 		$this->load->model('places_model');
 		return $this->places_model->getPlaces();
 	}
+
+	public function setTask($data)
+	{
+		$this->load->model('task_model');
+		return $this->task_model->setTask($data);
+	}
 }

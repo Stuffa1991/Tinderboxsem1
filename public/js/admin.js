@@ -19,7 +19,7 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	//schedulesCreate(siteUrl);
+	//loadSchedulesView(siteUrl);
 	//loadTeamsView(siteUrl);
 	//loadPlaceView(siteUrl);
 	loadTaskView(siteUrl);
@@ -236,9 +236,33 @@ function loadPlaceView(siteUrl)
 
 function loadTaskView(siteUrl)
 {
+	$('#dateEnd').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  });
+	$('#dateStart').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  }).on('change', function(e, date)
+	{
+		$('#dateEnd').bootstrapMaterialDatePicker('setMinDate', date);
+	});
+
 	$.ajax({
 	    type: 'GET',
 	    url: siteUrl + 'admin/getplaces/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			var source   = $('#place').html();
+			var template = Handlebars.compile(source);
+			var data = {data};
+			$('.places').append(template(data));
+			
+		},
+		complete: function()
+		{
+			$('.places-select').material_select();
+		}
+	});
+
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'admin/gettasks/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
@@ -324,7 +348,7 @@ function declineMember()
 /*
  * Schedule date picker
  */
- function schedulesCreate()
+ function loadSchedulesView(siteUrl)
  {
  	$('#dateEnd').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  });
 	$('#dateStart').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  }).on('change', function(e, date)
@@ -395,9 +419,9 @@ $('#createTasks').submit(function(e) {
 	var data = $(this).serializeArray();
 	var values = serializeForm(data); 
 
-	if(values.name == '')
+	if(values.name == '' || values.dateStart == '' || values.dataEnd == '' || values.placeid == '' || values.memberid == '')
 	{
-		Materialize.toast('Name cant be empty', 4000) // 4000 is the duration of the toast
+		Materialize.toast('Something isnt right', 4000) // 4000 is the duration of the toast
 		return false;
 	}
 
@@ -406,11 +430,10 @@ $('#createTasks').submit(function(e) {
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, status, response) {
-			var source   = $('#places').html();
-			var template = Handlebars.compile(source);
-			var data = {name: data.name, id: data.placeid};
-			$('#place-list').append(template(data));
-			$('#name').val('');
+			// var source   = $('#tasks').html();
+			// var template = Handlebars.compile(source);
+			// var data = {name: data.name, id: data.placeid};
+			// $('#task-list').append(template(data));
 		}
 	});
 });
