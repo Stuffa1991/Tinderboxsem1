@@ -99,7 +99,7 @@ function loadDashboardView(siteUrl)
 	function after(siteUrl)
 	{
 		getTeamLeader(siteUrl);
-		//getSchedules(siteUrl);
+		getSchedules(siteUrl);
 		getNews(siteUrl);
 	}
 }
@@ -128,10 +128,13 @@ function getSchedules(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-			var source   = $('#schedules').html();
-			var template = Handlebars.compile(source);
-			var data = {name: data.name, email: data.email, mobile: data.mobile};
-			$('#schedules-info').append(template(data));
+			$.each(data, function(key, val) {
+				console.log(val);
+				var source   = $('#schedules').html();
+				var template = Handlebars.compile(source);
+				var data = {fromtime: val.fromtime, totime: val.totime};
+				$('#schedules-info').append(template(data));
+			});
 		}
 	});
 }
@@ -182,7 +185,6 @@ function loadTeamView(siteUrl)
 			success: function(data, status, response)
 			{	
 				$.each(data, function(key, val) {
-					console.log(val);
 					var source   = $('#team').html();
 					var template = Handlebars.compile(source);
 					var data = {memberid: val.memberid, name: val.name};

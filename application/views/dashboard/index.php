@@ -1,20 +1,21 @@
 <script id="dashboard" type="text/x-handlebars-template">
-<div class="row">
-	<div class="col s12">
-		
-		<div id="teamleader-info"></div>
-	
-		<div>
-			<ul id="schedules-info" class="collection"></ul>
-		</div>
-		
-		<div>
-			<h4>Nyheder</h4>
-			<ul id="news-info" class="collection"></ul>
-		</div>
+	<div class="row">
+		<div class="col s12">
+			
+			<div id="teamleader-info"></div>
+			
+			<div>
+				<h4>Schedules</h4>
+				<ul id="schedules-info" class="collection"></ul>
+			</div>
+			
+			<div>
+				<h4>News</h4>
+				<ul id="news-info" class="collection"></ul>
+			</div>
 
+		</div>
 	</div>
-</div>
 </script>
 
 <script id="teamleader" type="text/x-handlebars-template">
@@ -33,12 +34,12 @@
 
 <script id="schedules" type="text/x-handlebars-template">
 	
-	<li class="collection-item">Alvin</li>
+	<li class="collection-item">{{ fromtime }} - {{ totime }}</li>
 
 </script>
 
 <script id="news" type="text/x-handlebars-template">
 	
-	<li class="collection-item"> {{title}} </li>
+	<li class="collection-item">{{ title }}</li>
 
 </script>
