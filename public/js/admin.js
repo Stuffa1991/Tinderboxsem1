@@ -21,6 +21,7 @@ $(function(){
 	//loadMembersView(siteUrl);
 	schedulesCreate(siteUrl);
 	//loadTeamsView(siteUrl);
+	hideLoad();
 });
 
 function serializeForm(data) 
