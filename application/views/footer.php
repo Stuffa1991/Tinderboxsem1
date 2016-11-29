@@ -65,8 +65,8 @@
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Compiled and minified JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
-		<!-- Moustache -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.min.js" integrity="sha256-iaqfO5ue0VbSGcEiQn+OeXxnxAMK2+QgHXIDA5bWtGI=" crossorigin="anonymous"></script>
+		<!-- Handlebars -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.6/handlebars.js" integrity="sha256-AunHBHi07QREz6ipU5g+CgOItzHsewdmK9Zn1WgWvyw=" crossorigin="anonymous"></script>
 		<!-- MomentJS -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.0/moment.js" integrity="sha256-7zrgeFEiubUoz8Fsa0TnbWWDPYTu7sZp7BJef2ayeWI=" crossorigin="anonymous"></script>
 		<!-- Default js -->
