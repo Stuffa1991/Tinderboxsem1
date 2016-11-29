@@ -23,26 +23,38 @@ $(function(){
 
 	// menu
 	$('#dashboard-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
+
 		loadDashboardView(siteUrl);
 	});
 
 	$('#team-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
+
 		loadTeamView(siteUrl);
 	});
 
 	$('#schedule-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
+
 		console.log('schedule-view');
 	});
 
 	$('#rules-view').click(function(){
+		switchActive();
 		loadInfoView(siteUrl);
 	});
 
 	$('#info-view').click(function(){
+		switchActive();
 		loadRuleView(siteUrl);
 	});
 
 	$('#news-view').click(function(){
+		switchActive();
 		loadNewsView(siteUrl);
 	});
 
@@ -195,9 +207,39 @@ function loadTeamView(siteUrl)
 			complete: function()
 			{
 				hideLoad();
+
+				loadTeamMemberInfo(siteUrl);
 			}
 		});
 	}
+}
+
+/*
+ * Method to load members information
+ */
+function loadTeamMemberInfo(siteUrl)
+{
+	$('.memberinfo').click(function(e){
+		e.preventDefault();
+
+		var memberId = $(this).data('member-id');
+		console.log(memberId);
+
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'team/getTeamMemberInfo/' + memberId,
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				console.log(data);
+				var source   = $('#teammember').html();
+				var template = Handlebars.compile(source);
+				var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
+				$('#container').html(template(data));
+				
+			},
+		});		
+	});
 }
 
 /*

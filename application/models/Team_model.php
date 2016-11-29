@@ -137,6 +137,15 @@ class Team_model extends CI_Model {
 		return $this->teamleaders;
 	}
 
+	/*
+	 * Method to get news
+	 */
+	public function getTeamMemberInfo($id)
+	{
+		$this->load->model('member_model');
+		return $this->member_model->getMember($id);
+	}
+
 	public function getErrors()
 	{
 		return $this->errors;

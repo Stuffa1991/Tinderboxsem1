@@ -34,4 +34,17 @@ class Team extends CI_Controller {
 		$this->response->response(200, 'OK', $this->team_model->getTeamMembers($this->session->memberid));
 	}
 
+	/*
+	 * Method get a team members information
+	 */
+	public function getTeamMemberInfo($id)
+	{
+		// Loads library method
+		$this->method->method('GET');
+
+		// Loads library response
+		$this->response->response(200, 'OK', $this->team_model->getTeamMemberInfo($id));
+	}
+
+
 }

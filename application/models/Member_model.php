@@ -24,7 +24,7 @@ class Member_model extends CI_Model {
 			WHERE me.mode != 'deleted' 
 			AND me.memberid = " . $this->db->escape($id) . "");
 
-		$this->member = $sth->result();
+		$this->member = $sth->row();
 		return $this->member;
 	}
 	
