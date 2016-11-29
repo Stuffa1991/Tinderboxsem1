@@ -249,14 +249,12 @@ class Admin extends CI_Controller {
 		$dateStart = html_entity_decode($post['dateStart']);
 		$dateEnd = html_entity_decode($post['dateEnd']);
 
-		var_dump($post);
-		return;
 		$data = $this->admin_model->setTask([
 			'fromtime' => $dateStart,
 			'totime' => $dateEnd,
 			'memberid' => $post['memberTaskId'],
 			'name' => $post['name'],
-			'place' => $post['placeid']
+			'place' => $post['placeId']
 		]);
 
 		if($data === false) {

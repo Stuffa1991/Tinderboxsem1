@@ -21,6 +21,16 @@ class Tasks_model extends CI_Model {
 		return $this->tasks;
 	}
 
+	public function getAllTask()
+	{
+		$query = $this->db->query('SELECT ta.name, ta.fromtime, ta.totime, pl.name as place
+			FROM tasks AS ta 
+			AND ta.mode != `deleted`');
+		$this->tasks = $query->result();
+
+		return $this->tasks;
+	}
+
 	public function getTasksByDay()
 	{
 

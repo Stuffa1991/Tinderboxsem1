@@ -419,7 +419,7 @@ $('#createTasks').submit(function(e) {
 	var data = $(this).serializeArray();
 	var values = serializeForm(data); 
 
-	if(values.name == '' || values.dateStart == '' || values.dataEnd == '' || values.placeid == '' || values.memberid == '')
+	if(values.name == '' || values.dateStart == '' || values.dataEnd == '' || values.memberid == '' || values.placeId == '0')
 	{
 		Materialize.toast('Something isnt right', 4000) // 4000 is the duration of the toast
 		return false;
@@ -434,6 +434,7 @@ $('#createTasks').submit(function(e) {
 			// var template = Handlebars.compile(source);
 			// var data = {name: data.name, id: data.placeid};
 			// $('#task-list').append(template(data));
+			Materialize.toast('New task was made, each task is assigned under the user profile', 4000) // 4000 is the duration of the toast
 		}
 	});
 });

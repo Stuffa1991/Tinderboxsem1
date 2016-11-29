@@ -96,4 +96,10 @@ class Admin_model extends CI_Model {
 		$this->load->model('task_model');
 		return $this->task_model->setTask($data);
 	}
+
+	public function getTask($id)
+	{
+		$this->load->model('task_model');
+		return $this->tasks_model->getTasks($data);
+	}
 }

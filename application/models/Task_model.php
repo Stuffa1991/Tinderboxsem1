@@ -9,9 +9,9 @@ class Task_model extends CI_Model {
 	private $name; // string
 	private $fromtime; // int
 	private $totime; // int
-	private $mode // string
+	private $mode; // string
 
-	private $task = [] // Array
+	private $task = []; // Array
 
 	public function __construct()
 	{
@@ -50,7 +50,7 @@ class Task_model extends CI_Model {
 		if(!is_int($id) && $id <= 0) { return false; }	
 
 		$query = sprintf('UPDATE tasks SET name = "%s", fromtime = "%s", totime = "%s" 
-			WHERE taskid = "%s"', $data['name'], $data['fromtime'], $data['totime'] $id);
+			WHERE taskid = "%s"', $data['name'], $data['fromtime'], $data['totime'], $id);
 		$this->db->query($query);
 
 		// Get latest id

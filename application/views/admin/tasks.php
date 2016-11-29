@@ -44,10 +44,10 @@
 </script>
 
 <script id="place" type="text/x-handlebars-template">
-	<select name="placeid" class="places-select">
+	<select name="placeId" class="places-select">
 	<option value="0" disabled selected>Place</option>
 	    {{#each data}}
-	    	<option value="{{ id }}">{{ name }}</option>
+	    	<option value="{{ placeid }}">{{ name }}</option>
 		{{/each}}
 	</select>
 </script>
