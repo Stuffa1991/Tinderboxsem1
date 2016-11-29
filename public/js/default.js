@@ -18,8 +18,8 @@ $(function(){
 	    }
 	);
 
-	//loadDashboardView(siteUrl);
-	loadTeamView(siteUrl);
+	loadDashboardView(siteUrl);
+	//loadTeamView(siteUrl);
 
 	// menu
 	$('#dashboard-view').click(function(){
