@@ -108,7 +108,7 @@ class Admin extends CI_Controller {
 		if($data === false) {
 			$this->response->response(400, 'Bad Request', 'Shit');
 		} else {
-			$this->response->response(200, 'OK', $data->id);
+			$this->response->response(200, 'OK', $data);
 		}
 	}
 

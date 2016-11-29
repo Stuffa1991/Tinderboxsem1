@@ -20,9 +20,9 @@ $(function(){
 
 	//loadMembersView(siteUrl);
 	//loadSchedulesView(siteUrl);
-	//loadTeamsView(siteUrl);
+	loadTeamsView(siteUrl);
 	//loadPlaceView(siteUrl);
-	loadTaskView(siteUrl);
+	// loadTaskView(siteUrl);
 	hideLoad();
 });
 
@@ -76,57 +76,40 @@ function loadAdminView(siteUrl)
  * Method to load members view
  */
 function loadTeamsView(siteUrl)
-{
-	console.log(siteUrl + 'admin/getteams/')
-	$.ajax({
-	    type: 'GET',
-	    url: siteUrl + 'admin/getteams/',
-		contentType: 'application/json',
-		success: function(data, status, response)
-		{	
-			$.each(data, function(key, val) {
-				var source   = $('#team').html();
-				var template = Handlebars.compile(source);
-				var data = {id: val.teamid, name: val.name};
-				$('#team-list').append(template(data));
-			});
-		}
-	});
+{	
+	allTeams();
 
-	$('#add-team').click(function(){
-		
-
+	function allTeams()
+	{
 		$.ajax({
-			type: 'GET',
-			url: siteUrl + 'admin/getteamleaders/',
+		    type: 'GET',
+		    url: siteUrl + 'admin/getteams/',
 			contentType: 'application/json',
 			success: function(data, status, response)
-			{
-				var source   = $('#addteam').html();
-				var template = Handlebars.compile(source);
-				var data = {};
-				$('#team-list').html(template(data));
-
-
+			{	
 				$.each(data, function(key, val) {
-					var source   = $('#teamleaders').html();
+					var source = $('#team').html();
 					var template = Handlebars.compile(source);
-					var data = {teamleaderid: val.memberid, name: val.name};
-					$('#teamleaders-select').append(template(data));
+					var data = {id: val.teamid, name: val.name};
+					$('#team-list').append(template(data));
 				});
-			},
-
-			complete: function(data, status, response)
-			{
-				
-				//var firstitem = '<option value="" selected>Choose your option</option>';
-				//$('#teamleaders-select').append(firstitem);
-
-				$('select').material_select(); // Must be last
 			}
-
 		});
-		
+	}
+
+	$('#add-team').click(function(){
+		var hidden = $('.teams').hasClass('hide');
+
+		if(hidden)
+		{
+			$('.teams').removeClass('hide');
+			$('.insertTeams').addClass('hide');
+		}
+		else
+		{
+			$('.teams').addClass('hide');
+			$('.insertTeams').removeClass('hide');
+		}	
 	});
 
 	$('#submitTeam').submit(function(e) {
@@ -370,9 +353,24 @@ $('#createSchedule').submit(function(e) {
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, status, response) {
-			console.log(data);
-			console.log(status);
-			console.log(response);
+		}
+	});
+});
+
+ /*
+ * Team create form
+ */
+$('#createTeam').submit(function(e) {
+	e.preventDefault(); 
+
+	url = $(this).attr('action');
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, status, response) {
+			Materialize.toast('New team was made', 4000) // 4000 is the duration of the toast
 		}
 	});
 });

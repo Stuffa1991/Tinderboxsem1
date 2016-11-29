@@ -30,8 +30,11 @@ class Team_model extends CI_Model {
 		// Get latest id
 		$id = $this->db->insert_id();
 
+		$query = sprintf('SELECT teamleaderid, name FROM teams WHERE teamid="%s"', $id);
+		$result = $this->db->query($query);
+
 		if(is_int($id) && $id > 0) { 
-			return $id;
+			return $result->row();
 		} 
 		
 		return false;

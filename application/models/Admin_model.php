@@ -16,7 +16,7 @@ class Admin_model extends CI_Model {
 	public function setTeam($data = [])
 	{
 		$this->load->model('team_model');
-		$this->team_model->setTeam($data);
+		return $this->team_model->setTeam($data);
 	}
 
 	public function getMembers()
