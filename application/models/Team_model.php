@@ -6,6 +6,7 @@ class Team_model extends CI_Model {
 	private $name; // string
 	private $mode; // string
 
+	private $members = [];
 	private $teamleaders = [];
 
 	public function __construct()
@@ -103,6 +104,29 @@ class Team_model extends CI_Model {
 		return $result->row();
 	}
 
+	public function getTeamMembers($id)
+	{
+		// If not an int, return false
+		if(!is_int($id) && $id <= 0) { return false; }
+
+		$query = sprintf('SELECT teamid FROM teams_has_members WHERE memberid = "%s"', $id);
+		$result = $this->db->query($query);
+
+		$teamid = $result->row();
+
+		$query = sprintf('SELECT te.teamid, me.memberid, me.name 
+			FROM teams_has_members AS thm 
+			LEFT JOIN members AS me ON (me.memberid = thm.memberid) 
+			LEFT JOIN contacts AS co ON (co.contactid = me.memberid) 
+			LEFT JOIN teams AS te on (te.teamid = thm.teamid) 
+			WHERE thm.teamid = "%s"', $teamid->teamid);
+		$result = $this->db->query($query);
+
+		$this->members = $result->result();
+
+		return $this->members;
+	}
+
 	public function getTeamLeaders()
 	{
 		$query = sprintf('SELECT memberid, name FROM members WHERE teamleader = 1');
@@ -117,7 +141,5 @@ class Team_model extends CI_Model {
 	{
 		return $this->errors;
 	}
-
-
 
 }
