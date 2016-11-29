@@ -5,22 +5,19 @@ $(function(){
 	 */
 	// Initialize collapse button
 	$(".button-collapse").sideNav();
+
 	$('select').material_select();
 	$('.collapsible').collapsible();
-	
-	// Initialize collapsible (uncomment the line below if you use the dropdown variation)
-	//$('.collapsible').collapsible();
 
 	$('.button-collapse').sideNav({
 	      	menuWidth: 300, // Default is 240
 	     	edge: 'right', // Choose the horizontal origin
 	      	closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-	      	draggable: true // Choose whether you can drag to open on touch screens
+	      	draggable: false // Choose whether you can drag to open on touch screens
 	    }
 	);
 
 	loadDashboardView(siteUrl);
-	//loadTeamView(siteUrl);
 
 	// menu
 	$('#dashboard-view').click(function(){
@@ -41,21 +38,18 @@ $(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
-		console.log('schedule-view');
+		//loadScheduleView(siteUrl);
 	});
 
 	$('#rules-view').click(function(){
-		switchActive();
-		loadInfoView(siteUrl);
-	});
-
-	$('#info-view').click(function(){
-		switchActive();
 		loadRuleView(siteUrl);
 	});
 
+	$('#info-view').click(function(){
+		loadInfoView(siteUrl);
+	});
+
 	$('#news-view').click(function(){
-		switchActive();
 		loadNewsView(siteUrl);
 	});
 
@@ -94,6 +88,7 @@ function hideLoad()
 	$('#loader').hide();
 	$('#container').show();
 }
+
 
 /*
  * Dashboard view
@@ -161,6 +156,7 @@ function getNews(siteUrl)
 		success: function(data, status, response)
 		{
 			$('.collapsible').collapsible();
+
 			$.each(data, function(key, val) {
 				var source   = $('#news').html();
 				var template = Handlebars.compile(source);
@@ -182,7 +178,6 @@ function loadTeamView(siteUrl)
 {	
 	clearView();
 	showLoad();
-
 
 	var source   = $('#teamlist').html();
 	var template = Handlebars.compile(source);
@@ -225,7 +220,6 @@ function loadTeamMemberInfo(siteUrl)
 		e.preventDefault();
 
 		var memberId = $(this).data('member-id');
-		console.log(memberId);
 
 		$.ajax({
 		    type: 'GET',
@@ -237,32 +231,9 @@ function loadTeamMemberInfo(siteUrl)
 				var source   = $('#teammember').html();
 				var template = Handlebars.compile(source);
 				var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
-				$('#container').html(template(data));
-				
-			},
+				$('#container').html(template(data));	
+			}
 		});		
-	});
-}
-
-/*
- * Method to load infos
- */
-function loadInfoView(siteUrl)
-{
-	$.ajax({
-	    type: 'GET',
-	    url: siteUrl + 'info/getinfos/',
-		contentType: 'application/json',
-		success: function(data, status, response)
-		{	
-			$.each(data, function(key, val) {
-				var source   = $('#info').html();
-				var template = Handlebars.compile(source);
-				var data = {title: val.title, text: val.text};
-				$('#info-list').append(template(data));
-			});
-			
-		}
 	});
 }
 
@@ -271,19 +242,65 @@ function loadInfoView(siteUrl)
  */
 function loadRuleView(siteUrl)
 {
+	clearView();
+	showLoad();
+	
+	var source   = $('#rulesview').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
 	$.ajax({
 	    type: 'GET',
 	    url: siteUrl + 'info/getrules/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
+			$('.collapsible').collapsible();
+
+			$.each(data, function(key, val) {
+				var source   = $('#rules').html();
+				var template = Handlebars.compile(source);
+				var data = {title: val.title, text: val.text};
+				$('#rules-list').append(template(data));
+			});
+		},
+		complete: function()
+		{
+			hideLoad();
+		}
+	});
+}
+
+/*
+ * Method to load infos
+ */
+function loadInfoView(siteUrl)
+{	
+	clearView();
+	showLoad();
+	
+	var source   = $('#infoview').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'info/getinfos/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$('.collapsible').collapsible();
+
 			$.each(data, function(key, val) {
 				var source   = $('#info').html();
 				var template = Handlebars.compile(source);
 				var data = {title: val.title, text: val.text};
 				$('#info-list').append(template(data));
 			});
-			
+		},
+		complete: function()
+		{
+			hideLoad();
 		}
 	});
 }
@@ -293,19 +310,31 @@ function loadRuleView(siteUrl)
  */
 function loadNewsView(siteUrl)
 {
+	clearView();
+	showLoad();
+	
+	var source   = $('#newsview').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
 	$.ajax({
 	    type: 'GET',
 	    url: siteUrl + 'info/getnews/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
+			$('.collapsible').collapsible();
+
 			$.each(data, function(key, val) {
-				var source   = $('#info').html();
+				var source   = $('#news').html();
 				var template = Handlebars.compile(source);
 				var data = {title: val.title, text: val.text};
-				$('#info-list').append(template(data));
+				$('#news-list').append(template(data));
 			});
-			
+		},
+		complete: function()
+		{
+			hideLoad();
 		}
 	});
 }
