@@ -11,9 +11,11 @@ class Schedules_model extends CI_Model {
 
 	public function getSchedules($id)
 	{
-		$sth = $this->db->query('SELECT fromtime, totime FROM schedules WHERE mode != 'deleted' AND memberid = "%d"', $id);
-		
-		$this->schedules = $sth->result();
+
+		$query = sprintf('SELECT fromtime, totime FROM schedules WHERE mode != "deleted" AND memberid = "%s"', $id);
+		$result = $this->db->query($query);
+
+		$this->schedules = $result->result();
 
 		return $this->schedules;
 	}
