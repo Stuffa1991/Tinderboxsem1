@@ -1,3 +1,5 @@
+<script id="teamlist" type="text/x-handlebars-template">
+
 <div class="row">
 	<div class="col s12">
 			
@@ -9,6 +11,8 @@
 
 	</div>
 </div>
+
+</script>
 
 <script id="team" type="text/x-handlebars-template">
 	

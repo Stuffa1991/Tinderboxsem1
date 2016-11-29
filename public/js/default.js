@@ -61,31 +61,65 @@ function serializeForm(data)
 	return values;
 }
 
+/**
+ * [clearView description]
+ * @return {[type]} [description]
+ */
+function clearView()
+{
+	$('#container').html('');
+}
+
+function showLoad()
+{
+	$('#loader').show();
+	$('#container').hide();
+}
+
+function hideLoad()
+{
+	$('#loader').hide();
+	$('#container').show();
+}
+
 /*
  * Dashboard view
  */
 function loadDashboardView(siteUrl)
 {
-	getTeamLeader(siteUrl);
-	//getSchedules(siteUrl);
-	getNews(siteUrl);
+	clearView();
+	showLoad();
+
+	var source   = $('#dashboard').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
+	var load = setTimeout(after(siteUrl), 1000);
+
+	function after(siteUrl)
+	{
+		// getTeamLeader(siteUrl);
+		//getSchedules(siteUrl);
+		getNews(siteUrl);
+	}
 }
 
-function getTeamLeader(siteUrl) 
-{
-	$.ajax({
-	    type: 'GET',
-	    url: siteUrl + 'dashboard/getteamleader/',
-		contentType: 'application/json',
-		success: function(data, status, response)
-		{
-			var source   = $('#teamleader').html();
-			var template = Handlebars.compile(source);
-			var data = {name: data.name, email: data.email, mobile: data.mobile};
-			$('#teamleader-info').append(template(data));
-		}
-	});
-}
+// function getTeamLeader(siteUrl) 
+// {
+// 	console.log('hej')
+// 	$.ajax({
+// 	    type: 'GET',
+// 	    url: siteUrl + 'dashboard/getteamleader/',
+// 		contentType: 'application/json',
+// 		success: function(data, status, response)
+// 		{
+// 			var source   = $('#teamleader').html();
+// 			var template = Handlebars.compile(source);
+// 			var data = {name: data.name, email: data.email, mobile: data.mobile};
+// 			$('#teamleader-info').append(template(data));
+// 		}
+// 	});
+// }
 
 function getSchedules(siteUrl)
 {
@@ -112,11 +146,16 @@ function getNews(siteUrl)
 		success: function(data, status, response)
 		{
 			$.each(data, function(key, val) {
+				console.log(val)
 				var source   = $('#news').html();
 				var template = Handlebars.compile(source);
 				var data = {title: val.title, text: val.text};
 				$('#news-info').append(template(data));
 			});	
+		},
+		complete: function()
+		{
+			hideLoad();
 		}
 	});
 }
@@ -126,6 +165,8 @@ function getNews(siteUrl)
  */
 function loadTeamView(siteUrl)
 {	
+
+
 	$.ajax({
 	    type: 'GET',
 	    url: siteUrl + 'team/getteam/',

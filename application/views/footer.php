@@ -1,5 +1,4 @@
-				</div> <!-- // id container -->
-
+			
 				<!-- Side menu -->
 			    <ul id="slide-out" class="side-nav">
 				    <li><div class="userView">
