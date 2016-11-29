@@ -89,7 +89,7 @@ class Team_model extends CI_Model {
 		$query = sprintf('SELECT me.name,co.email,co.phone,co.mobile
 		 FROM teams AS te
 		 LEFT JOIN members AS me ON (me.memberid = te.teamleaderid)
-		 LEFT JOIN contacts AS CO ON (co.contactid = me.contactid)
+		 LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
 		 LEFT JOIN teams_has_members AS thm ON (thm.teamid = te.teamid)
 		 WHERE thm.memberid = "%s"', $id);
 		$result = $this->db->query($query);
