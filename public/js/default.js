@@ -163,24 +163,39 @@ function getNews(siteUrl)
  */
 function loadTeamView(siteUrl)
 {	
+	clearView();
+	showLoad();
 
 
-	$.ajax({
-	    type: 'GET',
-	    url: siteUrl + 'team/getteam/',
-		contentType: 'application/json',
-		success: function(data, status, response)
-		{	
-			$.each(data, function(key, val) {
-				console.log(val);
-				var source   = $('#team').html();
-				var template = Handlebars.compile(source);
-				var data = {memberid: val.memberid, name: val.name};
-				$('#team-list').append(template(data));
-				
-			});
-		}
-	});
+	var source   = $('#teamlist').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
+	var load = setTimeout(after(siteUrl), 1000);
+
+	function after(siteUrl)
+	{
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'team/getteam/',
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				$.each(data, function(key, val) {
+					console.log(val);
+					var source   = $('#team').html();
+					var template = Handlebars.compile(source);
+					var data = {memberid: val.memberid, name: val.name};
+					$('#team-list').append(template(data));
+					
+				});
+			},
+			complete: function()
+			{
+				hideLoad();
+			}
+		});
+	}
 }
 
 /*
