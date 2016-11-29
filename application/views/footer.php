@@ -14,19 +14,19 @@
 				    <li><div class="divider"></div></li>
 				    <li><a class="subheader">Other pages</a></li>
 				    <li>
-				    	<a class="waves-effect" href="#!">
+				    	<a id="rules-view" class="waves-effect" href="#!">
 				    		<i class="material-icons">warning</i>
 				    		Rules
 				    	</a>
 				    </li>
 				    <li>
-				    	<a class="waves-effect" href="#!">
+				    	<a id="info-view" class="waves-effect" href="#!">
 				    		<i class="material-icons">info</i>
 				    		Info
 				    	</a>
 				    </li>
 				    <li>
-				    	<a class="waves-effect" href="#!">
+				    	<a id="news-view" class="waves-effect" href="#!">
 				    		<i class="material-icons">new_releases</i>
 				    		News
 				    	</a>
