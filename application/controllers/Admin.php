@@ -48,10 +48,33 @@ class Admin extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	/**
+	 * Page Schedules
+	 */
 	public function schedules()
 	{
 		$this->load->view('header');
 		$this->load->view('admin/schedules');
+		$this->load->view('footer');
+	}
+
+	/**
+	 * Page Task
+	 */
+	public function tasks()
+	{
+		$this->load->view('header');
+		$this->load->view('admin/tasks');
+		$this->load->view('footer');
+	}
+
+	/**
+	 * Page Places
+	 */
+	public function Places()
+	{
+		$this->load->view('header');
+		$this->load->view('admin/places');
 		$this->load->view('footer');
 	}
 
@@ -184,7 +207,7 @@ class Admin extends CI_Controller {
 	 */
 	public function setSchedule()
 	{
-		//$this->method->method('POST');
+		$this->method->method('POST');
 
 		$postData = file_get_contents('php://input');
 
@@ -203,9 +226,62 @@ class Admin extends CI_Controller {
 		]);
 
 		if($data === false) {
-			$this->response->response(400, 'Bad Request', 'Shit');
+			$this->response->response(400, 'Bad Request', 'Not allowed');
 		} else {
 			$this->response->response(200, 'OK', $data);
 		}
+	}
+
+	/**
+	 * Create new task
+	 */
+	public function setTask()
+	{
+		$this->method->method('POST');
+
+		$postData = file_get_contents('php://input');
+
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
+
+		$data = $this->admin_model->setTask([
+
+		]);
+
+		if($data === false) {
+			$this->response->response(400, 'Bad Request', 'Not allowed');
+		} else {
+			$this->response->response(200, 'OK', $data);
+		}
+	}
+
+	public function setPlace()
+	{
+		$this->method->method('POST');
+
+		$postData = file_get_contents('php://input');
+
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
+
+		$data = $this->admin_model->setPlace([
+			'name' => $post['name']
+		]);
+
+		if($data === false) {
+			$this->response->response(400, 'Bad Request', 'Not allowed');
+		} else {
+			$this->response->response(200, 'OK', $data);
+		}
+	}
+
+	public function getPlaces()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getPlaces());
 	}
 }

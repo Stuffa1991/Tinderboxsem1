@@ -285,8 +285,6 @@ $('#createSchedule').submit(function(e) {
 
 	url = $(this).attr('action');
 
-	console.log($(this).serialize());
-
 	$.ajax({
 		type: 'POST',
 		url: url,
@@ -299,14 +297,28 @@ $('#createSchedule').submit(function(e) {
 	});
 });
 
+ /*
+ * Places form
+ */
+$('#createPlaces').submit(function(e) {
+	e.preventDefault(); 
+
+	url = $(this).attr('action');
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, status, response) {
+		}
+	});
+});
+
 /*
  * Info form
  */
 $('#submitInfo').submit(function(e) {
 	e.preventDefault();
-
-	var data = $(this).serializeArray();
-	var values = serializeForm(data); 
 
 	url = $(this).attr('action');
 

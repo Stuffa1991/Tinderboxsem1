@@ -72,4 +72,16 @@ class Admin_model extends CI_Model {
 		$this->load->model('team_model');
 		return $this->team_model->getTeamLeaders();
 	}
+
+	public function setPlace($data = [])
+	{
+		$this->load->model('place_model');
+		return $this->place_model->setPlace($data);
+	}
+
+	public function getPlaces()
+	{
+		$this->load->model('places_model');
+		return $this->places_model->getPlaces();
+	}
 }
