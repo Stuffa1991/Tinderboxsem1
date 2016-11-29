@@ -52,29 +52,36 @@ class Member_model extends CI_Model {
 		return false;
 	}
 
-	public function updateMember($id, $data)
-	{
+	public function updateMember($id, $data = [])
+	{	
 		// If not an int, return false
 		if(!is_int($id) && $id <= 0) { return false; }	
 
-		// Updates the contact field for now
-		$query = sprintf('UPDATE contacts SET email = "%s", phone = "%s", mobile = "%s" WHERE contactid = "%s"', 
-			$data['contactid'], $data['email'], $data['phone'], $data['mobile']);
-		$this->db->query($query);
+		// If the member wants to create a new password
+		if($data['password']) {
+			// Encrypting the new password
+			$encryptedPassword = password_hash($data['password'], PASSWORD_DEFAULT);
 
-		// Updates the member field
-		$query = sprintf('UPDATE members SET name = "%s", role = "%s", mode = "%s" WHERE memberid = "%s"', 
-			$id, $data['name'], $data['role'], $data['mode']);
-		$this->db->query($query);
+			$query = sprintf('UPDATE members SET name = "%s", password = "%s" WHERE memberid = "%s"', 
+				$data['name'], $encryptedPassword, $id);
+			$this->db->query($query);
+		} else {
+			$query = sprintf('UPDATE members SET name = "%s" WHERE memberid = "%s"', 
+				$data['name'], $id);
+			$this->db->query($query);
+		}
 
-		// Get latest id
-		$id = $this->db->insert_id();
+		$query = sprintf('SELECT contactid FROM members WHERE memberid = "%s"', $id);
+		$result = $this->db->query($query);
 
-		if(is_int($id) && $id > 0) {
-			return $id;
-		} 
+		$result = $result->row();
+		$contactid = $result->contactid;
+		
+		$query = sprintf('UPDATE contacts SET email = "%s", phone = "%s", mobile = "%s" WHERE contactid = "%s"',
+			$data['email'], $data['phone'], $data['mobile'], $contactid);
+		$result = $this->db->query($query);
 
-		return false;
+		return 'Member was edited';
 	}
 
 	public function deleteMember($id)
@@ -99,7 +106,7 @@ class Member_model extends CI_Model {
 			}
 		}
 
-		$this->errors[] = 'schedule-not-delete' . $id;
+		$this->errors[] = 'member-not-delete' . $id;
 		return false;
 
 		/* @TODO: NEED THIS? */

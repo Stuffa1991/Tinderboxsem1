@@ -43,7 +43,10 @@ class Dashboard_model extends CI_Model {
 		return $this->informations_model->getInfos('news');
 	}
 
-}
+	public function updateMember($id, $data = [])
+	{
+		$this->load->model('member_model');
+		return $this->member_model->updateMember($id, $data);
+	}
 
-/* End of file Dashboard_model.php */
-/* Location: ./application/models/Dashboard_model.php */
+}

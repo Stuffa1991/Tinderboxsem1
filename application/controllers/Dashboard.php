@@ -10,6 +10,7 @@ class Dashboard extends CI_Controller {
 		parent::__construct();
 		$this->auth->handleLogin();
 		$this->load->model('dashboard_model');
+		$this->load->library('form_validation');
 	}
 
 	/*
@@ -74,6 +75,51 @@ class Dashboard extends CI_Controller {
 
 		// Loads library response
 		$this->response->response(200, 'OK', $this->dashboard_model->getNews());
+	}
+
+	/*
+	 * Method to edit a members information
+	 */
+	public function editMember()
+	{
+		$this->method->method('POST');
+
+		$postData = file_get_contents('php://input');
+
+		//make an array to store in
+		$post = [];
+		//store serialized data to array
+		parse_str($postData, $post);
+
+		// Set your rules
+		$this->form_validation->set_rules('name', 'Name', 'required|min_length[1]');
+		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
+		$this->form_validation->set_rules('password', 'Password', 'min_length[8]');
+		$this->form_validation->set_rules('repeatPassword', 'Password', 'min_length[8]|matches[password]');
+		
+
+		if ($this->form_validation->run() == TRUE) {  
+		  //This means it works we can continue the script hooray
+		} else { 
+			$this->response->response(200, 'OK', validation_errors());
+		} 
+
+		$data = [
+			'name' => $post['name'],
+			'email' => $post['email'],
+			'phone' => $post['phone'],
+			'mobile' => $post['mobile'],
+			'password' => $post['password']
+		];
+
+		$res = $this->response->response(200, 'OK', $this->dashboard_model->updateMember($this->session->memberid, $data));
+		//$res = $this->member_model->updateMember($this->session->memberid, $data);
+
+		if($res === false) {
+			$this->response->response(200, 'OK', $res);
+		} else {
+			$this->response->response(200, 'OK', $res);
+		}
 	}
 
 }
