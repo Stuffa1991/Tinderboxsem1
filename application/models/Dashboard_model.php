@@ -8,6 +8,15 @@ class Dashboard_model extends CI_Model {
 	}
 
 	/*
+	 * Method to get own informations
+	 */
+	public function getOwnInfo($id)
+	{
+		$this->load->model('member_model');
+		return $this->member_model->getMember($id);
+	}
+
+	/*
 	 * Method to get the members team leader
 	 */
 	public function getTeamLeader($id)
