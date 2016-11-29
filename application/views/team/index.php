@@ -16,6 +16,11 @@
 
 <script id="team" type="text/x-handlebars-template">
 	
-	<li class="collection-item"> {{ name }} </li>
-
+	<li class="collection-item">
+		<div>
+			<a class="memberinfo" data-member-id="{{ memberid }}">{{ name }}<i class="material-icons secondary-content">keyboard_arrow_right</i></a>
+		</div>
+	</li>
+ 
 </script>
+
