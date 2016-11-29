@@ -196,11 +196,7 @@ class Admin extends CI_Controller {
 		$dateStart = html_entity_decode($post['dateStart']);
 		$dateEnd = html_entity_decode($post['dateEnd']);
 
-		$date = new DateTime($dateStart);
-
-		$format = $date->format('Y-m-d-H:i:s');
-
-		$this->response->response(200, 'OK', $format);
+		$this->response->response(200, 'OK', $dateStart);
 
 		return;
 

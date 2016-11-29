@@ -19,8 +19,8 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	schedulesCreate(siteUrl);
-
+	//schedulesCreate(siteUrl);
+	loadTeamsView(siteUrl);
 });
 
 function serializeForm(data) 
@@ -53,6 +53,7 @@ function loadAdminView(siteUrl)
  */
 function loadTeamsView(siteUrl)
 {
+	console.log(siteUrl + 'admin/getteams/')
 	$.ajax({
 	    type: 'GET',
 	    url: siteUrl + 'admin/getteams/',
