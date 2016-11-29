@@ -19,9 +19,25 @@ class Dashboard extends CI_Controller {
 	{	
 		$this->load->view('header');
 		$this->load->view('dashboard/index');
+		$this->load->view('dashboard/edit');
 		$this->load->view('team/index');
 		$this->load->view('team/member');
+		$this->load->view('info/info');
+		$this->load->view('info/news');
+		$this->load->view('info/rules');
 		$this->load->view('footer');
+	}
+
+	/*
+	 * Method to get own informations
+	 */
+	public function getOwnInfo()
+	{
+		// Loads library method
+		$this->method->method('GET');
+
+		// Loads library response
+		$this->response->response(200, 'OK', $this->dashboard_model->getOwnInfo($this->session->memberid));
 	}
 
 	/*
@@ -58,7 +74,6 @@ class Dashboard extends CI_Controller {
 
 		// Loads library response
 		$this->response->response(200, 'OK', $this->dashboard_model->getNews());
-	}	
-
+	}
 
 }

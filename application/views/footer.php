@@ -1,17 +1,25 @@
 			
 				<!-- Side menu -->
 			    <ul id="slide-out" class="side-nav">
-				    <li><div class="userView">
-				      <div class="background">
-				        <img src="http://placehold.it/300x150">
-				      </div>
-				      <a href="#!user"><img class="circle" src="http://lorempicsum.com/up/255/200/5"></a>
-				      <a href="#!name"><span class="name">John Doe</span></a>
-				      <a href="#!email"><span class="email">jdandturk@gmail.com</span></a>
-				    </div></li>
-				    <li><a href="#!"><i class="material-icons">edit_mode</i>Edit profile</a></li>
-				    <li><div class="divider"></div></li>
-				    <li><a class="subheader">Other pages</a></li>
+				    <li>
+				    	<div class="userView">
+				      		<div class="background">
+				        		<img src="http://placehold.it/300x150">
+				      		</div>
+						    <a href="#!user"><img class="circle" src="http://lorempicsum.com/up/255/200/5"></a>
+						    <a href="#!name"><span class="name">John Doe</span></a>
+						    <a href="#!email"><span class="email">jdandturk@gmail.com</span></a>
+				    	</div>
+				    </li>
+				    <li>
+				    	<a id="edit-view" href="#!"><i class="material-icons">edit_mode</i>Edit profile</a>
+				    </li>
+				    <li>
+				    	<div class="divider"></div>
+				    </li>
+				    <li>
+				    	<a class="subheader">Other pages</a>
+				    </li>
 				    <li>
 				    	<a id="rules-view" class="waves-effect" href="#!">
 				    		<i class="material-icons">warning</i>
