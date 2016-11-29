@@ -9,7 +9,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    /*background-image: url(../img/background.jpg);*/
+    background-image: url(../img/background.jpg);
     background-size: cover;
 }
 /*
@@ -36,7 +36,46 @@ nav .nav-wrapper {
     margin: 0 25px auto;
 }
 /*
- * End site
+ * End site view
+ */
+
+/*
+ * Dashboard
+ */
+#teamleader-info .card.horizontal {
+    background: #043540;
+}
+#teamleader-info .card.horizontal p {
+    color: #fff;
+}
+#teamleader-info .card.horizontal h4 {
+    color: #fff;
+    margin: 5px;
+}
+#teamleader-info .card.horizontal .card-image img {
+    margin: 5px;
+}
+#teamleader-info .card .card-content {
+    padding: 2px 10px;
+}
+#schedules-info {
+    border: none;
+}
+#schedules-info li {
+    background: #f18879;
+    color: #fff;
+}
+#news-info li {
+    background-color: rgba(4, 53, 64, 0.5);
+}
+#news-info p {
+    color: #fff;
+}
+
+
+
+/*
+ * End dashboard
  */
 
 /*

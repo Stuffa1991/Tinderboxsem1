@@ -6,6 +6,7 @@ $(function(){
 	// Initialize collapse button
 	$(".button-collapse").sideNav();
 	$('select').material_select();
+	$('.collapsible').collapsible();
 	
 	// Initialize collapsible (uncomment the line below if you use the dropdown variation)
 	//$('.collapsible').collapsible();
@@ -159,6 +160,7 @@ function getNews(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
+			$('.collapsible').collapsible();
 			$.each(data, function(key, val) {
 				var source   = $('#news').html();
 				var template = Handlebars.compile(source);
