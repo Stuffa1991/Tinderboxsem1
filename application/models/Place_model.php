@@ -4,6 +4,7 @@ class Place_model extends CI_Model {
 
 	private $name; // int
 	private $mode; //enumt (active:deleted)
+	private $errors;
 
 	public function __construct()
 	{
@@ -18,8 +19,11 @@ class Place_model extends CI_Model {
 		// Get latest id
 		$id = $this->db->insert_id();
 
+		$query = sprintf('SELECT name,placeid FROM places WHERE placeid="%s"', $id);
+		$result = $this->db->query($query);
+
 		if(is_int($id) && $id > 0) { 
-			return $id;
+			return $result->row();
 		} 
 		
 		return false;
@@ -43,7 +47,7 @@ class Place_model extends CI_Model {
 		return false;
 	}	
 
-	public function deleteSchedule($id)
+	public function deletePlace($id)
 	{
 		// Validates that the content of the variable is an interfer. Return error if it is null or not interger.
 		if($id === null) { $this->errors[] = 'id-not-set'; }

@@ -79,6 +79,12 @@ class Admin_model extends CI_Model {
 		return $this->place_model->setPlace($data);
 	}
 
+	public function deletePlace($id)
+	{
+		$this->load->model('place_model');
+		return $this->place_model->deletePlace($id);
+	}
+
 	public function getPlaces()
 	{
 		$this->load->model('places_model');

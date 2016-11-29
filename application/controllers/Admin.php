@@ -279,6 +279,22 @@ class Admin extends CI_Controller {
 		}
 	}
 
+	public function deletePlace($id)
+	{
+		$this->method->method('GET');
+
+		if($this->admin_model->deletePlace($id))
+		{
+			$response = 'deleted';
+		}
+		else
+		{
+			$response = 'notdeleted';
+		}
+
+		$this->response->response(200, 'OK', $response);
+	}
+
 	public function getPlaces()
 	{
 		// Loads library response

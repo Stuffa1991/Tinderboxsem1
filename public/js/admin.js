@@ -19,8 +19,9 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	schedulesCreate(siteUrl);
+	//schedulesCreate(siteUrl);
 	//loadTeamsView(siteUrl);
+	loadPlaceView(siteUrl);
 	hideLoad();
 });
 
@@ -127,10 +128,6 @@ function loadTeamsView(siteUrl)
 			}
 
 		});
-
-		
-		
-
 		
 	});
 
@@ -196,6 +193,46 @@ function loadMembersView(siteUrl)
 			});
 			
 		}
+	});
+}
+
+function loadPlaceView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'admin/getplaces/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$.each(data, function(key, val) {
+				var source   = $('#places').html();
+				var template = Handlebars.compile(source);
+				var data = {name: val.name, id: val.placeid};
+				$('#place-list').append(template(data));
+			});
+			
+		},
+	});
+
+	$('#place-list').on('click','.deletePlace', function(e){
+
+		var id = $(this).data('id');
+
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'admin/deletePlace/' + id,
+			success: function(data, status, response)
+			{	
+				if(data == 'deleted')
+				{
+					Materialize.toast('Place was deleted', 4000) // 4000 is the duration of the toast
+				}
+				else
+				{
+					Materialize.toast('Place couldnt be deleted', 4000) // 4000 is the duration of the toast
+				}
+			}
+		});
 	});
 }
 
@@ -305,11 +342,25 @@ $('#createPlaces').submit(function(e) {
 
 	url = $(this).attr('action');
 
+	var data = $(this).serializeArray();
+	var values = serializeForm(data); 
+
+	if(values.name == '')
+	{
+		Materialize.toast('Name cant be empty', 4000) // 4000 is the duration of the toast
+		return false;
+	}
+
 	$.ajax({
 		type: 'POST',
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, status, response) {
+			var source   = $('#places').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, id: data.placeid};
+			$('#place-list').append(template(data));
+			$('#name').val('');
 		}
 	});
 });

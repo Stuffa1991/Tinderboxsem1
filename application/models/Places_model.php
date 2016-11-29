@@ -2,7 +2,7 @@
 
 class Places_model extends CI_Model {
 
-	private $name; // int
+	private $places;
 
 	public function __construct()
 	{
@@ -11,10 +11,12 @@ class Places_model extends CI_Model {
 
 	public function getPlaces()
 	{
-		$query = 'SELECT name,placeid FROM places WHERE mode !="deleted"';
-		$result = $this->db->query($query);
+		$sth = 'SELECT name,placeid FROM places WHERE mode !="deleted"';
+		$result = $this->db->query($sth);
 
-		return $result->row();
+		$this->places= $result->result();
+
+		return $this->places;
 	}
 
 }
