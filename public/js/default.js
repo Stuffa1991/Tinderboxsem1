@@ -98,28 +98,27 @@ function loadDashboardView(siteUrl)
 
 	function after(siteUrl)
 	{
-		// getTeamLeader(siteUrl);
+		getTeamLeader(siteUrl);
 		//getSchedules(siteUrl);
 		getNews(siteUrl);
 	}
 }
 
-// function getTeamLeader(siteUrl) 
-// {
-// 	console.log('hej')
-// 	$.ajax({
-// 	    type: 'GET',
-// 	    url: siteUrl + 'dashboard/getteamleader/',
-// 		contentType: 'application/json',
-// 		success: function(data, status, response)
-// 		{
-// 			var source   = $('#teamleader').html();
-// 			var template = Handlebars.compile(source);
-// 			var data = {name: data.name, email: data.email, mobile: data.mobile};
-// 			$('#teamleader-info').append(template(data));
-// 		}
-// 	});
-// }
+function getTeamLeader(siteUrl) 
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'dashboard/getteamleader/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{
+			var source   = $('#teamleader').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, email: data.email, mobile: data.mobile};
+			$('#teamleader-info').append(template(data));
+		}
+	});
+}
 
 function getSchedules(siteUrl)
 {
@@ -146,7 +145,6 @@ function getNews(siteUrl)
 		success: function(data, status, response)
 		{
 			$.each(data, function(key, val) {
-				console.log(val)
 				var source   = $('#news').html();
 				var template = Handlebars.compile(source);
 				var data = {title: val.title, text: val.text};

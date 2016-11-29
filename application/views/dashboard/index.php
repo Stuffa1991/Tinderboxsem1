@@ -3,12 +3,13 @@
 	<div class="col s12">
 		
 		<div id="teamleader-info"></div>
-
+	
 		<div>
 			<ul id="schedules-info" class="collection"></ul>
 		</div>
-
+		
 		<div>
+			<h4>Nyheder</h4>
 			<ul id="news-info" class="collection"></ul>
 		</div>
 
