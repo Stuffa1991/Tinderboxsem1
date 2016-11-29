@@ -18,7 +18,8 @@ $(function(){
 	    }
 	);
 
-	loadDashboardView(siteUrl);
+	//loadDashboardView(siteUrl);
+	loadTeamView(siteUrl);
 
 	// menu
 	$('#dashboard-view').click(function(){
@@ -66,7 +67,7 @@ function serializeForm(data)
 function loadDashboardView(siteUrl)
 {
 	getTeamLeader(siteUrl);
-	getSchedules(siteUrl);
+	//getSchedules(siteUrl);
 	getNews(siteUrl);
 }
 
@@ -142,8 +143,6 @@ function loadTeamView(siteUrl)
 		}
 	});
 }
-
-
 
 /*
  * Method to load infos

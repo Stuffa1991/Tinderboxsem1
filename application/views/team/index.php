@@ -7,3 +7,9 @@
 
 	</div>
 </div>
+
+<script id="team" type="text/x-handlebars-template">
+	
+	<li class="collection-item"> {{ name }} </li>
+
+</script>
