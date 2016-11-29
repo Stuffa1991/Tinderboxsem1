@@ -137,7 +137,6 @@ function getSchedules(siteUrl)
 		success: function(data, status, response)
 		{
 			$.each(data, function(key, val) {
-				console.log(val);
 				var source   = $('#schedules').html();
 				var template = Handlebars.compile(source);
 				var data = {fromtime: val.fromtime, totime: val.totime};
@@ -227,7 +226,6 @@ function loadTeamMemberInfo(siteUrl)
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{	
-				console.log(data);
 				var source   = $('#teammember').html();
 				var template = Handlebars.compile(source);
 				var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
@@ -355,12 +353,10 @@ $('.loginUserForm').submit(function(e) {
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, textStatus, xhr) {
-			console.log(data);
 			//console.debug(data + ' ' + textStatus + ' ' + xhr);
 			if(data == 'loggedIn')
 			{
 				window.location.href = siteUrl + "dashboard";
-				console.log(data + ' True')
 			}
 			else
 			{
