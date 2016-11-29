@@ -19,8 +19,8 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	//schedulesCreate(siteUrl);
-	loadTeamsView(siteUrl);
+	schedulesCreate(siteUrl);
+	//loadTeamsView(siteUrl);
 });
 
 function serializeForm(data) 
@@ -32,6 +32,27 @@ function serializeForm(data)
 	});
 
 	return values;
+}
+
+/**
+ * [clearView description]
+ * @return {[type]} [description]
+ */
+function clearView()
+{
+	$('#container').html('');
+}
+
+function showLoad()
+{
+	$('#loader').show();
+	$('#container').hide();
+}
+
+function hideLoad()
+{
+	$('#loader').hide();
+	$('#container').show();
 }
 
 /*
@@ -257,8 +278,8 @@ function schedulesLoad()
  */
  function schedulesCreate()
  {
- 	$('#dateEnd').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-DD-MM HH:mm:00'  });
-	$('#dateStart').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-DD-MM HH:mm:00'  }).on('change', function(e, date)
+ 	$('#dateEnd').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  });
+	$('#dateStart').bootstrapMaterialDatePicker({ weekStart : 0, format : 'YYYY-MM-DD HH:mm:00'  }).on('change', function(e, date)
 	{
 		$('#dateEnd').bootstrapMaterialDatePicker('setMinDate', date);
 	});

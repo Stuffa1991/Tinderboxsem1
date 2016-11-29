@@ -1,8 +1,6 @@
 <div class="row">
 	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Back</a>
-	
-	<a href="#" id="add-schedule" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Create New Schedule</a>
-	
+
 	<div id="scheduleinfo" class="col s12">
 		<h3>Schedules</h3>
 	<ul id="schedule-list" class="collection with-header"></ul>

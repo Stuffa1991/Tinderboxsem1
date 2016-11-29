@@ -196,10 +196,6 @@ class Admin extends CI_Controller {
 		$dateStart = html_entity_decode($post['dateStart']);
 		$dateEnd = html_entity_decode($post['dateEnd']);
 
-		$this->response->response(200, 'OK', $dateStart);
-
-		return;
-
 		$data = $this->admin_model->setSchedule([
 			'memberid'	=> $post['memberScheduleId'],
 			'fromtime' => $dateStart,
