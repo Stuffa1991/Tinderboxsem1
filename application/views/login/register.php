@@ -1,6 +1,6 @@
   		
 	  	<div class="row">
-	  		<form action="<?php  echo base_url('/login/registerUser/')?>" method="POST" role="form" class="col s12 registerUserForm">
+	  		<form action="<?php echo base_url('/login/registerUser/')?>" method="POST" role="form" class="col s12 registerUserForm">
 				<div class="row">
 					<div class="input-field col s12">
 						<input name="email" id="email" type="email" class="validate">
