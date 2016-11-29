@@ -60,10 +60,10 @@ function loadTeamsView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#team').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {id: val.teamid, name: val.name});
-				$('#team-list').append(rendered);
+				var source   = $('#team').html();
+				var template = Handlebars.compile(source);
+				var data = {id: val.teamid, name: val.name};
+				$('#team-list').append(template(data));
 			});
 		}
 	});
@@ -77,17 +77,17 @@ function loadTeamsView(siteUrl)
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{
-				var template = $('#addteam').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {});
-				$('#teaminfo').html(rendered);
+				var source   = $('#addteam').html();
+				var template = Handlebars.compile(source);
+				var data = {};
+				$('#team-list').html(template(data));
 
 
 				$.each(data, function(key, val) {
-					var template = $('#teamleaders').html();
-					Mustache.parse(template);   // optional, speeds up future uses
-					var rendered = Mustache.render(template, {teamleaderid: val.memberid, name: val.name});
-					$('#teamleaders-select').append(rendered);
+					var source   = $('#teamleaders').html();
+					var template = Handlebars.compile(source);
+					var data = {teamleaderid: val.memberid, name: val.name};
+					$('#teamleaders-select').append(template(data));
 				});
 			},
 
@@ -143,10 +143,10 @@ function loadMembersView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#pending-members').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {id: val.memberid, name: val.name, mobile: val.mobile});
-				$('#pending-member-list').append(rendered);
+				var source   = $('#pending-members').html();
+				var template = Handlebars.compile(source);
+				var data = {id: val.memberid, name: val.name, mobile: val.mobile};
+				$('#pending-member-list').append(template(data));
 			});
 			
 		},
@@ -166,10 +166,10 @@ function loadMembersView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#members').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {id: val.memberid, name: val.name, mobile: val.mobile});
-				$('#member-list').append(rendered);
+				var source   = $('#members').html();
+				var template = Handlebars.compile(source);
+				var data = {id: val.memberid, name: val.name, mobile: val.mobile};
+				$('#member-list').append(template(data));
 			});
 			
 		}
@@ -189,10 +189,10 @@ function getMemberInfo()
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{	
-				var template = $('#memberinfo').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {id: data.memberid, name: data.name, mobile: data.mobile});
-				$('#profile-info').append(rendered);
+				var source   = $('#memberinfo').html();
+				var template = Handlebars.compile(source);
+				var data = {id: data.memberid, name: data.name, mobile: data.mobile};
+				$('#profile-info').append(template(data));
 			}
 		});
 	});

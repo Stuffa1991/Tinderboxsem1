@@ -78,10 +78,10 @@ function getTeamLeader(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-			var template = $('#teamleader').html();
-			Mustache.parse(template);   // optional, speeds up future uses
-			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
-			$('#teamleader-info').append(rendered);
+			var source   = $('#teamleader').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, email: data.email, mobile: data.mobile};
+			$('#teamleader-info').append(template(data));
 		}
 	});
 }
@@ -94,10 +94,10 @@ function getSchedules(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-			var template = $('#schedules').html();
-			Mustache.parse(template);   // optional, speeds up future uses
-			var rendered = Mustache.render(template, {name: data.name, email: data.email, mobile: data.mobile});
-			$('#schedules-info').append(rendered);
+			var source   = $('#schedules').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, email: data.email, mobile: data.mobile};
+			$('#schedules-info').append(template(data));
 		}
 	});
 }
@@ -111,10 +111,10 @@ function getNews(siteUrl)
 		success: function(data, status, response)
 		{
 			$.each(data, function(key, val) {
-				var template = $('#news').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {title: val.title, text: val.text});
-				$('#news-info').append(rendered);
+				var source   = $('#news').html();
+				var template = Handlebars.compile(source);
+				var data = {title: val.title, text: val.text};
+				$('#news-info').append(template(data));
 			});	
 		}
 	});
@@ -133,11 +133,10 @@ function loadTeamView(siteUrl)
 		{	
 			$.each(data, function(key, val) {
 				console.log(val);
-				
-				var template = $('#team').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {memberid: val.memberid, name: val.name});
-				$('#team-list').append(rendered);
+				var source   = $('#team').html();
+				var template = Handlebars.compile(source);
+				var data = {memberid: val.memberid, name: val.name};
+				$('#team-list').append(template(data));
 				
 			});
 		}
@@ -158,10 +157,10 @@ function loadInfoView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#info').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {title: val.title, text: val.text});
-				$('#info-list').append(rendered);
+				var source   = $('#info').html();
+				var template = Handlebars.compile(source);
+				var data = {title: val.title, text: val.text};
+				$('#info-list').append(template(data));
 			});
 			
 		}
@@ -180,10 +179,10 @@ function loadRuleView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#info').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {title: val.title, text: val.text});
-				$('#info-list').append(rendered);
+				var source   = $('#info').html();
+				var template = Handlebars.compile(source);
+				var data = {title: val.title, text: val.text};
+				$('#info-list').append(template(data));
 			});
 			
 		}
@@ -202,10 +201,10 @@ function loadNewsView(siteUrl)
 		success: function(data, status, response)
 		{	
 			$.each(data, function(key, val) {
-				var template = $('#info').html();
-				Mustache.parse(template);   // optional, speeds up future uses
-				var rendered = Mustache.render(template, {title: val.title, text: val.text});
-				$('#info-list').append(rendered);
+				var source   = $('#info').html();
+				var template = Handlebars.compile(source);
+				var data = {title: val.title, text: val.text};
+				$('#info-list').append(template(data));
 			});
 			
 		}
