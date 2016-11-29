@@ -281,7 +281,7 @@ class Admin extends CI_Controller {
 
 	public function deletePlace($id)
 	{
-		$this->method->method('GET');
+		$this->method->method('DELETE');
 
 		if($this->admin_model->deletePlace($id))
 		{

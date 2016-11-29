@@ -21,7 +21,8 @@ $(function(){
 	//loadMembersView(siteUrl);
 	//schedulesCreate(siteUrl);
 	//loadTeamsView(siteUrl);
-	loadPlaceView(siteUrl);
+	//loadPlaceView(siteUrl);
+	loadTaskView(siteUrl);
 	hideLoad();
 });
 
@@ -118,11 +119,8 @@ function loadTeamsView(siteUrl)
 			complete: function(data, status, response)
 			{
 				
-				
 				//var firstitem = '<option value="" selected>Choose your option</option>';
 				//$('#teamleaders-select').append(firstitem);
-
-				
 
 				$('select').material_select(); // Must be last
 			}
@@ -219,7 +217,7 @@ function loadPlaceView(siteUrl)
 		var id = $(this).data('id');
 
 		$.ajax({
-		    type: 'GET',
+		    type: 'DELETE',
 		    url: siteUrl + 'admin/deletePlace/' + id,
 			success: function(data, status, response)
 			{	
@@ -234,6 +232,27 @@ function loadPlaceView(siteUrl)
 			}
 		});
 	});
+}
+
+function loadTaskView(siteUrl)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'admin/getplaces/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			var source   = $('#place').html();
+			var template = Handlebars.compile(source);
+			var data = {data};
+			$('.places').append(template(data));
+			
+		},
+		complete: function()
+		{
+			$('.places-select').material_select();
+		}
+	});	
 }
 
 function getMemberInfo()
@@ -338,6 +357,37 @@ $('#createSchedule').submit(function(e) {
  * Places form
  */
 $('#createPlaces').submit(function(e) {
+	e.preventDefault(); 
+
+	url = $(this).attr('action');
+
+	var data = $(this).serializeArray();
+	var values = serializeForm(data); 
+
+	if(values.name == '')
+	{
+		Materialize.toast('Name cant be empty', 4000) // 4000 is the duration of the toast
+		return false;
+	}
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, status, response) {
+			var source   = $('#places').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, id: data.placeid};
+			$('#place-list').append(template(data));
+			$('#name').val('');
+		}
+	});
+});
+
+ /*
+ * Places form
+ */
+$('#createTasks').submit(function(e) {
 	e.preventDefault(); 
 
 	url = $(this).attr('action');

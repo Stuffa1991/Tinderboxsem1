@@ -7,8 +7,12 @@
 				<input name="name" id="name" type="text">
 				<label for="name">Name</label>
 			</div>
+			<div class="input-field col s6">
+				<input name="place" id="place" type="text">
+				<label for="place">Place</label>
+			</div>
 		</div>
-		<button type="submit" class="btn btn-primary">Create place</button>
+		<button type="submit" class="btn btn-primary">Create Task</button>
 	</form>
 
 	<div id="placeinfo" class="col s12">
