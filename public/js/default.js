@@ -53,6 +53,10 @@ $(function(){
 		loadNewsView(siteUrl);
 	});
 
+	$('#edit-view').click(function(){
+		loadEditView(siteUrl);
+	});
+
 	//loadAdminView(siteUrl);
 
 });
@@ -338,6 +342,34 @@ function loadNewsView(siteUrl)
 }
 
 /*
+ * Method to edit profile view
+ */
+function loadEditView(siteUrl)
+{
+	clearView();
+	showLoad();
+
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'dashboard/getOwnInfo/',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			$('.button-collapse').sideNav('hide');
+
+			var source   = $('#editview').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
+			$('#container').html(template(data));
+		},
+		complete: function()
+		{
+			hideLoad();
+		}
+	});
+}
+
+/*
  * Login user form
  */
 $('.loginUserForm').submit(function(e) {
@@ -370,6 +402,24 @@ $('.loginUserForm').submit(function(e) {
 			//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
 		}
 	});
+});
+
+/*
+ * Edit user form
+ */
+$('.editUserForm').submit(function(e){
+	e.preventDefault();
+
+    var data = $(this).serializeArray();
+	var values = serializeForm(data); 
+
+	if(values.repeatPassword !== values.password)
+	{
+		Materialize.toast('Passwords dont match', 4000) // 4000 is the duration of the toast
+		return false;
+	}
+
+	url = $(this).attr('action');
 });
 
 /*
