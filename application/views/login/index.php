@@ -1,4 +1,4 @@
-		<div class="container">
+		<div id="container" class="container">
 			<div class="row">
 				<div class="col s12">
 					<form class="loginUserForm" action="<?php  echo base_url('/login/loginAjax')?>" method="POST" role="form">
