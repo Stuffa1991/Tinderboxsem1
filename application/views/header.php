@@ -26,7 +26,7 @@
 				<!-- class container -->
 				<div class="container">
 					<!-- id loader -->
-					<div id="loader" class="center">
+					<div id="loader" class="center hide">
 						<div id="preloader" class="preloader-wrapper big active">
 						    <div class="spinner-layer spinner-blue-only">
 						        <div class="circle-clipper left">
