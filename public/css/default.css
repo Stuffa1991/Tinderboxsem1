@@ -74,6 +74,17 @@ nav .nav-wrapper {
     color: #fff;
 }
 
+.card-month {
+    transition: box-shadow .25s;
+    padding: 10px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.schedule-farver {
+    background-color: #f18879!important;
+    color:#fff;
+}
 
 
 /*
