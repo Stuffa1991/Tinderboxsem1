@@ -9,8 +9,8 @@
 		</div>
 		
 		<div>
-			<h4>News</h4>
-			<ul id="news-info" class="collapsible" data-collapsible="accordion"></ul>
+			<h4>Info from staff</h4>
+			<ul id="staff-info" class="collapsible" data-collapsible="accordion"></ul>
 			    
 		</div>
 
