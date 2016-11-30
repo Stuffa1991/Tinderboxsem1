@@ -17,47 +17,48 @@ $(function(){
 	    }
 	);
 
-	// loadDashboardView(siteUrl);
+	loadDashboardView(siteUrl);
 
-	// // menu
-	// $('#dashboard-view').click(function(){
-	// 	$('.collection-item').removeClass('active');
-	// 	$(this).addClass('active');
+	// menu
+	$('#dashboard-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
 
-	// 	loadDashboardView(siteUrl);
-	// });
+		loadDashboardView(siteUrl);
+	});
 
-	// $('#team-view').click(function(){
-	// 	$('.collection-item').removeClass('active');
-	// 	$(this).addClass('active');
+	$('#team-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
 
-	// 	loadTeamView(siteUrl);
-	// });
+		loadTeamView(siteUrl);
+	});
 
-	// $('#schedule-view').click(function(){
-	// 	$('.collection-item').removeClass('active');
-	// 	$(this).addClass('active');
+	$('#schedule-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
 
-	// 	//loadScheduleView(siteUrl);
-	// });
+		//loadScheduleView(siteUrl);
+	});
 
-	// $('#rules-view').click(function(){
-	// 	loadRuleView(siteUrl);
-	// });
+	$('#rules-view').click(function(){
+		loadRuleView(siteUrl);
+	});
 
-	// $('#info-view').click(function(){
-	// 	loadInfoView(siteUrl);
-	// });
+	$('#info-view').click(function(){
+		loadInfoView(siteUrl);
+	});
 
-	// $('#news-view').click(function(){
-	// 	loadNewsView(siteUrl);
-	// });
+	$('#news-view').click(function(){
+		loadNewsView(siteUrl);
+	});
 
-	// $('#edit-view').click(function(){
-	// 	loadEditView(siteUrl);
-	// });
+	$('#edit-view').click(function(){
+		loadEditView(siteUrl);
+	});
 
 	//loadAdminView(siteUrl);
+	hideLoad();
 });
 
 function serializeForm(data) 
@@ -92,7 +93,7 @@ function hideLoad()
 	$('#container').show();
 }
 
-hideLoad();
+
 /*
  * Dashboard view
  */
