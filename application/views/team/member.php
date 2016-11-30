@@ -1,9 +1,9 @@
 <script id="teammember" type"text/x-handlebars-template">
-	<div class="card">
+	<div class="team card">
 	    <div class="waves-effect waves-block waves-light">
 	      <img class="circle" src="http://placehold.it/100x100">
 	    </div>
-	    <div class="card-content">
+	    <div class="team card-content">
 	      	<h4>{{ name }}</h4>
 
 	      	<h5>Email: {{ email }}</h5>
