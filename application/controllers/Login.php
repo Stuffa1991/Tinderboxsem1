@@ -91,6 +91,7 @@ class Login extends CI_Controller {
 					'memberid' => $member->memberid
 				);
 
+				//$this->session->sess_expiration = '43200';// expires in 12 hours
 				$this->session->set_userdata($sess_data);
 
 				$this->response->response(200, 'OK', 'loggedIn');

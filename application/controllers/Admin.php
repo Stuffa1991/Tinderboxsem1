@@ -6,6 +6,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		$this->load->model('admin_model');
+		$this->auth->handleLogin();
 	}
 
 	/*
@@ -85,6 +86,12 @@ class Admin extends CI_Controller {
 	{	
 		// Loads library response
 		$this->response->response(200, 'OK', $this->admin_model->getTeams());
+	}
+
+	public function getTeamMembers()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getTeamMembers());
 	}
 
 	/*

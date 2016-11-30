@@ -12,6 +12,12 @@ class Admin_model extends CI_Model {
 		$this->load->model('teams_model');
 		return $this->teams_model->getTeams();
 	}
+
+	public function getTeamMembers()
+	{
+		$this->load->model('teams_model');
+		return $this->teams_model->getTeamMembers();
+	}
 	
 	public function setTeam($data = [])
 	{

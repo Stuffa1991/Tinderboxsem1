@@ -42,8 +42,27 @@
 </script>
 
 <script id="team" type="text/x-handlebars-template">
+{{#each data}}
 	<li id="team-list">
-      <div class="collapsible-header">{{ name }}</div>
-      <div class="collapsible-body">{{ name }}</div>
+      <div class="collapsible-header"># {{ teamid }} - {{ teamname }}</div>
+      <div class="collapsible-body center">
+
+      	<div class="teamleader">
+      		<h5>Team Leader</h5>
+      		{{ name }}
+      	</div
+      	<div class="teammembers" id="teamid-{{ teamid }}">
+			<h5>Members</h5>
+			<div id="teammembers-{{ teamid }}">
+				
+			</div>
+      	</div>
+      </div>
     </li>
+
+{{/each}}
+</script>
+
+<script id="teammembers" type="text/x-handlebars-template">
+	<div class="member"># {{ memberid }} - {{ name }}</div>
 </script>

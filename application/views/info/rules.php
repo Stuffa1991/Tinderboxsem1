@@ -12,7 +12,7 @@
 
 </script>
 	
-<script id="rules" type="x-tmpl-mustache">
+<script id="rules" type="text/x-handlebars-template">
     <li>
       <div class="collapsible-header">{{ title }}</div>
       <div class="collapsible-body"><p>{{ text }}</p></div>

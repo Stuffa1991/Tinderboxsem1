@@ -19,8 +19,8 @@ $(function(){
 	);
 
 	//loadMembersView(siteUrl);
-	//loadSchedulesView(siteUrl);
-	loadTeamsView(siteUrl);
+	loadSchedulesView(siteUrl);
+	//loadTeamsView(siteUrl);
 	//loadPlaceView(siteUrl);
 	// loadTaskView(siteUrl);
 	hideLoad();
@@ -87,11 +87,31 @@ function loadTeamsView(siteUrl)
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{	
-				$.each(data, function(key, val) {
-					var source = $('#team').html();
+				var source = $('#team').html();
+				var template = Handlebars.compile(source);
+				var data = {data};
+				$('#team-list').append(template(data));
+			},
+			complete: function()
+			{
+				getTeamMembers();
+			}
+		});
+	}
+
+	function getTeamMembers()
+	{
+		$.ajax({
+		    type: 'GET',
+		    url: siteUrl + 'admin/getteammembers/',
+			contentType: 'application/json',
+			success: function(data, status, response)
+			{	
+				$.each(data, function(key, val) {					
+					var source = $('#teammembers').html();
 					var template = Handlebars.compile(source);
-					var data = {id: val.teamid, name: val.name};
-					$('#team-list').append(template(data));
+					var data = {name: val.name, memberid: val.memberid};
+					$('#teammembers-' + val.teamid).append(template(data));
 				});
 			}
 		});

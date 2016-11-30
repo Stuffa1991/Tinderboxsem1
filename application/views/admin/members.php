@@ -10,7 +10,7 @@
 	<ul id="member-list" class="collection with-header"></ul>
 </div>
 
-<script id="memberinfo" type="x-tmpl-mustache">
+<script id="memberinfo" type="text/x-handlebars-template">
 		<div class="userView">
 	      	<div class="background">
 	        	<img src="http://placehold.it/300x150">
@@ -21,7 +21,7 @@
 	    </div>
 </script>	
 
-<script id="pending-members" type="x-tmpl-mustache">
+<script id="pending-members" type="text/x-handlebars-template">
 	<li>
       <div class="collapsible-header">{{ name }}</div>
       	<div class="collapsible-body">
@@ -32,7 +32,7 @@
     </li>
 </script>
 
-<script id="members" type="x-tmpl-mustache">
+<script id="members" type="text/x-handlebars-template">
 	<li class="collection-item">
 		<div> {{ name }} - {{ mobile }}
 			<a href="#!" class="secondary-content"><i data-id="{{ id }}" class="material-icons">send</i></a>
