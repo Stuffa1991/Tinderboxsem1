@@ -112,7 +112,7 @@ function loadDashboardView(siteUrl)
 	{
 		getTeamLeader(siteUrl);
 		getSchedules(siteUrl);
-		getNews(siteUrl);
+		getStaff(siteUrl);
 	}
 }
 
@@ -150,21 +150,21 @@ function getSchedules(siteUrl)
 	});
 }
 
-function getNews(siteUrl)
+function getStaff(siteUrl)
 {
 	$.ajax({
 	    type: 'GET',
-	    url: siteUrl + 'dashboard/getnews/',
+	    url: siteUrl + 'dashboard/getstaff/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
 			$('.collapsible').collapsible();
 
 			$.each(data, function(key, val) {
-				var source   = $('#news').html();
+				var source   = $('#staff').html();
 				var template = Handlebars.compile(source);
 				var data = {title: val.title, text: val.text};
-				$('#news-info').append(template(data));
+				$('#staff-info').append(template(data));
 			});	
 		},
 		complete: function()
@@ -420,6 +420,20 @@ $('.editUserForm').submit(function(e){
 	}
 
 	url = $(this).attr('action');
+
+	$.ajax({
+		type: 'POST',
+		url: url,
+		data: $(this).serialize(),
+		success: function(data, textStatus, xhr) {
+			var dataString = JSON.stringify(data);
+			Materialize.toast('Profile was edited', 4000);
+		},
+		complete: function(xhr, textStatus) {
+		},
+		error: function(xhr, textStatus, errorThrown) {
+		}
+	});
 });
 
 /*

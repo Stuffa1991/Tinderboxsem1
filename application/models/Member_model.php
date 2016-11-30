@@ -81,7 +81,7 @@ class Member_model extends CI_Model {
 			$data['email'], $data['phone'], $data['mobile'], $contactid);
 		$result = $this->db->query($query);
 
-		return 'Member was edited';
+		return true;
 	}
 
 	public function deleteMember($id)

@@ -68,13 +68,13 @@ class Dashboard extends CI_Controller {
 	/*
 	 * Method get news
 	 */
-	public function getNews()
+	public function getStaff()
 	{
 		// Loads library method
 		$this->method->method('GET');
 
 		// Loads library response
-		$this->response->response(200, 'OK', $this->dashboard_model->getNews());
+		$this->response->response(200, 'OK', $this->dashboard_model->getStaff());
 	}
 
 	/*

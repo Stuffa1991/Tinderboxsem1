@@ -37,10 +37,10 @@ class Dashboard_model extends CI_Model {
 	/*
 	 * Method to get news
 	 */
-	public function getNews()
+	public function getStaff()
 	{
 		$this->load->model('informations_model');
-		return $this->informations_model->getInfos('news');
+		return $this->informations_model->getStaff('staff');
 	}
 
 	public function updateMember($id, $data = [])

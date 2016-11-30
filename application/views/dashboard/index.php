@@ -39,7 +39,7 @@
 
 </script>
 
-<script id="news" type="text/x-handlebars-template">
+<script id="staff" type="text/x-handlebars-template">
 	
 	<li>
       <div class="collapsible-header">{{ title }}</div>
