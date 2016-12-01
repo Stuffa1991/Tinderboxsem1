@@ -43,6 +43,13 @@ $(function(){
 		document.title = 'Schedules';
 	});
 
+	$('#sidenav-view').click(function(){
+		$('.collection-item').removeClass('active');
+		$(this).addClass('active');
+
+		document.title = 'Side Nav';
+	});
+
 	$('#rules-view').click(function(){
 		loadRuleView(siteUrl);
 		document.title = 'Rules';
@@ -464,6 +471,7 @@ function loadEditView(siteUrl)
 		complete: function()
 		{
 			hideLoad();
+			Materialize.updateTextFields();
 		}
 	});
 }
