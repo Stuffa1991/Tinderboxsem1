@@ -17,7 +17,7 @@ $(function(){
 	    }
 	);
 
-	loadDashboardView(siteUrl);
+	//loadDashboardView(siteUrl);
 
 	// menu
 	$('#dashboard-view').click(function(){
