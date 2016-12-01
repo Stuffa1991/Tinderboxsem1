@@ -133,10 +133,35 @@ function getTeamLeader(siteUrl)
 				var template = Handlebars.compile(source);
 				var data = {name: data.name, email: data.email, mobile: data.mobile, memberid: data.memberid};
 				$('#teamleader-info').append(template(data));
+
+				$('#show-teamleader').click(function(){
+					var id = $(this).data('member-id');
+
+					$.ajax({
+					    type: 'GET',
+					    url: siteUrl + 'team/getTeamMemberInfo/' + id,
+						contentType: 'application/json',
+						success: function(data, status, response)
+						{	
+							var source   = $('#teammember').html();
+							var template = Handlebars.compile(source);
+							var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
+							$('#container').html(template(data));	
+						},
+						complete: function()
+						{
+							
+						}
+					});		
+				});
 			}
 		}
 	});
 }
+$('#container').on('click','#backDashboard', function(e){
+	e.preventDefault();
+	loadDashboardView(siteUrl);
+});
 
 function getSchedules(siteUrl)
 {

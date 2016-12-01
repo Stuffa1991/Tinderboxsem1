@@ -17,7 +17,7 @@
 </script>
 
 <script id="teamleader" type="text/x-handlebars-template">
-	<div id="show-teamleader" data-member-id="{{member-id}}" class="card horizontal">
+	<div id="show-teamleader" data-member-id="{{memberid}}" class="card horizontal">
 	  	<div class="card-image">
 	    	<img src="http://placehold.it/100x100">
 	  	</div>
@@ -32,16 +32,7 @@
 	</div>
 </script>
 
-<script>
-	$('#show-teamleader').click(function(){
-		var id = $(this).data('member-id');
-
-		console.log(id);
-	});
-</script>
-
-<script id="schedules" type="text/x-handlebars-template">
-	
+<script id="schedules" type="text/x-handlebars-template">	
 	<li class="collection-item">
 	<div class="row">
 		<div class="col s6">
@@ -52,14 +43,36 @@
 		</div>
 	</div>
 	</li>
-
 </script>
 
 <script id="staff" type="text/x-handlebars-template">
-	
 	<li>
       <div class="collapsible-header">{{ title }} <div class="right">{{ date }}</div></div>
       <div class="collapsible-body"><p>{{ text }}</p></div>
     </li>
+</script>
 
+<script id="teammember" type="text/x-handlebars-template">
+	<div class="team card">
+	    <div class="team card-content">
+	    	<p class="center">
+	    		<img class="circle" src="http://placehold.it/120x120">
+	    	</p>
+	    	<div class="col s12 center">
+	    		<h4>{{ name }}</h4>
+	    	</div>
+	      	
+	      	<h5>Email: {{ email }} 
+		      	<a class="btn-floating btn">
+			      <i class="large material-icons">email</i>
+			    </a>
+			</h5>
+	     	<h5>Mobile: {{ mobile }} 
+	     		<a class="btn-floating btn">
+			      <i class="large material-icons">phone</i>
+			    </a>
+	     	</h5>
+	    </div>
+	</div>
+	<a href="#!" id="backDashboard" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
 </script>

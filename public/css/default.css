@@ -92,6 +92,7 @@ img.center {
 }
 #teamleader-info .card.horizontal .card-image img {
     margin: 5px;
+    border-radius: 50%;
 }
 #teamleader-info .card .card-content {
     padding: 2px 10px;
