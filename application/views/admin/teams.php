@@ -66,3 +66,11 @@
 <script id="teammembers" type="text/x-handlebars-template">
 	<div class="member"># {{ memberid }} - {{ name }}</div>
 </script>
+
+<script>
+
+$(document).ready(function($) {
+	
+});
+
+</script>

@@ -92,7 +92,60 @@
 		<script src="<?=base_url('public/js/default.js');?>"></script>
 
 		<?php } ?>	
-	
+		
+		<?php if ($this->uri->segment(2) == 'schedules'){ ?>
+			<!--  Load admin function for schedules-->
+			<script>
 
+			$(document).ready(function($) {
+				loadSchedulesView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
+
+		<?php if ($this->uri->segment(2) == 'members'){ ?>
+			<!--  Load admin function for members-->
+			<script>
+
+			$(document).ready(function($) {
+				loadMembersView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
+
+		<?php if ($this->uri->segment(2) == 'teams'){ ?>
+			<!--  Load admin function for teams-->
+			<script>
+
+			$(document).ready(function($) {
+				loadTeamsView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
+
+		<?php if ($this->uri->segment(2) == 'tasks'){ ?>
+			<!--  Load admin function for tasks-->
+			<script>
+
+			$(document).ready(function($) {
+				loadTaskView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
+
+		<?php if ($this->uri->segment(2) == 'places'){ ?>
+			<!--  Load admin function for Places-->
+			<script>
+
+			$(document).ready(function($) {
+				loadPlaceView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
 	</body>
 </html>

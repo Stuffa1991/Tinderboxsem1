@@ -19,15 +19,15 @@ $(function(){
 	);
 
 
-	$('#add-team').click(function(){
-		loadTeamsView(siteUrl);
-	});	
+	// $('#add-team').click(function(){
+	// 	loadTeamsView(siteUrl);
+	// });	
 
-	loadMembersView(siteUrl);
+	//loadMembersView(siteUrl);
 	//loadSchedulesView(siteUrl);
 	//
 	//loadPlaceView(siteUrl);
-	// loadTaskView(siteUrl);
+	//loadTaskView(siteUrl);
 	hideLoad();
 });
 

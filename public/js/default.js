@@ -38,7 +38,7 @@ $(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
-		//loadScheduleView(siteUrl);
+		loadScheduleView(siteUrl);
 	});
 
 	$('#rules-view').click(function(){
@@ -124,10 +124,17 @@ function getTeamLeader(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{
-			var source   = $('#teamleader').html();
-			var template = Handlebars.compile(source);
-			var data = {name: data.name, email: data.email, mobile: data.mobile};
-			$('#teamleader-info').append(template(data));
+			if(data == null)
+			{
+
+			}
+			else
+			{
+				var source   = $('#teamleader').html();
+				var template = Handlebars.compile(source);
+				var data = {name: data.name, email: data.email, mobile: data.mobile};
+				$('#teamleader-info').append(template(data));
+			}
 		}
 	});
 }
@@ -238,6 +245,24 @@ function loadTeamMemberInfo(siteUrl)
 		});		
 	});
 }
+
+/**
+ * Schedules View
+ */
+
+function loadScheduleView(siteUrl)
+{
+	clearView();
+	showLoad();
+
+	var source   = $('#schedulesview').html();
+	var template = Handlebars.compile(source);
+	$('#container').html(template());
+
+	$('ul.tabs').tabs();
+	hideLoad();
+}
+
 
 /*
  * Method to load rules
