@@ -71,28 +71,32 @@
 
 			</div> <!-- // class container -->
 		</main>
-		
-		<footer class="page-footer">
-	        <div class="container">
-	            <div class="row">
-	              	<div class="col s12">
-	                	
-	              		<div class="collection">
-					        <a id="dashboard-view" href="#!" class="collection-item active"><i class="material-icons">home</i><p>Home</p></a>
-					        <a id="team-view" href="#!" class="collection-item"><i class="material-icons">person</i><p>Team</p></a>
-					        <a id="schedule-view" href="#!" class="collection-item"><i class="material-icons">assignment</i><p>Schedules</p></a>
-					        <a id="info-view" href="#!" class="collection-item"><i class="material-icons">info</i><p>Info</p></a>
-					        <a id="" href="#!" class="collection-item button-collapse" data-activates="slide-out">
-			        			<i class="material-icons">menu</i>
-			        			<p>Menu</p>
-			        		</a>
-					    </div>
 
-	                </div>
-	            </div>    
-	        </div>
-        </footer>
-        
+		<?php if($this->session->memberid) { ?>
+	
+			<footer class="page-footer">
+		        <div class="container">
+		            <div class="row">
+		              	<div class="col s12">
+		                	
+		              		<div class="collection">
+						        <a id="dashboard-view" href="#!" class="collection-item active"><i class="material-icons">home</i><p>Home</p></a>
+						        <a id="team-view" href="#!" class="collection-item"><i class="material-icons">person</i><p>Team</p></a>
+						        <a id="schedule-view" href="#!" class="collection-item"><i class="material-icons">assignment</i><p>Schedules</p></a>
+						        <a id="info-view" href="#!" class="collection-item"><i class="material-icons">info</i><p>Info</p></a>
+						        <a id="" href="#!" class="collection-item button-collapse" data-activates="slide-out">
+				        			<i class="material-icons">menu</i>
+				        			<p>Menu</p>
+				        		</a>
+						    </div>
+
+		                </div>
+		            </div>    
+		        </div>
+	        </footer>
+        	
+		<?php } ?>
+
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Compiled and minified JavaScript -->
