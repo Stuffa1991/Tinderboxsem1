@@ -79,10 +79,6 @@
 	        </div>
         </footer>
         <?php } ?>
-		<!-- Tiny Mce -->
-		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
-		<script>tinymce.init({ selector:'textarea' });</script>
- 	    <!-- Tinymce End -->
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Compiled and minified JavaScript -->

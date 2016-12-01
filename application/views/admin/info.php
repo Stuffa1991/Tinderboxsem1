@@ -3,7 +3,7 @@
 	<form id="submitInfo" action="<?=base_url('admin/setinfo')?>" method="POST" role="form">
 		<div class="row">
 			<div class="input-field col s12">
-				<select name="info">
+				<select name="type">
 					<option value="" selected>Choose your option</option>
 					<option value="info">Info</option>
 					<option value="rule">Rule</option>
@@ -19,7 +19,7 @@
 
 			<div class="input-field col s12">
 	          	<textarea name="text" id="textarea" class="materialize-textarea validate"></textarea>
-	          	<label for="textarea"></label>
+	          	<label for="textarea">Text</label>
 	        </div>
 	        <button type="submit" class="btn btn-primary">Submit</button>
 		</div>		

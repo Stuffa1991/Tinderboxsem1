@@ -18,7 +18,13 @@
 		<body>
 			<nav>
 			    <div class="nav-wrapper">
-		      		<a href="#" class="brand-logo">Logo</a>
+				    <div class="row">
+				    	<div class="col s3"></div>
+					    <div class="col s6">
+					    	<img class="center" src="<?=base_url('public/img/tinderboxlogo.png');?>">
+					    </div>
+					    <div class="col s3"></div>
+					</div>    	
 		    	</div>
 		  	</nav>
 
