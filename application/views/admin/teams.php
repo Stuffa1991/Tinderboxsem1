@@ -16,7 +16,7 @@
 
 		<div id="setteam" class="col s12">
 			<div class="insertTeams">
-				<form action="<?php echo base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
+				<form action="<?=base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
 							<input name="name" id="name" type="text">
