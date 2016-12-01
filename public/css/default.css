@@ -135,6 +135,9 @@ nav .nav-wrapper {
 /*
  * Footer
  */
+ul#slide-out {
+    z-index: 99999;
+} 
 footer.page-footer {
 	background: #043540;
 	margin-top: 0;
