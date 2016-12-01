@@ -243,3 +243,18 @@ a.waves-effect.waves-light.btn-large {
     margin-left: 1%;
     padding: 0px 10px;
 }
+
+.member-options {
+    width: 33%;
+    display: inline;
+    padding: 10px;
+}
+.member-options a {
+    color: #043540;
+    width: 100%;
+    padding: 12px;
+}
+.member-options a i {
+    color: #043540;
+    line-height: 40px;
+}
