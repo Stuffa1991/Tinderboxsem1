@@ -27,11 +27,3 @@
 		</div>		
 	</form>
 </div>
-
-<script>
-
-$(document).ready(function($) {
-	
-});
-
-</script>

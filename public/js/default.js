@@ -58,7 +58,7 @@ $(function(){
 	});
 
 	//loadAdminView(siteUrl);
-	hideLoad();
+	//hideLoad();
 });
 
 function serializeForm(data) 
