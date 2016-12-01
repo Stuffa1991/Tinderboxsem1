@@ -79,6 +79,16 @@ class Admin extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	/**
+	 * Method get tasks
+	 */
+
+	public function getAllTasks()
+	{
+		// Loads library response
+		$this->response->response(200, 'OK', $this->admin_model->getAllTasks());
+	}
+
 	/*
 	 * Method get teams
 	 */
