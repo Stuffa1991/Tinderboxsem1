@@ -12,4 +12,7 @@
 
 		<a href="<?=base_url('admin/schedules')?>" class="waves-effect waves-light btn-large"><i class="material-icons left">schedule</i>Schedules</a>
 	</div>
+	<div class="col s12 center" style="margin-top:50px;">
+		<a href="<?=base_url('dashboard')?>" style="width:100%;" class="waves-effect waves-light btn-large"><i class="material-icons left">arrow_back</i>To dashboard</a>
+	</div>
 </div>

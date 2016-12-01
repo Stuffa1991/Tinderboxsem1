@@ -156,6 +156,7 @@ main {
  * Header
  */
 nav {
+    font-family: EvelethCleanThin;
     position: fixed;
     height: 48px;
     margin-bottom: 48px;
@@ -172,6 +173,9 @@ img.center {
  * End header
  */
 
+* {
+    font-family: BrownMedium;   
+}
 
 h4 {
     font-family: evelethclean_regular;

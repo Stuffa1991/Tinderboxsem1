@@ -72,7 +72,7 @@
 			</div> <!-- // class container -->
 		</main>
 
-		<?php if($this->session->memberid) { ?>
+		<?php if($this->session->memberid && $this->uri->segment(1) != 'admin') { ?>
 	
 			<footer class="page-footer">
 		        <div class="container">
