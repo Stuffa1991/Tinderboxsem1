@@ -1,5 +1,3 @@
-
-
 <script id="schedulesview" type="text/x-handlebars-template">
 	<div class="container">
 		<div class="row">
