@@ -35,7 +35,16 @@
 
 <script id="schedules" type="text/x-handlebars-template">
 	
-	<li class="collection-item">{{ fromtime }} - {{ totime }}</li>
+	<li class="collection-item">
+	<div class="row">
+		<div class="col s6">
+			{{ day }}
+		</div>
+		<div class="col s6 right-align">
+			{{ fromtime }} - {{ totime }}
+		</div>
+	</div>
+	</li>
 
 </script>
 

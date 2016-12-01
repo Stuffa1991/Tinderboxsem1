@@ -150,7 +150,7 @@ function getSchedules(siteUrl)
 			$.each(data, function(key, val) {
 				var source   = $('#schedules').html();
 				var template = Handlebars.compile(source);
-				var data = {fromtime: val.fromtime, totime: val.totime};
+				var data = {day: val.day ,fromtime: val.fromtime, totime: val.totime};
 				$('#schedules-info').append(template(data));
 			});
 		}

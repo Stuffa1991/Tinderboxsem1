@@ -12,7 +12,7 @@ class Schedules_model extends CI_Model {
 	public function getSchedules($id)
 	{
 
-		$query = "SELECT DATE_FORMAT(fromtime,'%W : %k.%i') AS fromtime, DATE_FORMAT(totime,' %k.%i') AS totime FROM schedules WHERE mode != 'deleted' AND memberid = $id AND (totime > NOW()+INTERVAL 7 DAY OR fromtime > NOW()+INTERVAL 7 DAY)";
+		$query = "SELECT DATE_FORMAT(fromtime,'%W') AS day,DATE_FORMAT(fromtime,'%k.%i') AS fromtime, DATE_FORMAT(totime,' %k.%i') AS totime FROM schedules WHERE mode != 'deleted' AND memberid = $id AND (totime > NOW()+INTERVAL 7 DAY OR fromtime > NOW()+INTERVAL 7 DAY)";
 		$result = $this->db->query($query);
 
 		$this->schedules = $result->result();
