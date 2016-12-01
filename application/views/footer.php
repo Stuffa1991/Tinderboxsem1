@@ -7,8 +7,12 @@
 				        		<img src="http://placehold.it/300x150">
 				      		</div>
 						    <a href="#!user"><img class="circle" src="http://lorempicsum.com/up/255/200/5"></a>
-						    <a href="#!name"><span class="name">John Doe</span></a>
-						    <a href="#!email"><span class="email">jdandturk@gmail.com</span></a>
+						    <a href="#!">
+						    	<span class="name"><?=$this->session->name;?></span>
+						    </a>
+						    <a href="#!">
+						    	<span class="email"><?=$this->session->email;?></span>
+						    </a>
 				    	</div>
 				    </li>
 				    <li>
@@ -42,7 +46,7 @@
 				    	<div class="divider"></div>
 				    </li>
 				    <li>
-				    	<a id="logout" class="waves-effect" href="login/logout">
+				    	<a id="logout" class="waves-effect" href="<?= base_url() .'login/logout';?>">
 				    		<i class="material-icons">exit_to_app</i>
 				    		Log out
 				    	</a>

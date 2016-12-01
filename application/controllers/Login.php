@@ -88,7 +88,8 @@ class Login extends CI_Controller {
 				$sess_data = array(
 					'login' => TRUE, 
 					'email' => $member->email,
-					'memberid' => $member->memberid
+					'memberid' => $member->memberid,
+					'name' => $member->name
 				);
 
 				//$this->session->sess_expiration = '43200';// expires in 12 hours
