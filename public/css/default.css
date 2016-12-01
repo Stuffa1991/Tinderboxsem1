@@ -78,7 +78,7 @@ img.center {
     margin-top: 60px;
 }
 #teamleader-info .card.horizontal {
-    background: #043540;
+    background: rgba(4, 53, 64, 0.9)
 }
 #teamleader-info .card.horizontal p {
     color: #fff;
@@ -120,6 +120,9 @@ img.center {
     background-color: #f18879!important;
     color:#fff;
 }
+.schedule-tab ul.tabs {
+    background: none;
+}
 .schedule-tab .tabs .tab a {
     color: #043540;
 }
@@ -148,12 +151,25 @@ img.center {
 }
 .team .waves-effect.waves-block.waves-light {
     background-color: rgba(4, 53, 64, .9);
-    padding-left: 34%;
+    padding-left: 32%;
     padding-top: 5%;
 }
 .team.card-content {
     background-color: rgba(4, 53, 64, .9);
     color: #fff;
+}
+.team h4 {
+    margin-bottom: 25px;
+}
+.team h5 {
+    font-size: 16px;
+    text-align: right;
+}
+.team a.btn-floating.btn {
+    height: 36px;
+    width: 36px;
+    margin-top: -5px;
+    margin-left: 5px;
 }
 /*
  * End team
