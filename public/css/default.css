@@ -27,6 +27,9 @@ main {
 .dropdown-content li>a, .dropdown-content li>span {
     color: #043540;
 }
+.secondary-content {
+    color: #043540;
+}
 /*
  * End base
  */
