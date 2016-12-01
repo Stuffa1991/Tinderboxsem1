@@ -26,9 +26,12 @@ nav {
     margin-bottom: 48px;
     z-index: 99999;
 }
-
 nav .nav-wrapper {
     background: #043540;
+}
+img.center {
+    width: 100%;
+    margin-top: 12px;
 }
 /*
  * End header
@@ -56,6 +59,9 @@ nav .nav-wrapper {
 /*
  * Dashboard
  */
+#teamleader-info {
+    margin-top: 60px;
+}
 #teamleader-info .card.horizontal {
     background: #043540;
 }
