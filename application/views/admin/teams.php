@@ -11,11 +11,7 @@
 		</div>
 
 		<div id="teaminfo" class="col s12">
-
-			<h3>Teams</h3>
-
 			<ul id="team-list" class="collapsible" data-collapsible="accordion"></ul>
-
 		</div>
 
 		<div id="setteam" class="col s12">
