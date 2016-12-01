@@ -2,7 +2,7 @@
 
 class Tasks_model extends CI_Model {
 
-	private $tasks = [] // Array
+	private $tasks = []; // Array
 
 	public function __construct()
 	{
@@ -21,11 +21,12 @@ class Tasks_model extends CI_Model {
 		return $this->tasks;
 	}
 
-	public function getAllTask()
+	public function getAllTasks()
 	{
-		$query = $this->db->query('SELECT ta.name, ta.fromtime, ta.totime, pl.name as place
-			FROM tasks AS ta 
-			AND ta.mode != `deleted`');
+		$query = $this->db->query('SELECT ta.taskid, ta.name, ta.fromtime, ta.totime, pl.name as place
+				FROM tasks AS ta
+				LEFT JOIN places AS pl ON (ta.placeid = pl.placeid)
+				WHERE ta.mode != "deleted"');
 		$this->tasks = $query->result();
 
 		return $this->tasks;

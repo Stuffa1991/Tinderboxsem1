@@ -1,15 +1,17 @@
-<div class="row">
+<div class="row taskPage">
 	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
 
 	<div class="col s12 schedule-tab">
 		<ul class="tabs">
-			<li class="tab col s6"><a class="active" href="#teaminfo">Task</a></li>
+			<li class="tab col s6"><a class="active" href="#taskinfo">Task</a></li>
 			<li class="tab col s6"><a href="#settask">Create task</a></li>
 		</ul>
 	</div>
 	
 	<div id="taskinfo" class="col s12">
-		<ul id="task-list" class="collection with-header"></ul>
+		<ul id="task-list" class="collection with-header">
+
+		</ul>
 	</div>
 
 	<div id="settask" class="col s12">
@@ -45,30 +47,12 @@
 	</div>
 </div>
 
-
 <script id="tasks" type="text/x-handlebars-template">
-	
+	{{#each data}}
 	<li class="collection-item"> {{ name }}
-		<a href="#!" data-id="{{ id }}" class="deletePlace secondary-content">
+		<a href="#!" data-id="{{ id }}" class="deleteTask secondary-content">
 			<i class="material-icons">delete</i>
 		</a>
 	</li>
-
-</script>
-
-<script id="place" type="text/x-handlebars-template">
-	<select name="placeId" class="places-select">
-	<option value="0" disabled selected>Place</option>
-	    {{#each data}}
-	    	<option value="{{ placeid }}">{{ name }}</option>
-		{{/each}}
-	</select>
-</script>
-
-<script>
-
-$(document).ready(function($) {
-	
-});
-
+	{{/each}}
 </script>

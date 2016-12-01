@@ -253,39 +253,28 @@ function loadTaskView(siteUrl)
 
 	$.ajax({
 	    type: 'GET',
-	    url: siteUrl + 'admin/getplaces/',
+	    url: siteUrl + 'admin/getalltasks/',
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
-			var source   = $('#place').html();
+			var source   = $('#tasks').html();
 			var template = Handlebars.compile(source);
 			var data = {data};
-			$('.places').append(template(data));
+			$('#task-list').append(template(data));
 			
 		},
 		complete: function()
 		{
-			$('.places-select').material_select();
-		}
-	});
-
-	$.ajax({
-	    type: 'GET',
-	    url: siteUrl + 'admin/gettasks/',
-		contentType: 'application/json',
-		success: function(data, status, response)
-		{	
-			var source   = $('#place').html();
-			var template = Handlebars.compile(source);
-			var data = {data};
-			$('.places').append(template(data));
-			
-		},
-		complete: function()
-		{
-			$('.places-select').material_select();
+			$('ul.tabs').tabs();
 		}
 	});	
+
+	$('#task-list').on('click','.deleteTask', function(e){
+
+		var id = $(this).data('id');
+
+		Materialize.toast('Sometime in a near future this should work', 4000) // 4000 is the duration of the toast
+	});
 }
 
 function getMemberInfo()

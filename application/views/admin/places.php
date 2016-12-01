@@ -31,11 +31,3 @@
 	<li class="collection-item"> {{ name }}<a href="#!" data-id="{{ id }}" class="deletePlace secondary-content"><i class="material-icons">delete</i></a></div></li>
 
 </script>
-
-<script>
-
-$(document).ready(function($) {
-	
-});
-
-</script>
