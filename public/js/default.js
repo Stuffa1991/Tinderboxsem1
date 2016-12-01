@@ -234,7 +234,7 @@ function loadTeamView(siteUrl)
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{	
-				console.log('loadTeam');
+				//console.log('loadTeam');
 				$.each(data, function(key, val) {
 					var source   = $('#team').html();
 					var template = Handlebars.compile(source);
@@ -258,7 +258,7 @@ function loadTeamView(siteUrl)
 $('#container').on('click','.memberinfo', function(e){
 	e.preventDefault();
 
-	console.log('click');
+	//console.log('click');
 
 	var memberId = $(this).data('member-id');
 
@@ -302,7 +302,7 @@ function loadScheduleView(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
-			console.log(data);
+			//console.log(data);
 			var source   = $('#schedulesview').html();
 			var template = Handlebars.compile(source);
 			var data = {data};
@@ -322,7 +322,7 @@ function loadScheduleView(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
-			console.log(data);
+			//console.log(data);
 			var source   = $('#schedulesmonth').html();
 			var template = Handlebars.compile(source);
 			var data = {data};
@@ -559,7 +559,7 @@ $('.registerUserForm').submit(function(e) {
 		success: function(data, textStatus, xhr) {
 			//console.debug(data + ' ' + textStatus + ' ' + xhr);
 			var dataString = JSON.stringify(data);
-			console.debug(dataString);
+			//console.debug(dataString);
 		},
 		complete: function(xhr, textStatus) {
 			//console.debug(textStatus + ' ' + xhr); 
