@@ -42,6 +42,21 @@
 				    		News
 				    	</a>
 				   	</li>
+
+					<?php if($this->session->role == 'admin') { ?>
+
+						<li>
+					    	<div class="divider"></div>
+					    </li>
+						<li>
+					    	<a id="logout" class="waves-effect" href="<?= base_url() .'admin';?>">
+					    		<i class="material-icons">settings</i>
+					    		Admin panel
+					    	</a>
+					   	</li>	
+
+					<?php } ?>
+
 				   	<li>
 				    	<div class="divider"></div>
 				    </li>
