@@ -150,7 +150,7 @@ function getTeamLeader(siteUrl)
 						contentType: 'application/json',
 						success: function(data, status, response)
 						{	
-							var source   = $('#teammember').html();
+							var source   = $('#teammemberDashboard').html();
 							var template = Handlebars.compile(source);
 							var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
 							$('#container').html(template(data));	

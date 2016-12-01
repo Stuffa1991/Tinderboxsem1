@@ -52,7 +52,7 @@
     </li>
 </script>
 
-<script id="teammember" type="text/x-handlebars-template">
+<script id="teammemberDashboard" type="text/x-handlebars-template">
 	<div class="team card">
 	    <div class="team card-content">
 	    	<p class="center">
