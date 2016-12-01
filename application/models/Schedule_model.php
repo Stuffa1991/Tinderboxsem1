@@ -24,22 +24,6 @@ class Schedule_model extends CI_Model {
 		return $result->row();
 	}
 
-	public function getSchedule7day($id)
-	{
-		$query = sprintf('SELECT fromtime, totime FROM schedules WHERE scheduleid = "%s"', $id);
-		$result = $this->db->query($query);
-
-		return $result->row();
-	}
-
-	public function getSchedule30day($id)
-	{
-		$query = sprintf('SELECT fromtime, totime FROM schedules WHERE scheduleid = "%s"', $id);
-		$result = $this->db->query($query);
-
-		return $result->row();
-	}
-
 	public function setSchedule($data = [])
 	{
 		$query = sprintf('INSERT INTO schedules (memberid, fromtime, totime) VALUES ("%s", "%s", "%s")', 

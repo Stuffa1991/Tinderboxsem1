@@ -56,7 +56,8 @@
 
 			</div> <!-- // class container -->
 		</main>
-
+		
+		<?php if ($this->uri->segment(1) != 'admin'){ ?>
 		<footer class="page-footer">
 	        <div class="container">
 	            <div class="row">
@@ -77,6 +78,7 @@
 	            </div>    
 	        </div>
         </footer>
+        <?php } ?>
 		<!-- Tiny Mce -->
 		<script src="//cdn.tinymce.com/4/tinymce.min.js"></script>
 		<script>tinymce.init({ selector:'textarea' });</script>

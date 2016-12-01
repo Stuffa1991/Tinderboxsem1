@@ -20,14 +20,42 @@ class Schedules_model extends CI_Model {
 		return $this->schedules;
 	}
 
-	public function getSchedulesByDay()
+	public function getMemberSchedules7day($id)
 	{
+		$query = sprintf('SELECT fromtime, totime FROM schedules WHERE memberid = "%s" AND (totime > NOW()+INTERVAL 7 DAY OR fromtime > NOW()+INTERVAL 7 DAY)', $id);
+		$result = $this->db->query($query);
 
+		$numRows = $result->num_rows();
+
+		if($numRows <= 0)
+		{
+			return false;
+		}
+		else
+		{
+			$this->schedules = $result->result();
+
+			return $this->schedules;
+		}
 	}
 
-	public function getSchedulesByWeek()
+	public function getMemberSchedules30day($id)
 	{
+		$query = sprintf('SELECT fromtime, totime FROM schedules WHERE memberid = "%s" AND (totime > CURDATE()+INTERVAL 30 DAY OR fromtime > NOW()+INTERVAL 30 DAY)', $id);
+		$result = $this->db->query($query);
 
+		$numRows = $result->num_rows();
+
+		if($numRows <= 0)
+		{
+			return false;
+		}
+		else
+		{
+			$this->schedules = $result->result();
+
+			return $this->schedules;
+		}
 	}
 
 }

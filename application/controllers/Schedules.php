@@ -21,4 +21,18 @@ class Schedules extends CI_Controller {
 		$this->load->view('footer');
 	}
 
+	public function getSchedulesBy30days()
+	{
+		$memberid = $this->session->memberid;
+		// Loads library response
+		$this->response->response(200, 'OK', $this->schedules_model->getMemberSchedules30day($this->session->memberid));
+	}
+
+	public function getSchedulesBy7days()
+	{
+		$memberid = $this->session->memberid;
+		// Loads library response
+		$this->response->response(200, 'OK', $this->schedules_model->getMemberSchedules7day($this->session->memberid));
+	}
+
 }
