@@ -187,5 +187,16 @@
 
 			</script>
 		<?php } ?>
+
+		<?php if ($this->uri->segment(1) == 'login' || $this->uri->segment(1) == ''){ ?>
+			<!--  Load admin function for login-->
+			<script>
+
+			$(document).ready(function($) {
+				hideLoad();
+			});
+
+			</script>
+		<?php } ?>
 	</body>
 </html>
