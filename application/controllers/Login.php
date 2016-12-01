@@ -89,7 +89,8 @@ class Login extends CI_Controller {
 					'login' => TRUE, 
 					'email' => $member->email,
 					'memberid' => $member->memberid,
-					'name' => $member->name
+					'name' => $member->name,
+					'role' => $member->role
 				);
 
 				//$this->session->sess_expiration = '43200';// expires in 12 hours
