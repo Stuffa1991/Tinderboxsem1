@@ -170,9 +170,9 @@ img.center {
  */
 #team-list li.collection-item {
     background-color: rgba(4, 53, 64, .9);
-    padding: 20px;
+    padding: 1px 10px;
 }
-#team-list a.memberinfo {
+#team-list .memberinfo p {
     color: #fff;
     font-size: 18px;
 }
