@@ -233,8 +233,10 @@ footer.page-footer p {
   * Admin
   */
 a.waves-effect.waves-light.btn-large {
-    width: 50%;
+    width: 48%;
     float: left;
     margin-top: 25px;
+    margin-right: 1%;
+    margin-left: 1%;
     padding: 0px 10px;
 }
