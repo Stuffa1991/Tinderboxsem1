@@ -183,6 +183,7 @@
 
 			$(document).ready(function($) {
 				loadDashboardView(siteUrl);
+				document.title = 'Dashboard';
 			});
 
 			</script>
@@ -194,6 +195,7 @@
 
 			$(document).ready(function($) {
 				hideLoad();
+				document.title = 'Login';
 			});
 
 			</script>

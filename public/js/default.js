@@ -24,6 +24,7 @@ $(function(){
 		$(this).addClass('active');
 
 		loadDashboardView(siteUrl);
+		document.title = 'Dashboard';
 	});
 
 	$('#team-view').click(function(){
@@ -31,6 +32,7 @@ $(function(){
 		$(this).addClass('active');
 
 		loadTeamView(siteUrl);
+		document.title = 'Team';
 	});
 
 	$('#schedule-view').click(function(){
@@ -38,22 +40,27 @@ $(function(){
 		$(this).addClass('active');
 
 		loadScheduleView(siteUrl);
+		document.title = 'Schedules';
 	});
 
 	$('#rules-view').click(function(){
 		loadRuleView(siteUrl);
+		document.title = 'Rules';
 	});
 
 	$('#info-view').click(function(){
 		loadInfoView(siteUrl);
+		document.title = 'Info';
 	});
 
 	$('#news-view').click(function(){
 		loadNewsView(siteUrl);
+		document.title = 'News';
 	});
 
 	$('#edit-view').click(function(){
 		loadEditView(siteUrl);
+		document.title = 'Edit profile';
 	});
 
 	//loadAdminView(siteUrl);
