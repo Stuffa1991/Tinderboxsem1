@@ -1,6 +1,14 @@
 <div class="row">
 	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
-	<h3>Task</h3>
+
+	<div class="col s12 schedule-tab">
+		<ul class="tabs">
+			<li class="tab col s6"><a class="active" href="#teaminfo">Task</a></li>
+			<li class="tab col s6"><a href="#setteam">Create team</a></li>
+		</ul>
+	</div>
+
+		
 	<form action="<?php  echo base_url('/admin/setTask/')?>" method="POST" role="form" id="createTasks" class="col s12">
 		<div class="row">
 			<div class="input-field col s6">
