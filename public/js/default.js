@@ -255,12 +255,46 @@ function loadScheduleView(siteUrl)
 	clearView();
 	showLoad();
 
-	var source   = $('#schedulesview').html();
-	var template = Handlebars.compile(source);
-	$('#container').html(template());
 
-	$('ul.tabs').tabs();
-	hideLoad();
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'schedules/getSchedulesBy7days',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			console.log(data);
+			var source   = $('#schedulesview').html();
+			var template = Handlebars.compile(source);
+			var data = {data};
+			$('#container').html(template(data));	
+		},
+		complete: function()
+		{
+			daysLoad();
+		}
+	});
+
+	function daysLoad()
+	{
+		$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'schedules/getSchedulesBy30days',
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			console.log(data);
+			var source   = $('#schedulesmonth').html();
+			var template = Handlebars.compile(source);
+			var data = {data};
+			$('#30days').append(template(data));	
+		},
+		complete: function()
+		{
+			$('ul.tabs').tabs();
+			hideLoad();
+		}
+	});
+	}
 }
 
 

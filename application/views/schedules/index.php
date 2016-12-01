@@ -10,17 +10,25 @@
 				</ul>
 			</div>
 			<div class="col s12" id="7days">
-				<div class="row card-panel schedule-farver">
-					<div class="col s6"> Mandag</div>
-					<div class="col s6 right-align"> 08.09</div>
-				</div>
+				{{#each data}}
+					<div class="row card-panel schedule-farver">
+						<div class="col s6"> {{ day }}</div>
+						<div class="col s6 right-align">{{ fromtime }}</div>
+					</div>
+				{{/each}}
 			</div>
 			<div class="col s12" id="30days">
-				<div class="row card-month schedule-farver">
-					<div class="col s6"> Mandag</div>
-					<div class="col s6 right-align"> 28th November 2016</div>
-				</div>
+				
 			</div>
 		</div>
 	</div>
+</script>
+
+<script id="schedulesmonth" type="text/x-handlebars-template">
+	{{#each data}}
+		<div class="row card-month schedule-farver">
+			<div class="col s6"> {{ day }}</div>
+			<div class="col s6 right-align"> {{ fromtime }}</div>
+		</div>
+	{{/each}}
 </script>
