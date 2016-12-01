@@ -9,7 +9,6 @@
 	    		<h4>{{ name }}</h4>
 	    	</div>
 	      	
-
 	      	<h5>Email: {{ email }} 
 		      	<a class="btn-floating btn">
 			      <i class="large material-icons">email</i>

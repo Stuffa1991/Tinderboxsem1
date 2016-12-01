@@ -121,7 +121,7 @@ function loadTeamsView(siteUrl)
 			}
 		});
 	}
-
+	/*
 	$('#add-team').click(function(){
 		var hidden = $('.teams').hasClass('hide');
 
@@ -136,6 +136,7 @@ function loadTeamsView(siteUrl)
 			$('.insertTeams').removeClass('hide');
 		}	
 	});
+	*/
 
 	$('#submitTeam').submit(function(e) {
 		e.preventDefault();
