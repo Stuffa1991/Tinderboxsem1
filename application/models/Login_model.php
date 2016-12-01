@@ -10,7 +10,7 @@ class Login_model extends CI_Model {
 
 	public function login($email, $password)
 	{
-		$sth = sprintf('SELECT me.memberid, me.password, co.email
+		$sth = sprintf('SELECT me.memberid, me.name me.password, co.email
 		FROM members AS me
 		LEFT JOIN contacts AS co ON (co.contactid = me.contactid)
 		WHERE co.email = "%s" 
