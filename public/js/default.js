@@ -4,7 +4,6 @@ $(function(){
 	 * Initialize
 	 */
 	// Initialize collapse button
-	$(".button-collapse").sideNav();
 
 	$('select').material_select();
 	$('.collapsible').collapsible();
