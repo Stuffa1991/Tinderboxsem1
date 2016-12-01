@@ -99,6 +99,9 @@ img.center {
 #schedules-info {
     border: none;
 }
+#schedules-info .row {
+    margin: 0;
+}
 #schedules-info li {
     background: #f18879;
     color: #fff;
@@ -233,8 +236,10 @@ footer.page-footer p {
   * Admin
   */
 a.waves-effect.waves-light.btn-large {
-    width: 50%;
+    width: 48%;
     float: left;
     margin-top: 25px;
+    margin-right: 1%;
+    margin-left: 1%;
     padding: 0px 10px;
 }
