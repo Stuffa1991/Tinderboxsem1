@@ -19,14 +19,14 @@
 <script id="teamleader" type="text/x-handlebars-template">
 	<div id="show-teamleader" data-member-id="{{memberid}}" class="card horizontal">
 	  	<div class="card-image">
-	    	<img src="http://placehold.it/100x100">
+	    	<img src="http://placehold.it/75x75">
 	  	</div>
 	  	<div class="card-stacked">
 	    	<div class="card-content">
 	    		<p>Team leader</p>
 	    		<h4>{{ name }}</h4>
-	      		<p>Email: {{ email }}</p>
-	      		<p>Mobile: {{ mobile }}</p>
+
+	    		<i class="material-icons">keyboard_arrow_right</i>
 	   		</div>
 	  	</div>
 	</div>
