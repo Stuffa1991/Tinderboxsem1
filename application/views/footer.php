@@ -57,7 +57,6 @@
 			</div> <!-- // class container -->
 		</main>
 		
-		<?php if ($this->uri->segment(1) != 'admin'){ ?>
 		<footer class="page-footer">
 	        <div class="container">
 	            <div class="row">
@@ -78,7 +77,7 @@
 	            </div>    
 	        </div>
         </footer>
-        <?php } ?>
+        
 		<!-- jQuery -->
 		<script src="//code.jquery.com/jquery.js"></script>
 		<!-- Compiled and minified JavaScript -->

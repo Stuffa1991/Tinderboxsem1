@@ -99,6 +99,9 @@ img.center {
 #schedules-info {
     border: none;
 }
+#schedules-info .row {
+    margin: 0;
+}
 #schedules-info li {
     background: #f18879;
     color: #fff;
