@@ -1,9 +1,7 @@
 <script id="teamlist" type="text/x-handlebars-template">
 
 	<div class="row">
-				
-		<h4>Team</h4>
-
+			
 		<div>
 			<ul id="team-list" class="collection with-header"></ul>
 		</div>

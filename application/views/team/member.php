@@ -1,10 +1,10 @@
 
-<script id="teammember" type"text/x-handlebars-template">
+<script id="teammember" type="text/x-handlebars-template">
 	<div class="team card">
-	    <div class="waves-effect waves-block waves-light">
-	    	<img class="circle" src="http://placehold.it/120x120">
-	    </div>
 	    <div class="team card-content">
+	    	<p class="center">
+	    		<img class="circle" src="http://placehold.it/120x120">
+	    	</p>
 	    	<div class="col s12 center">
 	    		<h4>{{ name }}</h4>
 	    	</div>
@@ -21,5 +21,6 @@
 	     	</h5>
 	    </div>
 	</div>
+	<a href="#!" id="backTeam" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
 </script>
 
