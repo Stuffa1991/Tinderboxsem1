@@ -120,6 +120,12 @@ img.center {
     background-color: #f18879!important;
     color:#fff;
 }
+.schedule-tab .tabs .tab a {
+    color: #043540;
+}
+.schedule-tab .tabs .indicator {
+    background-color: #043540;
+}
 
 
 /*
