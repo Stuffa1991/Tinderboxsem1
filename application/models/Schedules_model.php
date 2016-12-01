@@ -22,7 +22,7 @@ class Schedules_model extends CI_Model {
 
 	public function getMemberSchedules7day($id)
 	{
-		$query = "SELECT DATE_FORMAT(fromtime,'%W') AS day,DATE_FORMAT(fromtime,'%d %M - %k.%i') AS fromtime, DATE_FORMAT(totime,'%d %M - %k.%i') AS totime FROM schedules WHERE memberid = $id AND (totime > NOW()+INTERVAL 7 DAY OR fromtime > NOW()+INTERVAL 7 DAY)";
+		$query = "SELECT DATE_FORMAT(fromtime,'%W') AS day,DATE_FORMAT(fromtime,'%d %M %k.%i') AS fromtime, DATE_FORMAT(totime,'%k.%i') AS totime FROM schedules WHERE memberid = $id AND (totime > NOW()+INTERVAL 7 DAY OR fromtime > NOW()+INTERVAL 7 DAY)";
 
 		$result = $this->db->query($query);
 

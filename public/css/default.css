@@ -1,3 +1,120 @@
+@font-face{ font-family:BrownBold;
+    src:url(../font/f49d822069ca32202d46151f59f27667.eot);
+    src:url(../font/f49d822069ca32202d46151f59f27667.eot?#iefix) format('embedded-opentype'),
+    url(../font/6a62c02e467f826d58d1fee643332d4b.woff2) format('woff2'),
+    url(../font/fa0c35071f7d6ac04c69940059e080e0.woff) format('woff'),
+    url(../font/270870c53c7f40c81e5180b21a0c48a6.ttf) format('truetype')
+}
+@font-face{font-family:BrownBoldItalic;
+    src:url(../font/19e59f5c1b59fd677932690c3ec31ce8.eot);
+    src:url(../font/19e59f5c1b59fd677932690c3ec31ce8.eot?#iefix) format('embedded-opentype'),
+    url(../font/43f18fd9a782c92ac4205ac2f40b4c8a.woff2) format('woff2'),
+    url(../font/b12e4c1411e0bbaf866629a3c474be46.woff) format('woff'),
+    url(../font/cd4c3e99266939a4feddd782891acdfe.ttf) format('truetype')
+}
+@font-face{font-family:BrownExtraBold;
+    src:url(../font/38fd0da999b066644990a8422edb27ab.eot);
+    src:url(../font/38fd0da999b066644990a8422edb27ab.eot?#iefix) format('embedded-opentype'),
+    url(../font/e9d796ac2498b546ac9c41d4d12344a4.woff2) format('woff2'),
+    url(../font/e7f083ad5a58c6b073feeea991a0e65e.woff) format('woff'),
+    url(../font/cccadd060fe45dba639199afedb513ee.ttf) format('truetype')
+}
+@font-face{font-family:BrownExtraBoldCondensed;
+    src:url(../font/421b8034196d88d319d1a0cdeb094c6a.eot);
+    src:url(../font/421b8034196d88d319d1a0cdeb094c6a.eot?#iefix) format('embedded-opentype'),
+    url(../font/5b8b57d088e85a20801ac281e3e8406e.woff2) format('woff2'),
+    url(../font/86c73081840a7a27e64eae0794ea6e18.woff) format('woff'),
+    url(../font/c3f794da8f9b7fe7fd09829155e1c17c.ttf) format('truetype')
+}
+@font-face{font-family:BrownItalic;
+    src:url(../font/d31b913a0548e5c619e02a31d5b67d51.eot);
+    src:url(../font/d31b913a0548e5c619e02a31d5b67d51.eot?#iefix) format('embedded-opentype'),
+    url(../font/a6883b34119d733e68d51a030f40c7f0.woff2) format('woff2'),
+    url(../font/206ed26a378bbfe80dbbd12ab2165dd9.woff) format('woff'),
+    url(../font/998ffc92780429f5ec96121dad1ee219.ttf) format('truetype')
+}
+@font-face{font-family:BrownLight;
+    src:url(../font/f88d794826507570e57989757099d4f7.eot);
+    src:url(../font/f88d794826507570e57989757099d4f7.eot?#iefix) format('embedded-opentype'),
+    url(../font/af9b387fa146988411b41706d4302632.woff2) format('woff2'),
+    url(../font/84d5740e35024ddf878445f098f03996.woff) format('woff'),
+    url(../font/ec161d03934ca52c8fbf644eeb13673e.ttf) format('truetype')
+}
+@font-face{font-family:BrownLightItalic;
+    src:url(../font/4f2d768ae78bae9b71a0c525c4316a22.eot);
+    src:url(../font/4f2d768ae78bae9b71a0c525c4316a22.eot?#iefix) format('embedded-opentype'),
+    url(../font/6fe9667185f8dc38c6706eb1815f40ac.woff2) format('woff2'),
+    url(../font/68f909fac073b8a1f17a5275028c0b4f.woff) format('woff'),
+    url(../font/8f95fd5c24c8d181d55b31b7f30f4d19.ttf) format('truetype')
+}
+@font-face{font-family:BrownMedium;
+    src:url(../font/b367209d4d9d72c9b4f32f56f5a6d798.eot);
+    src:url(../font/b367209d4d9d72c9b4f32f56f5a6d798.eot?#iefix) format('embedded-opentype'),
+    url(../font/93c2b33d4a39250d6b15a1730153687d.woff2) format('woff2'),
+    url(../font/bd8210d3264e7d493d8fed68601fc418.woff) format('woff'),
+    url(../font/14dc652187a15c78eeb55acb2c9d3679.ttf) format('truetype')
+}
+@font-face{font-family:BrownMediumItalic;
+    src:url(../font/42186ce9ea3a3a136b6ce2154cf9e383.eot);
+    src:url(../font/42186ce9ea3a3a136b6ce2154cf9e383.eot?#iefix) format('embedded-opentype'),
+    url(../font/d68064cb1a039db55cb6e2c8ab0ee740.woff2) format('woff2'),
+    url(../font/70b6eb4ee0a520e264ab2cd678e212c8.woff) format('woff'),
+    url(../font/ff2672bd496435a45152fdb94a9b54e8.ttf) format('truetype')
+}
+@font-face{font-family:Brown;
+    src:url(../font/0a96934405a12d6ed68336c64163745b.eot);
+    src:url(../font/0a96934405a12d6ed68336c64163745b.eot?#iefix) format('embedded-opentype'),
+    url(../font/d7dd7a610076c358c84cf5b487834b3b.woff2) format('woff2'),
+    url(../font/30a28c6edfb52d779a4ce6019e4fd4b8.woff) format('woff'),
+    url(../font/d980bd3aaf31ede9606a474bbf09ebd9.ttf) format('truetype')
+}
+@font-face{font-family:BrownBlack;
+    src:url(../font/20f57b85c0a3af7e6dd1566ceb5b6e44.eot);
+    src:url(../font/20f57b85c0a3af7e6dd1566ceb5b6e44.eot?#iefix) format('embedded-opentype'),
+    url(../font/e753cf3f20f8069197e28224fa7639d7.woff2) format('woff2'),
+    url(../font/12516f84c1207cc7320d1ec9c4ecc8f6.woff) format('woff'),
+    url(../font/8997071250062fd22af0eefe336d40a3.ttf) format('truetype')
+}
+@font-face{font-family:BrownCondensedBold;
+    src:url(../font/8d0361753992dd3e9f8c3966f0325df2.eot);
+    src:url(../font/8d0361753992dd3e9f8c3966f0325df2.eot?#iefix) format('embedded-opentype'),
+    url(../font/6f243a9de1fee7a5e6aa43b765aa639b.woff2) format('woff2'),
+    url(../font/0dcd958e7f9ee493f927b2f8a327dea1.woff) format('woff'),
+    url(../font/6bb79ba67be97ee15afdb120399b8583.ttf) format('truetype')
+}
+@font-face{font-family:BrownCondensedMedium;
+    src:url(../font/8e4e4faf9be98a7b02d30a00e4b46f17.eot);
+    src:url(../font/8e4e4faf9be98a7b02d30a00e4b46f17.eot?#iefix) format('embedded-opentype'),
+    url(../font/aff027dab25002b99180bca641ac25d6.woff2) format('woff2'),
+    url(../font/88fceda74326ca46f9770aa729c06f80.woff) format('woff'),
+    url(../font/17fa74a2b7bfcdd1314d078c0bc24726.ttf) format('truetype')
+}
+@font-face{font-family:BrownHeavy;
+    src:url(../font/913e913e47522d5cdc5fb96324f7cfd0.eot);
+    src:url(../font/913e913e47522d5cdc5fb96324f7cfd0.eot?#iefix) format('embedded-opentype'),
+    url(../font/dcad4d273a9a6ae10343d17e86bb60b6.woff2) format('woff2'),
+    url(../font/86c1f84e73cc9e4ea2776746b878d0e4.woff) format('woff'),
+    url(../font/87b37b7a1fb7a708549b22964ff8937b.ttf) format('truetype')
+}
+@font-face{font-family:BrownCondensedBlack;
+    src:url(../font/233c9bc327865eed1515e8d21da4f13a.eot);
+    src:url(../font/233c9bc327865eed1515e8d21da4f13a.eot?#iefix) format('embedded-opentype'),
+    url(../font/84b35521363ef2305339c745789a17b1.woff2) format('woff2')
+    ,url(../font/7ebeeff0ec21aa9685f7e38802c6cae9.woff) format('woff'),
+    url(../font/b8a8dd4323f5822ac7b312e29de453f5.ttf) format('truetype')
+}
+@font-face{font-family: EvelethCleanThin; 
+    src: url(../font/EvelethCleanThin.otf);
+}
+@font-face{font-family:evelethclean_regular;
+    src:url(../font/96a776385094f6ca9522ab5272b627dd.eot);
+    src:url(../font/96a776385094f6ca9522ab5272b627dd.eot?#iefix) format('embedded-opentype'),
+    url(../font/5b64f5b9c9dda3ed92d87f26d32746e3.woff) format('woff'),
+    url(../font/072085c8d99ffb0457338933199b8879.ttf) format('truetype'),
+    url(../font/82ec80d5bcfe20f25cad928fd0bdc3cb.svg#evelethclean_regular) format('svg');
+        font-weight:400;font-style:normal
+}
+
 /*
  * BASE - Dont edit this
  */
@@ -9,7 +126,7 @@ body {
 
 main {
     flex: 1 0 auto;
-    /*background-image: url(../img/background.jpg);*/
+    background: rgba(4, 53, 64, .2);
     background-size: cover;
 }
 .btn, .btn-large {
@@ -39,6 +156,7 @@ main {
  * Header
  */
 nav {
+    font-family: EvelethCleanThin;
     position: fixed;
     height: 48px;
     margin-bottom: 48px;
@@ -55,6 +173,18 @@ img.center {
  * End header
  */
 
+* {
+    font-family: BrownMedium;   
+}
+
+h4 {
+    font-family: evelethclean_regular;
+    font-weight: 400;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+}
 
 #container{
     margin-top: 56px;
@@ -87,7 +217,7 @@ img.center {
 #teamleader-info .card.horizontal p {
     color: #fff;
 }
-#teamleader-info .card.horizontal h4 {
+#teamleader-info .card.horizontal h5 {
     color: #fff;
     margin: 5px 0;
 }
@@ -115,6 +245,34 @@ img.center {
     background: #f18879;
     color: #fff;
 }
+.card-month {
+    transition: box-shadow .25s;
+    padding: 10px 20px;
+    margin: 0.5rem 0 1rem 0;
+    border-radius: 2px;
+    background-color: #fff;
+}
+
+.schedules-days .row.card-panel {
+    background-color: #f18879;
+    color: #fff;
+}
+.schedules-days .row.card-month {
+    background-color: #f18879;
+    color: #fff;
+}
+.schedule-tab ul.tabs {
+    background: none;
+}
+.schedule-tab .tabs .tab a {
+    color: #043540;
+}
+.schedule-tab .tabs .indicator {
+    background-color: #043540;
+}
+
+
+
 #staff-info .collapsible-header,
 #rules-list .collapsible-header, 
 #info-list .collapsible-header,
@@ -137,27 +295,6 @@ img.center {
 #news-list .collapsible-body {
     background-color: rgba(4, 53, 64, .8);
     color: #fff;
-}
-
-.card-month {
-    transition: box-shadow .25s;
-    padding: 10px;
-    margin: 0.5rem 0 1rem 0;
-    border-radius: 2px;
-    background-color: #fff;
-}
-.schedule-farver {
-    background-color: #f18879!important;
-    color:#fff;
-}
-.schedule-tab ul.tabs {
-    background: none;
-}
-.schedule-tab .tabs .tab a {
-    color: #043540;
-}
-.schedule-tab .tabs .indicator {
-    background-color: #043540;
 }
 
 

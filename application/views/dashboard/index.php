@@ -19,12 +19,12 @@
 <script id="teamleader" type="text/x-handlebars-template">
 	<div id="show-teamleader" data-member-id="{{memberid}}" class="card horizontal">
 	  	<div class="card-image">
-	    	<img src="http://placehold.it/75x75">
+	    	<img src="http://lorempicsum.com/simpsons/75/75/1">
 	  	</div>
 	  	<div class="card-stacked">
 	    	<div class="card-content">
 	    		<p>Team leader</p>
-	    		<h4>{{ name }}</h4>
+	    		<h5>{{ name }}</h5>
 
 	    		<i class="material-icons">keyboard_arrow_right</i>
 	   		</div>
