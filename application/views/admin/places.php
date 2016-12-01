@@ -1,5 +1,5 @@
 <div class="row">
-	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>Back</a>
+	<a href="<?=base_url('admin/')?>" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Back</a>
 	<h3>Places</h3>
 	<form action="<?php  echo base_url('/admin/setPlace/')?>" method="POST" role="form" id="createPlaces" class="col s12">
 		<div class="row">
