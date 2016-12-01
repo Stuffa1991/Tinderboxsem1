@@ -12,8 +12,8 @@
 			<div class="col s12" id="7days">
 				{{#each data}}
 					<div class="row card-panel schedule-farver">
-						<div class="col s6"> {{ day }}</div>
-						<div class="col s6 right-align">{{ fromtime }}</div>
+						<div class="col s4"> {{ day }}</div>
+						<div class="col s8 right-align">{{ fromtime }}</div>
 					</div>
 				{{/each}}
 			</div>
