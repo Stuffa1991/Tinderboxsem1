@@ -316,6 +316,7 @@ function acceptMember()
 			success: function(data, status, response)
 			{	
 				loadMembersView(siteUrl);
+				Materialize.toast('Member was accepted', 4000) // 4000 is the duration of the toast
 			}
 		});
 	});
@@ -338,6 +339,7 @@ function declineMember()
 			success: function(data, status, response)
 			{	
 				loadMembersView(siteUrl);
+				Materialize.toast('Member was declined', 4000) // 4000 is the duration of the toast
 			}
 		});
 	});
@@ -353,6 +355,8 @@ function declineMember()
 	{
 		$('#dateEnd').bootstrapMaterialDatePicker('setMinDate', date);
 	});
+
+
  }
 
  /*
