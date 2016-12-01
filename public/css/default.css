@@ -88,7 +88,7 @@ img.center {
 }
 #teamleader-info .card.horizontal h4 {
     color: #fff;
-    margin: 5px;
+    margin: 5px 0;
 }
 #teamleader-info .card.horizontal .card-image img {
     margin: 5px;
@@ -107,11 +107,26 @@ img.center {
     background: #f18879;
     color: #fff;
 }
-#staff-info .collapsible-header{
+#staff-info .collapsible-header,
+#rules-list .collapsible-header, 
+#info-list .collapsible-header,
+#news-list .collapsible-header {
     background-color: rgba(4, 53, 64, 0.9);
     color: #fff;
 }
 #staff-info .collapsible-body {
+    background-color: rgba(4, 53, 64, .8);
+    color: #fff;
+}
+#rules-list .collapsible-body {
+    background-color: rgba(4, 53, 64, .8);
+    color: #fff;
+}
+#info-list .collapsible-body {
+    background-color: rgba(4, 53, 64, .8);
+    color: #fff;
+}
+#news-list .collapsible-body {
     background-color: rgba(4, 53, 64, .8);
     color: #fff;
 }
