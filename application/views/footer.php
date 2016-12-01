@@ -53,7 +53,7 @@
 					        <a id="dashboard-view" href="#!" class="collection-item active"><i class="material-icons">home</i>Home</a>
 					        <a id="team-view" href="#!" class="collection-item"><i class="material-icons">person</i>Team</a>
 					        <a id="schedule-view" href="#!" class="collection-item"><i class="material-icons">assignment</i>Schedules</a>
-					        <a id="" href="#!" class="collection-item"><i class="material-icons">face</i>Test</a>
+					        <a id="info-view" href="#!" class="collection-item"><i class="material-icons">info</i>Test</a>
 					        <a id="" href="#!" class="collection-item button-collapse" data-activates="slide-out">
 			        			<i class="material-icons">menu</i>
 			        			Menu
