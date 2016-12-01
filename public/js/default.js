@@ -170,7 +170,7 @@ function getStaff(siteUrl)
 			$.each(data, function(key, val) {
 				var source   = $('#staff').html();
 				var template = Handlebars.compile(source);
-				var data = {title: val.title, text: val.text, date: val.date};
+				var data = {title: val.title, text: val.text, date: val.created_at};
 				$('#staff-info').append(template(data));
 			});	
 		},
