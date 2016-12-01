@@ -18,9 +18,14 @@ $(function(){
 	    }
 	);
 
-	//loadMembersView(siteUrl);
-	loadSchedulesView(siteUrl);
-	//loadTeamsView(siteUrl);
+
+	$('#add-team').click(function(){
+		loadTeamsView(siteUrl);
+	});	
+
+	loadMembersView(siteUrl);
+	//loadSchedulesView(siteUrl);
+	//
 	//loadPlaceView(siteUrl);
 	// loadTaskView(siteUrl);
 	hideLoad();

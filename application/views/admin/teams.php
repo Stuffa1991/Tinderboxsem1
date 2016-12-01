@@ -13,7 +13,7 @@
 	</div>
 
 	<div class="insertTeams hide">
-		<form action="<?php  echo base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
+		<form action="<?php echo base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
 			<div class="row">
 				<div class="input-field col s6">
 					<input name="name" id="name" type="text">
@@ -28,7 +28,7 @@
 					<label for="teamleader">Team leader id</label>
 				</div>
 			</div>
-			<button type="submit" class="btn btn-primary">Create Task</button>
+			<button type="submit" class="btn btn-primary">Create team</button>
 		</form>
 	</div>
 </div>
