@@ -11,16 +11,12 @@
 		</div>
 
 		<div id="teaminfo" class="col s12">
-
-			<h3>Teams</h3>
-
 			<ul id="team-list" class="collapsible" data-collapsible="accordion"></ul>
-
 		</div>
 
 		<div id="setteam" class="col s12">
 			<div class="insertTeams">
-				<form action="<?php echo base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
+				<form action="<?=base_url('/admin/setTeam/')?>" method="POST" role="form" id="createTeam" class="col s12">
 					<div class="row">
 						<div class="input-field col s12">
 							<input name="name" id="name" type="text">

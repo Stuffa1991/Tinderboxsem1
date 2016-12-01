@@ -37,9 +37,8 @@
 					<label for="memberTaskId">Member id</label>
 				
 				
-				<div class="input-field col s12">
-					<button type="submit" class="btn btn-primary">Create Task</button>
-				</div>
+				<button type="submit" class="btn btn-primary">Create Task</button>
+				
 			</div>	
 			
 		</form>
