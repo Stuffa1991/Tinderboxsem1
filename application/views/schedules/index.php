@@ -13,7 +13,7 @@
 				{{#each data}}
 					<div class="row card-panel schedule-farver">
 						<div class="col s4"> {{ day }}</div>
-						<div class="col s8 right-align">{{ fromtime }}</div>
+						<div class="col s8 right-align">{{ fromtime }}<br>{{ totime }}</div>
 					</div>
 				{{/each}}
 			</div>
