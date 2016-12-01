@@ -172,5 +172,16 @@
 
 			</script>
 		<?php } ?>
+
+		<?php if ($this->uri->segment(1) == 'dashboard'){ ?>
+			<!--  Load admin function for dashboard-->
+			<script>
+
+			$(document).ready(function($) {
+				loadDashboardView(siteUrl);
+			});
+
+			</script>
+		<?php } ?>
 	</body>
 </html>
