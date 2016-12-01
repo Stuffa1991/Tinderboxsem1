@@ -7,15 +7,15 @@
 					<li class="tab col s6"><a href="#30days">Next 30 days</a></li>
 				</ul>
 			</div>
-			<div class="col s12" id="7days">
+			<div id="7days" class="col s12 schedules-days">
 				{{#each data}}
-					<div class="row card-panel schedule-farver">
-						<div class="col s4"> {{ day }}</div>
-						<div class="col s8 right-align">{{ fromtime }}<br>{{ totime }}</div>
+					<div class="row card-panel">
+						<div class="col s2"> {{ day }}</div>
+						<div class="col s10 right-align">{{ fromtime }} - {{ totime }}</div>
 					</div>
 				{{/each}}
 			</div>
-			<div class="col s12" id="30days">
+			<div id="30days" class="col s12 schedules-days" >
 				
 			</div>
 		</div>
@@ -24,9 +24,9 @@
 
 <script id="schedulesmonth" type="text/x-handlebars-template">
 	{{#each data}}
-		<div class="row card-month schedule-farver">
-			<div class="col s6"> {{ day }}</div>
-			<div class="col s6 right-align"> {{ fromtime }}</div>
+		<div class="row card-month">
+			<div class="col s2"> {{ day }}</div>
+			<div class="col s10 right-align"> {{ fromtime }}</div>
 		</div>
 	{{/each}}
 </script>

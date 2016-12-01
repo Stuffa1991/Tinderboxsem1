@@ -24,7 +24,7 @@
 	  	<div class="card-stacked">
 	    	<div class="card-content">
 	    		<p>Team leader</p>
-	    		<h4>{{ name }}</h4>
+	    		<h5>{{ name }}</h5>
 
 	    		<i class="material-icons">keyboard_arrow_right</i>
 	   		</div>

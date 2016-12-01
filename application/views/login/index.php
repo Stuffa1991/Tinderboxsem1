@@ -1,5 +1,3 @@
-		
-#f5eccb
 		<div id="container" class="container">
 			<div class="row">
 				<div class="col s12">
