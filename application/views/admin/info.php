@@ -3,7 +3,7 @@
 	<form id="submitInfo" action="<?=base_url('admin/setinfo')?>" method="POST" role="form">
 		<div class="row">
 			<div class="input-field col s12">
-				<select name="info">
+				<select name="type">
 					<option value="" selected>Choose your option</option>
 					<option value="info">Info</option>
 					<option value="rule">Rule</option>
