@@ -189,11 +189,15 @@ footer.page-footer .collection .collection-item {
 footer.page-footer .collection a.collection-item {
 	background: #043540;
 	color: #fff;
-	padding: 5px 20px;
+	padding: 8px 0px;
 	text-align: center;
 }
 footer.page-footer .collection a.collection-item.active {
 	background: #f18879;
+}
+footer.page-footer p {
+    margin: 0;
+    text-align: center;
 }
 /*
  * End footer
