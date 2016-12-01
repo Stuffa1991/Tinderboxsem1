@@ -89,7 +89,7 @@ class Team_model extends CI_Model {
 		// If not an int, return false
 		if(!is_int($id) && $id <= 0) { return false; }	
 
-		$query = sprintf('SELECT me.name,co.email,co.phone,co.mobile
+		$query = sprintf('SELECT me.memberid, me.name,co.email,co.phone,co.mobile
 		 FROM teams AS te
 		 LEFT JOIN members AS me ON (me.memberid = te.teamleaderid)
 		 LEFT JOIN contacts AS co ON (co.contactid = me.contactid)

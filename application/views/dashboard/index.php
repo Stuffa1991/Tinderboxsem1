@@ -11,14 +11,13 @@
 		<div>
 			<h4>Info from staff</h4>
 			<ul id="staff-info" class="collapsible" data-collapsible="accordion"></ul>
-			    
 		</div>
 
 	</div>
 </script>
 
 <script id="teamleader" type="text/x-handlebars-template">
-	<div class="card horizontal">
+	<div id="show-teamleader" data-member-id="{{member-id}}" class="card horizontal">
 	  	<div class="card-image">
 	    	<img src="http://placehold.it/100x100">
 	  	</div>
@@ -31,6 +30,14 @@
 	   		</div>
 	  	</div>
 	</div>
+</script>
+
+<script>
+	$('#show-teamleader').click(function(){
+		var id = $(this).data('member-id');
+
+		console.log(id);
+	});
 </script>
 
 <script id="schedules" type="text/x-handlebars-template">
