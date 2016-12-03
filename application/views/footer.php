@@ -195,5 +195,17 @@
 
 			</script>
 		<?php } ?>
+
+		<?php if ($this->uri->segment(2) == 'Register' || $this->uri->segment(1) == ''){ ?>
+			<!--  Load function for login-->
+			<script>
+
+			$(document).ready(function($) {
+				hideLoad();
+				document.title = 'Register';
+			});
+
+			</script>
+		<?php } ?>
 	</body>
 </html>
