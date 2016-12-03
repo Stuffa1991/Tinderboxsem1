@@ -16,33 +16,95 @@ $(function(){
 	    }
 	);
 
-	//loadDashboardView(siteUrl);
+	var fakeLoad = 500;
 
-	// menu
+	//DASHBOARD
+	//Load dashboard view
 	$('#dashboard-view').click(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
-		loadDashboardView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadDashboardView(siteUrl)
+		}, fakeLoad);
+
 		document.title = 'Dashboard';
 	});
 
+	//Load back to dashboard on team leader click
+	$('#container').on('click','#backDashboard', function(e){
+		showLoad();
+
+		setTimeout(function(){
+			loadDashboardView(siteUrl);
+		}, fakeLoad);
+	});
+
+	//Load team leader info on dash board
+	$('#container').on('click','#show-teamleader', function(e){
+		showLoad();
+		var id = $(this).data('member-id');
+
+		setTimeout(function(){
+			showInfoTeamLeader(siteUrl,id)
+		}, fakeLoad);
+	});
+
+	//TEAM
+	//Load team view
 	$('#team-view').click(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
-		loadTeamView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadTeamView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'Team';
 	});
 
+	//Load back button on member profile page
+	$('#container').on('click','#backTeam', function(e){
+		showLoad();
+
+		setTimeout(function(){
+			loadTeamView(siteUrl);
+		}, fakeLoad);
+	});
+
+	//Load member info in team tab
+	$('#container').on('click','.memberinfo', function(e){
+		showLoad();
+
+		var memberId = $(this).data('member-id');
+
+		setTimeout(function(){
+			loadTeamMembersInfo(siteUrl,memberId);
+		}, fakeLoad);
+				
+	});
+
+	//SCHEDULE
+	//Load schedule view
 	$('#schedule-view').click(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
-		loadScheduleView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadScheduleView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'Schedules';
 	});
 
+	//SIDENAV PAGES
+	//Load sidenav
 	$('#sidenav-view').click(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
@@ -50,28 +112,51 @@ $(function(){
 		document.title = 'Side Nav';
 	});
 
+	//Load rules view
 	$('#rules-view').click(function(){
-		loadRuleView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadRuleView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'Rules';
 	});
 
+	//Load info view
 	$('#info-view').click(function(){
-		loadInfoView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadInfoView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'Info';
 	});
 
+	//Load news view
 	$('#news-view').click(function(){
-		loadNewsView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadNewsView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'News';
 	});
 
+	//Load edit view
 	$('#edit-view').click(function(){
-		loadEditView(siteUrl);
+		showLoad();
+
+		setTimeout(function(){
+			loadEditView(siteUrl);
+		}, fakeLoad);
+
 		document.title = 'Edit profile';
 	});
 
-	//loadAdminView(siteUrl);
-
+	//$('#loader').hide();
 });
 
 function serializeForm(data) 
@@ -89,15 +174,12 @@ function serializeForm(data)
  * [clearView description]
  * @return {[type]} [description]
  */
-function clearView()
-{
-	$('#container').html('');
-}
 
 function showLoad()
 {
 	$('#loader').show();
 	$('#container').hide();
+	$('#container').html('');
 }
 
 function hideLoad()
@@ -106,15 +188,11 @@ function hideLoad()
 	$('#container').show();
 }
 
-
 /*
  * Dashboard view
  */
 function loadDashboardView(siteUrl)
 {
-	clearView();
-	showLoad();
-
 	var source   = $('#dashboard').html();
 	var template = Handlebars.compile(source);
 	$('#container').html(template());
@@ -147,35 +225,30 @@ function getTeamLeader(siteUrl)
 				var template = Handlebars.compile(source);
 				var data = {name: data.name, email: data.email, mobile: data.mobile, memberid: data.memberid};
 				$('#teamleader-info').append(template(data));
-
-				$('#show-teamleader').click(function(){
-					var id = $(this).data('member-id');
-
-					$.ajax({
-					    type: 'GET',
-					    url: siteUrl + 'team/getTeamMemberInfo/' + id,
-						contentType: 'application/json',
-						success: function(data, status, response)
-						{	
-							var source   = $('#teammemberDashboard').html();
-							var template = Handlebars.compile(source);
-							var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
-							$('#container').html(template(data));	
-						},
-						complete: function()
-						{
-							
-						}
-					});		
-				});
 			}
 		}
 	});
 }
-$('#container').on('click','#backDashboard', function(e){
-	e.preventDefault();
-	loadDashboardView(siteUrl);
-});
+
+function showInfoTeamLeader(siteUrl,id)
+{
+	$.ajax({
+	    type: 'GET',
+	    url: siteUrl + 'team/getTeamMemberInfo/' + id,
+		contentType: 'application/json',
+		success: function(data, status, response)
+		{	
+			var source   = $('#teammemberDashboard').html();
+			var template = Handlebars.compile(source);
+			var data = {name: data.name, email: data.email, phone: data.phone, mobile: data.mobile};
+			$('#container').html(template(data));	
+		},
+		complete: function()
+		{
+			hideLoad();
+		}
+	});	
+}
 
 function getSchedules(siteUrl)
 {
@@ -224,9 +297,6 @@ function getStaff(siteUrl)
  */
 function loadTeamView(siteUrl)
 {	
-	clearView();
-	showLoad();
-
 	var source   = $('#teamlist').html();
 	var template = Handlebars.compile(source);
 	$('#container').html(template());
@@ -262,12 +332,8 @@ function loadTeamView(siteUrl)
  * Method to load members information
  */
 
-$('#container').on('click','.memberinfo', function(e){
-	e.preventDefault();
-
-	//console.log('click');
-
-	var memberId = $(this).data('member-id');
+function loadTeamMembersInfo(siteUrl,memberId)
+{
 
 	$.ajax({
 	    type: 'GET',
@@ -282,17 +348,10 @@ $('#container').on('click','.memberinfo', function(e){
 		},
 		complete: function()
 		{
-			
+			hideLoad();
 		}
-	});		
-});
-
-$('#container').on('click','#backTeam', function(e){
-	e.preventDefault();
-
-	loadTeamView(siteUrl);
-});
-
+	});
+}
 
 /**
  * Schedules View
@@ -300,8 +359,6 @@ $('#container').on('click','#backTeam', function(e){
 
 function loadScheduleView(siteUrl)
 {
-	clearView();
-	showLoad();
 
 	$.ajax({
 	    type: 'GET',
@@ -317,6 +374,7 @@ function loadScheduleView(siteUrl)
 		},
 		complete: function()
 		{
+			$('ul.tabs').tabs();
 			daysLoad();
 		}
 	});
@@ -350,8 +408,6 @@ function loadScheduleView(siteUrl)
  */
 function loadRuleView(siteUrl)
 {
-	clearView();
-	showLoad();
 	
 	var source   = $('#rulesview').html();
 	var template = Handlebars.compile(source);
@@ -384,8 +440,6 @@ function loadRuleView(siteUrl)
  */
 function loadInfoView(siteUrl)
 {	
-	clearView();
-	showLoad();
 	
 	var source   = $('#infoview').html();
 	var template = Handlebars.compile(source);
@@ -418,8 +472,6 @@ function loadInfoView(siteUrl)
  */
 function loadNewsView(siteUrl)
 {
-	clearView();
-	showLoad();
 	
 	var source   = $('#newsview').html();
 	var template = Handlebars.compile(source);
@@ -452,8 +504,6 @@ function loadNewsView(siteUrl)
  */
 function loadEditView(siteUrl)
 {
-	clearView();
-	showLoad();
 
 	$.ajax({
 	    type: 'GET',
