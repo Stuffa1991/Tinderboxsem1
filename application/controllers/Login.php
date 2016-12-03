@@ -106,9 +106,17 @@ class Login extends CI_Controller {
 	 */
 	public function logout()
 	{
+		//If there is 1 or more results returned --- should only be one
+		$sess_data = array(
+			'login' => FALSE, 
+			'email' => NULL,
+			'memberid' => NULL,
+			'name' => NULL,
+			'role' => NULL
+		);
 
-		// // @TODO Do not sess_destroy but set the data to NULL or ZERO
-		$this->session->sess_destroy();
+		//$this->session->sess_expiration = '43200';// expires in 12 hours
+		$this->session->set_userdata($sess_data);
 		redirect('/');
 		die();
 	}

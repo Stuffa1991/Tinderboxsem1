@@ -22,9 +22,6 @@
 				    	<div class="divider"></div>
 				    </li>
 				    <li>
-				    	<a class="subheader">Other pages</a>
-				    </li>
-				    <li>
 				    	<a id="rules-view" class="waves-effect" href="#!">
 				    		<i class="material-icons">warning</i>
 				    		Rules
