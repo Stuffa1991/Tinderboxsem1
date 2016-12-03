@@ -177,7 +177,7 @@
 			<script>
 
 			$(document).ready(function($) {
-				loadDashboardView(siteUrl);
+				loadDashboardOnLoad(siteUrl);
 				document.title = 'Dashboard';
 			});
 

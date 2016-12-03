@@ -178,12 +178,24 @@ function showLoad()
 function hideLoad()
 {
 	$('#loader').hide();
-	$('#container').show();
+	$('#container').fadeIn('slow')
 }
 
 /*
  * Dashboard view
  */
+function loadDashboardOnLoad(siteUrl)
+{
+	showLoad();
+
+	setTimeout(function(){
+		loadDashboardView(siteUrl);
+	}, 500);
+
+	document.title = 'Dashboard';
+}
+
+
 function loadDashboardView(siteUrl)
 {
 	var source   = $('#dashboard').html();
