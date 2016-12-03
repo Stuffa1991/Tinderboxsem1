@@ -1,5 +1,6 @@
 	
 		<div id="container" class="row">
+			<h4 id="loginHeader">Volunteer App</h4>
 			<form action="<?php echo base_url('/login/loginAjax')?>" method="POST" role="form" class="col s12 loginUserForm">
 				<div class="row">
 					<div class="input-field col s12">

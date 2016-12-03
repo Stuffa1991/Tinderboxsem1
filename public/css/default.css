@@ -210,8 +210,14 @@ h4 {
 /*
  * Login - Register
  */
+
+#loginHeader{
+    padding-top: 20px;
+    color: #043540;;
+}
+
 .registerUserForm, .loginUserForm{
-    margin-top: 50px;
+    margin-top: 20px;
 }
 
 
