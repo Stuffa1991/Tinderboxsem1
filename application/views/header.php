@@ -19,11 +19,9 @@
 			<nav>
 			    <div class="nav-wrapper">
 				    <div class="row">
-				    	<div class="col s3"></div>
-					    <div class="col s6">
-					    	<img class="center" src="<?=base_url('public/img/tinderboxlogo.png');?>">
+					    <div class="col s12 center">
+					    	<img class="logo" src="<?=base_url('public/img/tinderboxlogo.png');?>">
 					    </div>
-					    <div class="col s3"></div>
 					</div>    	
 		    	</div>
 		  	</nav>
