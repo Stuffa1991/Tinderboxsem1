@@ -19,5 +19,7 @@
 					</div>
 				</div>
 			</form>
-			<div class="col s12"><p>Not signed up yet? <a href="<?php echo base_url('/login/register')?>">Click here</a></div>
+			<div class="col s12">
+				<p>Not signed up yet? <a href="<?php echo base_url('/login/register')?>">Click here</a></p>
+			</div>
 		</div>
