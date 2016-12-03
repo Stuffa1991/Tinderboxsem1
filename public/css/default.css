@@ -147,6 +147,10 @@ main {
 .secondary-content {
     color: #043540;
 }
+
+#loader{
+    margin-top: 200px;
+}
 /*
  * End base
  */
@@ -202,6 +206,13 @@ h4 {
 /*
  * End site view
  */
+
+/*
+ * Login - Register
+ */
+.registerUserForm, .loginUserForm{
+    margin-top: 50px;
+}
 
 
 /*

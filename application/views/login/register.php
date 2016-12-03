@@ -23,8 +23,9 @@
 						<label for="name">name</label>
 					</div>
 				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+				<button type="submit" class="btn btn-primary">Register</button>
 			</form>
+			<div class="col s12"><p>Return to login screen <a href="<?php echo base_url('/login/')?>">Click here</a></div>
 		</div>
 
 

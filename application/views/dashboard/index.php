@@ -47,7 +47,7 @@
 
 <script id="staff" type="text/x-handlebars-template">
 	<li>
-      <div class="collapsible-header">{{ title }} <div class="right">{{ date }}</div></div>
+      <div class="collapsible-header"><div class="left"><i class="tiny material-icons">keyboard_arrow_down</i></div>{{ title }} <div class="right">{{ date }}</div></div>
       <div class="collapsible-body"><p>{{ text }}</p></div>
     </li>
 </script>

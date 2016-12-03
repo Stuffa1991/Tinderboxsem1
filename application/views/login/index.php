@@ -1,19 +1,23 @@
-
-		<div id="container" class="container">
-			<div class="row">
-				<div class="col s12">
-					<form class="loginUserForm" action="<?php  echo base_url('/login/loginAjax')?>" method="POST" role="form">
-						<?php echo validation_errors(); ?>
-						<div class="form-group">
-							<label for="username">Username</label>
-							<input type="text" class="form-control" id="username" name="email" placeholder="Input field" required autofocus>
-							<label for="password">Password</label>
-							<input type="password" class="form-control" id="password" name="password" placeholder="Input field" required>
-						</div>
-						<button type="submit" class="btn btn-primary">Submit</button>
-					</form>
+	
+		<div id="container" class="row">
+			<form action="<?php echo base_url('/login/loginAjax')?>" method="POST" role="form" class="col s12 loginUserForm">
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" class="validate" id="username" name="email">
+						<label for="username">Email</label>
+					</div>
 				</div>
-			</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<label for="password">Password</label>
+						<input type="password" class="validate" id="password" name="password">
+					</div>
+				</div>
+				<div class="row">
+					<div class="col s12 center">
+						<button type="submit" class="btn btn-primary center">Login</button>
+					</div>
+				</div>
+			</form>
+			<div class="col s12"><p>Not signed up yet? <a href="<?php echo base_url('/login/register')?>">Click here</a></div>
 		</div>
-
-
