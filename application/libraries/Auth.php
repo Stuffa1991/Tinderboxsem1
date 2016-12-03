@@ -7,16 +7,16 @@ class Auth
     public function __construct()
     {
         $this->ci =& get_instance();
+
+        //Load Session library
+        $this->ci->load->library(array('session'));
+
+        //Load url helper
+        $this->ci->load->helper(array('url_helper'));
     }
     
     public function handleLogin()
     {	
-    	//Load Session library
-    	$this->ci->load->library(array('session'));
-
-    	//Load url helper
-    	$this->ci->load->helper(array('url_helper'));
-
     	//Get session data
         $loggedIn = $this->ci->session->login;
 
@@ -24,6 +24,17 @@ class Auth
         if($loggedIn == FALSE){
         	redirect('/');
         	die();
+        }
+    }
+
+    public function getAdmin()
+    {
+        $role = $this->ci->session->role;
+
+        if($role != 'admin')
+        {
+            redirect('/dashboard');
+            die();
         }
     }
 }
