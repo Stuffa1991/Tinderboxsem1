@@ -62,7 +62,7 @@ class Login extends CI_Controller {
 
 		//Set form rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
 
 		//If the validator isnt running or it returns errors
 		if($this->form_validation->run() === FALSE)
@@ -137,8 +137,8 @@ class Login extends CI_Controller {
 
 		// Set your rules
 		$this->form_validation->set_rules('email', 'Email', 'required|valid_email|min_length[5]');
-		$this->form_validation->set_rules('password', 'Password', 'required|min_length[1]');
-		$this->form_validation->set_rules('repeatPassword', 'Password', 'required|min_length[1]|matches[password]');
+		$this->form_validation->set_rules('password', 'Password', 'required|min_length[6]');
+		$this->form_validation->set_rules('repeatPassword', 'Password', 'required|min_length[6]|matches[password]');
 		$this->form_validation->set_rules('name', 'Name', 'required|min_length[1]');
 
 		if ($this->form_validation->run() == TRUE) 

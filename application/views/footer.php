@@ -130,7 +130,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ($this->uri->segment(2) == 'members'){ ?>
+		<?php if ($this->uri->segment(1) == 'admin' && $this->uri->segment(2) == 'members'){ ?>
 			<!--  Load admin function for members-->
 			<script>
 
@@ -141,7 +141,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ($this->uri->segment(2) == 'teams'){ ?>
+		<?php if ($this->uri->segment(1) == 'admin' && $this->uri->segment(2) == 'teams'){ ?>
 			<!--  Load admin function for teams-->
 			<script>
 
@@ -152,7 +152,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ($this->uri->segment(2) == 'tasks'){ ?>
+		<?php if ($this->uri->segment(1) == 'admin' && $this->uri->segment(2) == 'tasks'){ ?>
 			<!--  Load admin function for tasks-->
 			<script>
 
@@ -163,7 +163,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ($this->uri->segment(2) == 'places'){ ?>
+		<?php if ($this->uri->segment(1) == 'admin' && $this->uri->segment(2) == 'places'){ ?>
 			<!--  Load admin function for Places-->
 			<script>
 
@@ -175,7 +175,7 @@
 		<?php } ?>
 
 		<?php if ($this->uri->segment(1) == 'dashboard'){ ?>
-			<!--  Load admin function for dashboard-->
+			<!--  Load function for dashboard-->
 			<script>
 
 			$(document).ready(function($) {
@@ -187,7 +187,7 @@
 		<?php } ?>
 
 		<?php if ($this->uri->segment(1) == 'login' || $this->uri->segment(1) == ''){ ?>
-			<!--  Load admin function for login-->
+			<!--  Load function for login-->
 			<script>
 
 			$(document).ready(function($) {

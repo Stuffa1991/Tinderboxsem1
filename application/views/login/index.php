@@ -3,14 +3,14 @@
 			<form action="<?php echo base_url('/login/loginAjax')?>" method="POST" role="form" class="col s12 loginUserForm">
 				<div class="row">
 					<div class="input-field col s12">
-						<input type="text" class="validate" id="username" name="email">
+						<input type="email" id="username" name="email" class="validate" required>
 						<label for="username">Email</label>
 					</div>
 				</div>
 				<div class="row">
 					<div class="input-field col s12">
 						<label for="password">Password</label>
-						<input type="password" class="validate" id="password" name="password">
+						<input type="password" id="password" name="password" class="validate" required>
 					</div>
 				</div>
 				<div class="row">
