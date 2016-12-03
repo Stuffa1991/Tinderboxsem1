@@ -196,7 +196,7 @@
 			</script>
 		<?php } ?>
 
-		<?php if ($this->uri->segment(2) == 'Register' || $this->uri->segment(1) == ''){ ?>
+		<?php if ($this->uri->segment(2) == 'register' && $this->uri->segment(1) == 'login'){ ?>
 			<!--  Load function for login-->
 			<script>
 
