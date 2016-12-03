@@ -155,8 +155,6 @@ $(function(){
 
 		document.title = 'Edit profile';
 	});
-
-	//$('#loader').hide();
 });
 
 function serializeForm(data) 
@@ -169,11 +167,6 @@ function serializeForm(data)
 
 	return values;
 }
-
-/**
- * [clearView description]
- * @return {[type]} [description]
- */
 
 function showLoad()
 {
@@ -311,7 +304,6 @@ function loadTeamView(siteUrl)
 			contentType: 'application/json',
 			success: function(data, status, response)
 			{	
-				//console.log('loadTeam');
 				$.each(data, function(key, val) {
 					var source   = $('#team').html();
 					var template = Handlebars.compile(source);
@@ -366,7 +358,6 @@ function loadScheduleView(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
-			//console.log(data);
 			var source   = $('#schedulesview').html();
 			var template = Handlebars.compile(source);
 			var data = {data};
@@ -387,7 +378,6 @@ function loadScheduleView(siteUrl)
 		contentType: 'application/json',
 		success: function(data, status, response)
 		{	
-			//console.log(data);
 			var source   = $('#schedulesmonth').html();
 			var template = Handlebars.compile(source);
 			var data = {data};
@@ -542,7 +532,6 @@ $('.loginUserForm').submit(function(e) {
 		url: url,
 		data: $(this).serialize(),
 		success: function(data, textStatus, xhr) {
-			//console.debug(data + ' ' + textStatus + ' ' + xhr);
 			if(data == 'loggedIn')
 			{
 				window.location.href = siteUrl + "dashboard";
@@ -553,10 +542,8 @@ $('.loginUserForm').submit(function(e) {
 			}
 		},
 		complete: function(xhr, textStatus) {
-			//console.debug(textStatus + ' ' + xhr); 
 		},
 		error: function(xhr, textStatus, errorThrown) {
-			//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
 		}
 	});
 });
@@ -614,16 +601,11 @@ $('.registerUserForm').submit(function(e) {
 		type: 'POST',
 		url: url,
 		data: $(this).serialize(),
-		success: function(data, textStatus, xhr) {
-			//console.debug(data + ' ' + textStatus + ' ' + xhr);
-			var dataString = JSON.stringify(data);
-			//console.debug(dataString);
+		success: function(data, textStatus, xhr) {;
 		},
 		complete: function(xhr, textStatus) {
-			//console.debug(textStatus + ' ' + xhr); 
 		},
 		error: function(xhr, textStatus, errorThrown) {
-			//console.debug(xhr + ' ' + textStatus + ' ' + errorThrown);
 		}
 	});
 });
