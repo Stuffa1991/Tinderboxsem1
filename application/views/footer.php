@@ -1,4 +1,4 @@
-			
+		<?php if($this->session->memberid && $this->uri->segment(1) != 'admin') { ?>
 				<!-- Side menu -->
 			    <ul id="slide-out" class="side-nav">
 				    <li>
@@ -68,8 +68,6 @@
 
 			</div> <!-- // class container -->
 		</main>
-
-		<?php if($this->session->memberid && $this->uri->segment(1) != 'admin') { ?>
 	
 			<footer class="page-footer">
 		        <div class="container">
