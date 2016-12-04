@@ -16,7 +16,7 @@
 				</div>
 				<div class="row">
 					<div class="col s12 center">
-						<button type="submit" class="btn btn-primary center">Login</button>
+						<button type="submit" class="btn btn-primary waves-effect waves-light">Login</button>
 					</div>
 				</div>
 			</form>

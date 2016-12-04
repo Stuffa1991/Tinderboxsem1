@@ -25,7 +25,7 @@
 				</div>
 				<div class="row">
 					<div class="col s12 center">
-						<button type="submit" class="btn btn-primary">Register</button>
+						<button type="submit" class="btn btn-primary waves-effect waves-light">Register</button>
 					</div>
 				</div>
 			</form>
