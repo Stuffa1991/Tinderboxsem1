@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col s12 schedule-tab">
 				<ul class="tabs">
-					<li class="tab col s6"><a id="7daystab" href="#7days">Next 7 days</a></li>
+					<li class="tab col s6"><a id="7daystab" class="active" href="#7days">Next 7 days</a></li>
 					<li class="tab col s6"><a href="#30days">Next 30 days</a></li>
 				</ul>
 			</div>

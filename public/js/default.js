@@ -21,7 +21,7 @@ $(function(){
 		setNavBar();
 	});
 
-	//Load member info in team tab
+	//Register closing sidenav
 	$('body').on('click','.drag-target', function(e){
 		setNavBar();
 	});
@@ -80,7 +80,7 @@ $(function(){
 		}, fakeLoad);
 	});
 
-	//Load team leader info on dash board
+	//Load team leader info on dashboard
 	$('#container').on('click','#show-teamleader', function(e){
 		showLoad();
 		var id = $(this).data('member-id');
@@ -433,8 +433,9 @@ function loadScheduleView(siteUrl)
 		},
 		complete: function()
 		{
-			$('ul.tabs').tabs();
 			hideLoad();
+			$('ul.tabs').tabs();
+			$('ul.tabs').tabs('select_tab', '#7daystab');
 		}
 	});
 	}
