@@ -11,9 +11,48 @@ $(function(){
 	      	menuWidth: 210, // Default is 240
 	     	edge: 'right', // Choose the horizontal origin
 	      	closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
-	      	draggable: false // Choose whether you can drag to open on touch screens
+	      	draggable: true, // Choose whether you can drag to open on touch screens
+	      	complete: function() { alert('Closed'); }
 	    }
 	);
+
+	//Load member info in team tab
+	$('body').on('click','#sidenav-overlay', function(e){
+		setNavBar();
+	});
+
+	//Load member info in team tab
+	$('body').on('click','.drag-target', function(e){
+		setNavBar();
+	});
+
+	function setNavBar()
+	{
+		var title = $(document).find("title").text();
+
+		switch(title){
+			case 'Dashboard':
+				$('#sidenav-view').removeClass('active');
+				$('#dashboard-view').addClass('active');
+				break;
+			case 'Team':
+				$('#sidenav-view').removeClass('active');
+				$('#team-view').addClass('active');
+				break;
+			case 'Schedules':
+				$('#sidenav-view').removeClass('active');
+				$('#schedule-view').addClass('active');
+				break;
+			case 'Rules':
+				break;
+			case 'Info':
+				break;
+			case 'News':
+				break;
+			case 'Edit profile':
+				break;
+		}
+	}
 
 	var fakeLoad = 500;
 
@@ -107,8 +146,6 @@ $(function(){
 	$('#sidenav-view').click(function(){
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
-
-		document.title = 'Side Nav';
 	});
 
 	//Load rules view
