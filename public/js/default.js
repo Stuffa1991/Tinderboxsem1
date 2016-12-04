@@ -59,6 +59,12 @@ $(function(){
 	//DASHBOARD
 	//Load dashboard view
 	$('#dashboard-view').click(function(){
+		ifActive = $(this).hasClass('active');
+		if(ifActive)
+		{
+			return;
+		}
+
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
@@ -93,6 +99,12 @@ $(function(){
 	//TEAM
 	//Load team view
 	$('#team-view').click(function(){
+		ifActive = $(this).hasClass('active');
+		if(ifActive)
+		{
+			return;
+		}
+
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
@@ -129,6 +141,12 @@ $(function(){
 	//SCHEDULE
 	//Load schedule view
 	$('#schedule-view').click(function(){
+		ifActive = $(this).hasClass('active');
+		if(ifActive)
+		{
+			return;
+		}
+		
 		$('.collection-item').removeClass('active');
 		$(this).addClass('active');
 
